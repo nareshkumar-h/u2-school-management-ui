@@ -1,0 +1,162 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+margin: 0;
+padding: 0;
+font-family: 'Poppins', sans-serif;
+}
+.aa
+{
+  margin-top:90px;
+  margin-left: 800px;
+  padding: 0;
+  z-index: 1000;
+  position: absolute;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0A2558;
+  float: right;
+  position: relative;
+  padding: 10px;
+}
+
+.aa .calendar
+{
+  width: 320px;
+  background: #fff;
+  box-sizing: border-box;
+  position: relative;
+  border: 2px solid #0A2558;
+
+}
+
+.aa .calendar .poster
+{
+  border: 5px solid white;
+  width: auto;
+  height: 250px;
+  background: url(bgc3.jpg);
+  background-size: cover;
+}
+
+.aa .calendar .poster h2
+/* .aa .calendar .poster h4 */
+{
+  padding-top: 30px;
+padding-left: 15px;
+}
+
+.aa .calendar .poster h3
+{
+  font-weight: 500;
+  padding-left: 15px;
+
+}
+.aa .calendar .date
+{
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30px, 6fr));
+  grid-gap:10px;
+  
+}
+
+.aa .calendar .date .NUM
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  color: #0A2558;
+
+}
+.aa .calendar .date .NUM:hover
+{
+  background-color: black;
+  border-radius: 100px;
+  color: white;
+}
+
+.aa .calendar .date .day
+{
+  font-weight: 700;
+}
+.aa .calendar .date .day:first-child,
+.aa .calendar .date .NUM:nth-child(7n+1)
+{
+  color: red;
+}
+.aa .calendar .date .day:nth-child(7n),
+.aa .calendar .date .NUM:nth-child(7n)
+{
+  color:blue ;
+}
+
+.aa .calendar .date .NUM.active
+ {
+   color: white;
+  background: green;
+  border-radius: 24px;
+}
+.aa .calendar .date .NUM.active:hover
+{
+  color: white;
+  background-color: blue;
+}
+.aa .calendar .MONTH
+{
+  border: 2px solid black;
+  color: white;
+  background-color: #0A2558;
+  border-radius: 12px;
+
+}
+.aa .calendar .YEAR
+{
+  border: 2px solid black;
+  color: white;
+  background-color: #0A2558;
+  border-radius: 12px;
+}
+.a2
+{
+  margin-top: 40%;
+  margin-left:50%;
+  padding: 0;
+  z-index: 1000;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+.box
+{
+  height: 100%;
+  width: 100%;
+  margin-top: 90px;
+  background-color: white;
+  /* border: 10px solid black; */
+  position: fixed;
+  padding: 20px;
+  background-image: linear-gradient(to bottom right, black, #0A2558 );
+  background-size: 100% 100%;
+  color: white;
+
+}
+
+
+.box h1{
+
+     font-size: 50px;
+}
+.box h3{
+  font-weight: 500;
+}
+.box p {
+  font-size: 20px;
+  font-weight: bold;
+
+}

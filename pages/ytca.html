@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<htm lang="en">
+  <head>
+
+    <title> CALENDER </title>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="/home/meenusowjanya/FreshTech/src/assets/images/1bg.png">
+    <link  rel="stylesheet" href="../assets/css/ytca.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+.sidebar{
+position: fixed;
+height: 100%;
+width: 240px;
+background: #0A2558;
+transition: all 0.5s ease;
+}
+.sidebar.active{
+width: 60px;
+}
+.sidebar .logo-details{
+height: 80px;
+display: flex;
+align-items: center;
+}
+.sidebar .logo-details i{
+font-size: 28px;
+font-weight: 500;
+color: #fff;
+min-width: 60px;
+text-align: center
+}
+.sidebar .logo-details .logo_name{
+color: #fff;
+font-size: 24px;
+font-weight: 500;
+}
+.sidebar .nav-links{
+margin-top: 10px;
+}
+.sidebar .nav-links li{
+position: relative;
+list-style: none;
+height: 50px;
+}
+.sidebar .nav-links li a{
+height: 100%;
+width: 100%;
+display: flex;
+align-items: center;
+text-decoration: none;
+transition: all 0.4s ease;
+}
+.sidebar .nav-links li a.active{
+background: #081D45;
+}
+.sidebar .nav-links li a:hover{
+background: #081D45;
+}
+.sidebar .nav-links li i{
+min-width: 60px;
+text-align: center;
+font-size: 18px;
+color: #fff;
+}
+.sidebar .nav-links li a .links_name{
+color: #fff;
+font-size: 15px;
+font-weight: 400;
+white-space: nowrap;
+}
+.sidebar .nav-links .log_out{
+position: absolute;
+bottom: 0;
+width: 100%;
+}
+.home-section{
+position: relative;
+min-height: 100vh;
+width: calc(100% - 240px);
+left: 240px;
+transition: all 0.5s ease;
+/*background-image: url(bgc.png);
+background-size: cover;*/
+background-color: #fff
+}
+.sidebar.active ~ .home-section{
+width: calc(100% - 60px);
+left: 60px;
+}
+.home-section nav{
+display: flex;
+justify-content: space-between;
+height: 80px;
+background: #0A2558;
+display: flex;
+align-items: center;
+position: fixed;
+width: calc(100% - 240px);
+left: 240px;
+z-index: 100;
+padding: 0 20px;
+box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+transition: all 0.5s ease;
+border-top: 5px solid  #0A2558;
+border-bottom: 5px solid  #0A2558;
+}
+.sidebar.active ~ .home-section nav{
+left: 60px;
+width: calc(100% - 60px);
+}
+.home-section nav .sidebar-button{
+display: block;
+align-items: center;
+font-size: 24px;
+font-weight: 500;
+}
+/*nav .sidebar-button i{
+font-size: 35px;
+margin-right: 10px;
+}*/
+.home-section nav .search-box{
+position: relative;
+height: 50px;
+max-width: 550px;
+width: 100%;
+margin: 0 20px;
+}
+
+.dashboard a{
+  text-decoration: none;
+  color: white;
+  text-decoration: center;
+  padding: 20px;
+  border: 2px solid #0A2558;
+  border-radius: 80px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+}
+.dashboard a:hover{
+  color: black;
+  background-color: white;
+
+  } </style>
+  </head>
+  <body>
+      <div class="sidebar">
+        <div class="logo-details">
+           <i class='bx bxl-c-plus-plus'>  </i>  <span class="logo_name">Fresh Tech</span>
+        </div>
+
+          <ul class="nav-links">
+
+          <li> <a href="/home/meenusowjanya/FreshTech/src/pages/attendance.html"><i class='bx bx-grid-alt' ></i> <span class="links_name">                       Attendance          </span>  </a></li>
+          <li> <a href="/home/meenusowjanya/FreshTech/src/pages/querybox.html"> <i class='bx bx-grid-alt'> </i> <span class="links_name">                      Query box           </span>  </a></li>
+          <li> <a href="#" class="active"> <i class='bx bx-pie-chart-alt-2' ></i><span class="links_name"> Calendar            </span>  </a></li>
+          <li> <a href="/home/meenusowjanya/FreshTech/src/pages/assignment.html"> <i class='bx bx-coin-stack'></i> <span class="links_name">                     Assignments         </span>  </a></li>
+          <li> <a href="/home/meenusowjanya/FreshTech/src/pages/school.html"> <i class='bx bx-message'></i>  <span class="links_name">                       Progress Reports    </span>  </a></li>
+          <li> <a href="/home/meenusowjanya/FreshTech/src/pages/notification.html"> <i class='bx bx-heart' ></i> <span class="links_name">                         SMS/Mail            </span>  </a></li>
+          <li class="log_out"><a href="/home/meenusowjanya/FreshTech/src/index.html"><i class='bx bx-log-out'></i>  <span class="links_name">         Logout              </span>  </a></li>
+
+          </ul>
+      </div>
+
+      <section class="home-section">
+        <nav>
+          <div class="sidebar-button">
+            <span class="dashboard">   </span>
+            <span class="dashboard"><a href="#"> EVENT&nbsp;&#8615; 	 </a>  </span>
+            <span class="dashboard"><a href="#"> MY SCHEDULE  &nbsp;&#8615;  </a>   </span>
+            <span class="dashboard"> <a href="#">MY DIARY &nbsp;&#8615;   </a>  </span>
+
+          </div>
+        </nav>
+        <div class="box">
+               <h1>15th M❤️NDAY  </h1>
+                <p><u>NOVEMBER |2021</u></p><br>
+                <h2> QUOTE : </h2>
+                <h3>"The best preparation for tomorrow is doing your best today. ..." </h3><br>
+                <h2> BIRTHDAY BABY </h2>
+                <h3> Today is "YOUR BIRTHDAY"</h3><br>
+                <h2> REMINDER : </h2>
+                <h3> empty</h3><BR>
+                <h2> DAILY TASK</h2>
+                <h3> Smile to the person sitting near you</h3>
+
+        </div>
+
+<div class="aa">
+    <div class="calendar">
+      <div class="poster">
+              <h2> 15th M❤️NDAY  </h2>
+              <h3> NOVEMBER | 2021 </h3>
+
+         <!-- <h4 style="color:white">   <span style="background-color:black">"The best preparation for tomorrow is doing your best today. ..."  </span> </h4> -->
+    </div>
+      <div class="date">
+                    <div class="day"> SUN</div>
+                    <div class="day"> MON</div>
+                    <div class="day"> TUE</div>
+                    <div class="day"> WED</div>
+                    <div class="day"> THU</div>
+                    <div class="day"> FRI</div>
+                    <div class="day"> SAT</div>
+
+                    <div class="NUM"> </div>
+                    <div class="NUM"> 1</div>
+                    <div class="NUM"> 2</div>
+                    <div class="NUM"> 3</div>
+                    <div class="NUM"> 4</div>
+                    <div class="NUM"> 5</div>
+                    <div class="NUM"> 6</div>
+                    <div class="NUM"> 7</div>
+                    <div class="NUM"> 8</div>
+                    <div class="NUM"> 9</div>
+                    <div class="NUM"> 10</div>
+                    <div class="NUM"> 11</div>
+                    <div class="NUM"> 12</div>
+                    <div class="NUM"> 13</div>
+                    <div class="NUM"> 14</div>
+                    <div class="NUM active"> 15</div>
+                    <div class="NUM"> 16</div>
+                    <div class="NUM"> 17</div>
+                    <div class="NUM"> 18</div>
+                    <div class="NUM"> 19</div>
+                    <div class="NUM"> 20</div>
+                    <div class="NUM"> 21</div>
+                    <div class="NUM"> 22</div>
+                    <div class="NUM"> 23</div>
+                    <div class="NUM"> 24</div>
+                    <div class="NUM"> 25</div>
+                    <div class="NUM"> 26</div>
+                    <div class="NUM"> 27</div>
+                    <div class="NUM"> 28</div>
+                    <div class="NUM"> 29</div>
+                    <div class="NUM"> 30</div>
+                   </div>
+                   <form style="padding:10px">
+                   <label>MONTH:</label>
+                   <select class="MONTH" name="MONTH">
+                   <option value="JANUARY">     JANUARY    </option>
+                   <option value="FEBRUARY">    FEBRUARY   </option>
+                   <option value="MARCH">       MARCH      </option>
+                   <option value="APRIL">       APRIL      </option>
+                   <option value="MAY">         MAY        </option>
+                   <option value="JUNE">        JUNE       </option>
+                   <option value="JULY">        JULY       </option>
+                   <option value="AUGUST">      AUGUST     </option>
+                   <option value="SEPTEMBER">   SEPTEMBER  </option>
+                   <option value="OCTOBER">     OCTOBER    </option>
+                   <option value="NOVEMBER">    NOVEMBER   </option>
+                   <option value="DECEMBER">    DECEMBER   </option>
+                   </select>
+                   <label>YEAR:</label>
+                   <select class="YEAR" name="YEAR">
+                   <option value="2020">2020</option>
+                   <option value="2021">2021</option>
+                   <option value="2022">2022</option>
+                   <option value="2023">2023</option>
+                   <option value="2024">2024</option>
+                   <option value="2025">2025</option>
+                   </select>
+                 </form>
+                <!-- <h1 style="color:#0A2558; padding-left: 6px; font-size:30px"> <center> BIRTHDAY BABY </center></h1><br>
+                <h1 style="color:black; padding-left: 6px; font-size:30px"><center>   YOU 🤗 </center></h1> -->
+    </div>
+</div>
+
+
+
+</div>
+</section>
+
+  </body>
+  <html>

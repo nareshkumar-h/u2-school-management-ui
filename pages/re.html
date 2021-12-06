@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Profile</title>
+    <!-- custom css link -->
+    <link rel="stylesheet" href="/assets/css/revathi.css">
+
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&family=Roboto:wght@100&display=swap');
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+
+::selection{
+    background-color: #f9ca24;
+    color: #333;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    width:1.4rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: whitesmoke;
+}
+
+html::-webkit-scrollbar-thumb{
+   background: #0A2558;
+}
+
+body{
+    background: #111;
+    overflow-x: hidden;
+    padding-left: 35rem;
+}
+
+section{
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.btn{
+    padding: .7rem 3rem;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+
+.btn i{
+    padding: 0 .5rem;
+    font-size: 1.8rem;
+}
+
+.btn:hover{
+    background: #0A2558;
+}
+
+.heading{
+    text-align: center;
+    margin: 0 6rem;
+    font-size: 4rem;
+    padding:1rem;
+    border-bottom: .1rem solid #fff4;
+    color:#fff;
+}
+
+.heading span{
+    color: #f9ca24;
+}
+
+header{
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 40rem;
+    background: #0A2558;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+
+header .user img{
+    height: 17rem;
+    width: 17rem;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+    border: .7rem solid #f9ca24;
+}
+
+header .user .name{
+    font-size: 3.5rem;
+    color: #fff;
+}
+
+header .user .post{
+    font-size: 2rem;
+    color: #eee;
+
+}
+
+header .navbar{
+    width: 100%;
+}
+
+header .navbar ul{
+    list-style: none;
+    padding: 1rem 3rem;
+}
+
+header .navbar ul li a{
+    display: block;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    background: #333;
+    color: #fff;
+    font-size: 2rem;
+    border-radius:5rem ;
+}
+
+header .navbar ul li a:hover{
+
+    background: #fff;
+    color: #111;
+    font-size: 3rem;
+}
+
+/* #menu{
+    position: fixed;
+    top: 2rem; right:2rem;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding:1rem 1.5rem;
+    z-index: 1000;
+    display: none;
+} */
+
+.home{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding: 0 15rem;
+}
+
+.home h3{
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.home h1{
+    font-size: 5rem;
+    color: #fff;
+}
+
+.home h1 span{
+    color: #f9ca24;
+}
+
+
+.home p{
+    font-size: 2rem;
+    color: #eee;
+    padding: 1rem 0;
+}
+
+
+
+.education .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    padding-left: 3rem;
+}
+
+
+.education .box-container .box{
+    width: 27rem;
+    margin:4rem 25rem 4rem 18rem ;
+    padding-left: 4rem;
+    border-left: .2rem solid #fff;
+    position: relative;
+}
+
+.education .box-container .box span{
+    font-size: 1.3rem;
+    background: grey;
+    color: #fff;
+    border-radius: 5rem 2.5rem;
+}
+
+.education .box-container .box h3{
+    font-size: 2rem;
+    color: #fff;
+    padding-top:1.5rem ;
+}
+
+.education .box-container .box p{
+    font-size: 1.4rem;
+    color: #eee;
+    padding:1rem 0;
+}
+
+.education .box-container .box i{
+    position: absolute;
+    top: -1.5rem; left:-2.5rem ;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    background: #f9ca24;
+}
+</style>
+
+</head>
+
+<body style="background: grey;">
+
+    <!-- header section starts -->
+    <header>
+        <div class="user">
+            <img src="./images/teacherlogo.png" alt="revathi">
+            <h3 class="name">revathi iyer</h3>
+            <p class="post">communication coach</p>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="re1.html">Profile</a></li>
+                <li><a href="#education">Experience</a></li>
+                <li><a href="Student profile.html ">Students Profile</a></li>
+
+
+            </ul>
+        </nav>
+    </header>
+
+    <div id="menu" class="fas fa-bars"></div>
+
+    <!-- home section  -->
+    <section class="home" id="home">
+        <h3>HI THERE !</h3>
+        <h1>I'M <span>revathi iyer</span></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim obcaecati omnis eum quibusdam dolorum ab
+            incidunt,
+            harum eos quas suscipit aut aliquid, non asperiores quia dignissimos illo molestiae minus quam! Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Corrupti illo et itaque, harum iure ducimus tempora at? Neque
+            eum magnam iusto voluptates fuga perferendis. Perspiciatis reiciendis fugit rerum nam voluptate!</p>
+
+    </section>
+
+    <!-- about section  -->
+
+
+    <!--  education section -->
+
+    <section class="education" id="education">
+        <h1 class="heading">my <span>experience</span> </h1>
+        <div class="box-container">
+
+
+
+            <div class="box">
+                <i class="fas fa-graduation-cap"></i>
+                <span>2018</span>
+                <h3>wipro</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum deleniti nihil nisi placeat velit odio
+                    aliquam officia sed possimus in mollitia debitis magni, amet ducimus quaerat. Molestias, explicabo
+                    voluptate. Rem!</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-graduation-cap"></i>
+                <span>2019</span>
+                <h3>zoho</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum deleniti nihil nisi placeat velit odio
+                    aliquam officia sed possimus in mollitia debitis magni, amet ducimus quaerat. Molestias, explicabo
+                    voluptate. Rem!</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-graduation-cap"></i>
+                <span>2020</span>
+                <h3>tcs</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum deleniti nihil nisi placeat velit odio
+                    aliquam officia sed possimus in mollitia debitis magni, amet ducimus quaerat. Molestias, explicabo
+                    voluptate. Rem!</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-graduation-cap"></i>
+                <span>2021</span>
+                <h3>freshworks</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum deleniti nihil nisi placeat velit odio
+                    aliquam officia sed possimus in mollitia debitis magni, amet ducimus quaerat. Molestias, explicabo
+                    voluptate. Rem!</p>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- jquery link  -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+
+    <!-- custom js link -->
+
+</body>
+
+</html>

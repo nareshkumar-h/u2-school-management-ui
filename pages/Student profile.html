@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="shortcut icon" href="/home/meenusowjanya/FreshTech/src/assets/images/1bg.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta charset="UTF-8">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+}
+
+.sidebar{
+position: fixed;
+height: 100%;
+width: 240px;
+background: #0A2558;
+transition: all 0.5s ease;
+}
+.sidebar.active{
+width: 60px;
+}
+.sidebar .logo-details{
+height: 80px;
+display: flex;
+align-items: center;
+}
+.sidebar .logo-details i{
+font-size: 28px;
+font-weight: 500;
+color: #fff;
+min-width: 60px;
+text-align: center
+}
+.sidebar .logo-details .logo_name{
+color: #fff;
+font-size: 24px;
+font-weight: 500;
+}
+.sidebar .nav-links{
+margin-top: 10px;
+}
+.sidebar .nav-links li{
+position: relative;
+list-style: none;
+height: 50px;
+}
+.sidebar .nav-links li a{
+height: 100%;
+width: 100%;
+display: flex;
+align-items: center;
+text-decoration: none;
+transition: all 0.4s ease;
+}
+.sidebar .nav-links li a.active{
+background: #081D45;
+}
+.sidebar .nav-links li a:hover{
+background: #081D45;
+}
+.sidebar .nav-links li i{
+min-width: 60px;
+text-align: center;
+font-size: 18px;
+color: #fff;
+}
+.sidebar .nav-links li a .links_name{
+color: #fff;
+font-size: 15px;
+font-weight: 400;
+white-space: nowrap;
+}
+.sidebar .nav-links .log_out{
+position: absolute;
+bottom: 0;
+width: 100%;
+}
+.home-section{
+position: relative;
+background: #f5f5f5;
+min-height: 100vh;
+width: calc(100% - 240px);
+left: 240px;
+transition: all 0.5s ease;
+}
+.sidebar.active ~ .home-section{
+width: calc(100% - 60px);
+left: 60px;
+}
+.home-section nav{
+display: flex;
+justify-content: space-between;
+height: 80px;
+background: #fff;
+display: flex;
+align-items: center;
+position: fixed;
+width: calc(100% - 240px);
+left: 240px;
+z-index: 100;
+padding: 0 20px;
+box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+transition: all 0.5s ease;
+}
+.sidebar.active ~ .home-section nav{
+left: 60px;
+width: calc(100% - 60px);
+}
+.home-section nav .sidebar-button{
+display: flex;
+align-items: center;
+font-size: 24px;
+font-weight: 500;
+}
+nav .sidebar-button i{
+font-size: 35px;
+margin-right: 10px;
+}
+.home-section nav .search-box{
+position: relative;
+height: 50px;
+max-width: 550px;
+width: 100%;
+margin: 0 20px;
+}
+nav .search-box input{
+height: 100%;
+width: 100%;
+outline: none;
+background: #F5F6FA;
+border: 2px solid #EFEEF1;
+border-radius: 6px;
+font-size: 18px;
+padding: 0 15px;
+}
+nav .search-box .bx-search{
+position: absolute;
+height: 40px;
+width: 40px;
+background: #2697FF;
+right: 5px;
+top: 50%;
+transform: translateY(-50%);
+border-radius: 4px;
+line-height: 40px;
+text-align: center;
+color: #fff;
+font-size: 22px;
+transition: all 0.4 ease;
+}
+.home-section nav .profile-details{
+display: flex;
+align-items: center;
+background: #F5F6FA;
+border: 2px solid #EFEEF1;
+border-radius: 6px;
+height: 50px;
+min-width: 190px;
+padding: 0 15px 0 2px;
+}
+nav .profile-details img{
+height: 40px;
+width: 40px;
+border-radius: 6px;
+object-fit: cover;
+}
+nav .profile-details .admin_name{
+font-size: 15px;
+font-weight: 500;
+color: #333;
+margin: 0 10px;
+white-space: nowrap;
+}
+nav .profile-details i{
+font-size: 25px;
+color: #333;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  text-align: center;
+  font-family: arial;
+  float: left;
+  position: absolute;
+  margin-left: 40px;
+  margin-top: 10px;
+  padding-top: 75px;
+}
+.card2{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  text-align: center;
+  font-family: arial;
+  position: absolute;
+  top: 87px;
+  left: 700px;
+}
+.card3{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  text-align: center;
+  font-family: arial;
+  position:absolute;
+  top: 70px;
+  right: 20px;
+}
+.card4{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  text-align: center;
+  font-family: arial;
+  position: absolute;
+  top: 700px;
+  margin-left: 40px;
+}
+.card5{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  text-align: center;
+  font-family: arial;
+  position: absolute;
+  top: 700px;
+  left: 700px;
+}
+.card6{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  text-align: center;
+  font-family: arial;
+  position: absolute;
+  top: 700px;
+  left: 1356px;
+}
+.card7{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  text-align: center;
+  font-family: arial;
+  position: absolute;
+  top: 1300px;
+  margin-left: 40px;
+  padding-top: 100px;
+}
+.card8{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  text-align: center;
+  font-family: arial;
+  position: absolute;
+  top: 1300px;
+  left: 700px;
+  padding-top: 100px;
+}
+.card9{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  text-align: center;
+  font-family: arial;
+  position: absolute;
+  top: 1300px;
+  left: 1366px;
+  padding-top: 100px;
+}
+.card10{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  text-align: center;
+  font-family: arial;
+  position: absolute;
+  top: 1900px;
+  margin-left: 40px;
+  padding-top: 70px;
+}
+.card11{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  text-align: center;
+  font-family: arial;
+  position: absolute;
+  top: 1900px;
+  left: 700px;
+}
+img{
+  width: 70%;
+  border-radius:120px;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: Navy;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: Black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+</style>
+</head>
+<body>
+  <div class="sidebar">
+      <div class="logo-details">
+        <i class='bx bxl-c-plus-plus'></i>
+        <span class="logo_name">Fresh Tech</span>
+      </div>
+        <ul class="nav-links">
+          <li>
+            <a href="/home/meenusowjanya/FreshTech/src/pages/attendance.html" >
+              <i class='bx bx-grid-alt' ></i>
+              <span class="links_name">Attendance</span>
+            </a>
+          </li>
+          <li>
+            <a href="/home/meenusowjanya/FreshTech/src/pages/querybox.html" >
+              <i class='bx bx-grid-alt' ></i>
+              <span class="links_name">Query Box</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="active">
+              <i class='bx bx-grid-alt'  ></i>
+              <span class="links_name">Student's Profile</span>
+            </a>
+          </li>
+
+
+          <li>
+            <a href="/home/meenusowjanya/FreshTech/src/pages/ytca.html">
+              <i class='bx bx-pie-chart-alt-2' ></i>
+              <span class="links_name">Calendar</span>
+            </a>
+          </li>
+          <li>
+            <a href="/home/meenusowjanya/FreshTech/src/pages/assignment.html">
+              <i class='bx bx-coin-stack' ></i>
+              <span class="links_name">Assignments</span>
+            </a>
+          </li>
+
+
+          <li>
+            <a href="/home/meenusowjanya/FreshTech/src/pages/school.html">
+              <i class='bx bx-message' ></i>
+              <span class="links_name">Progress Reports</span>
+            </a>
+          </li>
+          <li>
+            <a href="/home/meenusowjanya/FreshTech/src/pages/notification.html">
+              <i class='bx bx-heart' ></i>
+              <span class="links_name">SMS/Mail</span>
+            </a>
+          </li>
+
+          <li class="log_out">
+            <a href="index.html">
+              <i class='bx bx-log-out'></i>
+              <span class="links_name">Logout</span>
+            </a>
+          </li>
+        </ul>
+    </div>
+    <section class="home-section">
+      <nav>
+        <div class="sidebar-button">
+          <i class='bx bx-menu sidebarBtn'></i>
+          <span class="dashboard">Student's Profile   (01/11/2021)</span>
+        </div>
+        <div class="search-box">
+          <input type="text" placeholder="Search by student id">
+          <i class='bx bx-search' ></i>
+        </div>
+        <div class="profile-details">
+          <!--<img src="images/profile.jpg" alt="">-->
+          <span class="admin_name">Chitra Muthukumaran</span>
+          <!-- <i class='bx bx-chevron-down' ></i> -->
+        </div>
+      </nav><br><br><br>
+<div class="card">
+  <img src="https://ca.slack-edge.com/T032648LE-U02GKQYJ98U-eb60f467bbd6-512">
+  <h1>Meenu Sowjanya </h1>
+  <p class="title">Student Of FWSA</p>
+  <p>FreshTech Academy</p>
+  <div style="margin: 24px 0;">
+    <a href="#"><i class="fa fa-instagram"></i></a>
+    <a href="#"><i class="fa fa-google chrome"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    <a href="#"><i class="fa fa-facebook"></i></a>
+  </div>
+  <p><button>Profile</button></p>
+
+</div>
+<div class="card2"><br><br><br><br>
+  <img src="https://ca.slack-edge.com/T032648LE-U02GHKKF5GA-79f6a70447ea-512">
+  <h1>Keerthana</h1>
+  <p class="title">Student Of FWSA</p>
+  <p>FreshTech Academy</p>
+  <div style="margin: 24px 0;">
+    <a href="#"><i class="fa fa-instagram"></i></a>
+    <a href="#"><i class="fa fa-google chrome"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    <a href="#"><i class="fa fa-facebook"></i></a>
+  </div>
+  <p><button>Profile</button></p>
+
+</div>
+
+<div class="card3"><br><br><br>
+  <img src="https://ca.slack-edge.com/T032648LE-U02GKQYLTA8-5bc0a9be9950-512">
+  <h1>Pavan Raaj</h1>
+  <p class="title">Student Of FWSA</p>
+  <p>FreshTech Academy</p>
+  <div style="margin: 24px 0;">
+    <a href="#"><i class="fa fa-instagram"></i></a>
+    <a href="#"><i class="fa fa-google chrome"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    <a href="#"><i class="fa fa-facebook"></i></a>
+  </div>
+  <p><button>Profile</button></p>
+
+</div>
+
+<div class="card4">
+  <img src="https://ca.slack-edge.com/T032648LE-U02GASYH1FY-680ca68d6ce3-512">
+  <h1>Vaishnavi</h1>
+  <p class="title">Student Of FWSA</p>
+  <p>FreshTech Academy</p>
+  <div style="margin: 24px 0;">
+    <a href="#"><i class="fa fa-instagram"></i></a>
+    <a href="#"><i class="fa fa-google chrome"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    <a href="#"><i class="fa fa-facebook"></i></a>
+  </div>
+  <p><button>Profile</button></p>
+
+</div>
+
+<div class="card5">
+  <img src="https://ca.slack-edge.com/T032648LE-U02GHKLRRK4-6c21e04551f3-512">
+  <h1>Riyas Hanifa</h1>
+  <p class="title">Student Of FWSA</p>
+  <p>FreshTech Academy</p>
+  <div style="margin: 24px 0;">
+    <a href="#"><i class="fa fa-instagram"></i></a>
+    <a href="#"><i class="fa fa-google chrome"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    <a href="#"><i class="fa fa-facebook"></i></a>
+  </div>
+  <p><button>Profile</button></p>
+
+</div>
+
+<div class="card6">
+  <img src="https://ca.slack-edge.com/T032648LE-U02GEKGG8UD-6e3d8ce8c388-512">
+  <h1>Kasi Antony</h1>
+  <p class="title">Student Of FWSA</p>
+  <p>FreshTech Academy</p>
+  <div style="margin: 24px 0;">
+    <a href="#"><i class="fa fa-instagram"></i></a>
+    <a href="#"><i class="fa fa-google chrome"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    <a href="#"><i class="fa fa-facebook"></i></a>
+  </div>
+  <p><button>Profile</button></p>
+
+</div>
+
+
+<div class="card7">
+  <img src="https://ca.slack-edge.com/T032648LE-U02GHKL9CF4-d619133bb63b-512">
+  <h1>Selvaraj</h1>
+  <p class="title">Student Of FWSA</p>
+  <p>FreshTech Academy</p>
+  <div style="margin: 24px 0;">
+    <a href="#"><i class="fa fa-instagram"></i></a>
+    <a href="#"><i class="fa fa-google chrome"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    <a href="#"><i class="fa fa-facebook"></i></a>
+  </div>
+  <p><button>Profile</button></p>
+
+</div>
+<div class="card8">
+  <img src="https://ca.slack-edge.com/T032648LE-U02GEKGJ9HT-9f0d608b3401-512">
+  <h1>Deepak</h1>
+  <p class="title">Student Of FWSA</p>
+  <p>FreshTech Academy</p>
+  <div style="margin: 24px 0;">
+    <a href="#"><i class="fa fa-instagram"></i></a>
+    <a href="#"><i class="fa fa-google chrome"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    <a href="#"><i class="fa fa-facebook"></i></a>
+  </div>
+  <p><button>Profile</button></p>
+
+</div>
+
+<div class="card9">
+  <img src="https://ca.slack-edge.com/T032648LE-U02GASY0T7Y-2f3fbbb0a559-512">
+  <h1>Suguram</h1>
+  <p class="title">Student Of FWSA</p>
+  <p>FreshTech Academy</p>
+  <div style="margin: 24px 0;">
+    <a href="#"><i class="fa fa-instagram"></i></a>
+    <a href="#"><i class="fa fa-google chrome"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    <a href="#"><i class="fa fa-facebook"></i></a>
+  </div>
+  <p><button>Profile</button></p>
+
+</div>
+
+<div class="card10">
+  <img src="https://ca.slack-edge.com/T032648LE-U02H7AP72KS-941ae0a1277a-512">
+  <h1>Mohammed Musraf</h1>
+  <p class="title">Student Of FWSA</p>
+  <p>FreshTech Academy</p>
+  <div style="margin: 24px 0;">
+    <a href="#"><i class="fa fa-instagram"></i></a>
+    <a href="#"><i class="fa fa-google chrome"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    <a href="#"><i class="fa fa-facebook"></i></a>
+  </div>
+  <p><button>Profile</button></p>
+
+</div>
+
+<div class="card11">
+  <img src="./images/slack1.jpg">
+  <h1>Venkatakrishnan</h1>
+  <p class="title">Student Of FWSA</p>
+  <p>FreshTech Academy</p>
+  <div style="margin: 24px 0;">
+    <a href="#"><i class="fa fa-instagram"></i></a>
+    <a href="#"><i class="fa fa-google chrome"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    <a href="#"><i class="fa fa-facebook"></i></a>
+  </div>
+  <p><button>Profile</button></p>
+
+</div>
+
+
+
+</body>
+</html>

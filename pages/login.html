@@ -32,12 +32,12 @@
       </span>
 
       <span class="test2">
-        <form class="box" action="management.html">
+        <form class="box" action="management.html" >
           <h1>LOGIN PAGE</h1>
           <p>Email ID</p>
-          <input type="email" name="" placeholder="Enter Your Email ID" required>
+          <input type="email" name="" placeholder="Enter Your Email ID"id="mail" required>
           <p>Password</p>
-          <input type="password" name="" placeholder="Create Your Password" required>
+          <input type="password" name="" placeholder="Create Your Password" id="pass" required>
 
       <center>   <a href="../pages/management.html"><input type="submit" name="name" value="Submit" ></a> <br><br><br> </center>
           Forget Password? <a href="../pages/forget.html">Click here</a>
@@ -48,6 +48,12 @@
       </span>
     </div>
   </div>
+  <script>
+      let array=localStorage.getItem("user_credentials");
+      let y=JSON.parse(array);
+
+      
+  </script>
 </body>
 
 </html>

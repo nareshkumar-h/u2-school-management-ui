@@ -1,224 +1,233 @@
 <html>
- <head>
-     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-     <title> FreshTech</title>
-     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
-     <link rel="shortcut icon"  href="/home/meenusowjanya/u2-school-management-ui/assets/images/1.png">
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-     <link rel="stylesheet" href="style.css">
-     <style>
-     *{
-  margin:0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-}
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title> FreshTech</title>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
-
-.header{
-  min-height: 100vh;
-  width: 100%;
-  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4 ,9,30,0.7)),url('/home/meenusowjanya/u2-school-management-ui/assets/images/bgi.jpeg');
-  background-position: center;
-  background-size: cover;
-  position: relative;
-}
-
-nav{
-  display: flex;
-  padding: 2% 6%;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav img{
-  width: 190px;
-
-}
-
-h2{
-  color: #fff;
-  font-size: 20px;
-  padding: 2px 1px 0px 3px;
-}
-
-.nav-links{
-  flex: 1;
-  text-align: right;
-}
-
-.nav-links ul li{
-  list-style: none;
-  display: inline-block;
-  padding: 8px 21px 0 55px;
-  position: relative;
-
-}
-
-.nav-links ul li a{
-  color: #fff;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.nav-links ul li::after{
-  content: "";
-   width: 0%;
-   height: 2px;
-   background:#f44336;
-   display: block;
-   margin: auto;
-   transition: 0.5s;
-}
-
-.nav-links ul li:hover:after{
-    width: 100%;
-}
-
-.hero-btn1{
-  display: inline-block;
-  text-decoration: none;
-  color: #fff;
-  border: 1px solid #fff;
-  padding: 5px 17px;
-  font-size: 13px;
-  background: transparent;
-  position: relative;
-  cursor: pointer;
-}
-
-.hero-btn2{
-  display: inline-block;
-  text-decoration: none;
-  color: #fff;
-  border: 1px solid #fff;
-  padding: 5px 17px;
-  font-size: 13px;
-  background: transparent;
-  position: relative;
-  cursor: pointer;
-}
-
-.button{
-  color: #fff;
-  background-color: sandybrown;
-  width: 5%;
-  height: 5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5%;
-}
-.button a{
-  color: white;
-  text-decoration: none;
-}
+  <link rel="shortcut icon" href="/home/meenusowjanya/u2-school-management-ui/assets/images/1bg.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
 
 
+    .header {
+      min-height: 100vh;
+      width: 100%;
+      background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url('/home/meenusowjanya/u2-school-management-ui/assets/images/bgi.jpeg');
+      background-position: center;
+      background-size: cover;
+      position: relative;
+    }
 
-.text-box{
-  width: 90%;
-  color: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  text-align: center;
-}
+    nav {
+      display: flex;
+      padding: 2% 6%;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-.text-box h1{
-  font-size: 62px;
-}
+    nav img {
+      width: 190px;
 
-.text-box p{
-  margin: 10px 0 40px;
-  font-size: 14px;
-  color: #fff;
-}
+    }
 
-.hero{
-  display: inline-block;
-  text-decoration: none;
-  color: #fff;
-  border: 1px solid #fff;
-  padding: 12px 34px;
-  font-size: 13px;
-  background: transparent;
-  position: relative;
-  cursor: pointer;
-}
+    h2 {
+      color: #fff;
+      font-size: 20px;
+      padding: 2px 1px 0px 3px;
+    }
 
-.hero:hover{
-  border:1px solid #f44336;
-  background: #f44336;
-  transition: 1s;
-}
+    .nav-links {
+      flex: 1;
+      text-align: right;
+    }
 
+    .nav-links ul li {
+      list-style: none;
+      display: inline-block;
+      padding: 8px 21px 0 55px;
+      position: relative;
 
+    }
 
+    .nav-links ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+    }
 
-@media (max-width: 700px){
-  .text-box h1{
-       font-size: 20px;
-  }
-  .nav-links ul li{
+    .nav-links ul li::after {
+      content: "";
+      width: 0%;
+      height: 2px;
+      background: #f44336;
       display: block;
-  }
-  .nav-links{
+      margin: auto;
+      transition: 0.5s;
+    }
+
+    .nav-links ul li:hover:after {
+      width: 100%;
+    }
+
+    .hero-btn1 {
+      display: inline-block;
+      text-decoration: none;
+      color: #fff;
+      border: 1px solid #fff;
+      padding: 5px 17px;
+      font-size: 13px;
+      background: transparent;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .hero-btn2 {
+      display: inline-block;
+      text-decoration: none;
+      color: #fff;
+      border: 1px solid #fff;
+      padding: 5px 17px;
+      font-size: 13px;
+      background: transparent;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .button {
+      color: #fff;
+      background-color: sandybrown;
+      width: 5%;
+      height: 5%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5%;
+    }
+
+    .button a {
+      color: white;
+      text-decoration: none;
+    }
+
+
+
+    .text-box {
+      width: 90%;
+      color: #fff;
       position: absolute;
-      background:#f44336;
-      height: 100vh;
-      width:200px;
-      top: 0;
-      right: 0;
-      text-align: left;
-      z-index: 2;
-  }
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
 
-}
-p{
-  font-size: 50px;
-  color: white;
-}
+    .text-box h1 {
+      font-size: 62px;
+    }
 
-     </style>
+    .text-box p {
+      margin: 10px 0 40px;
+      font-size: 14px;
+      color: #fff;
+    }
 
- </head>
- <body>
-     <section class="header">
-         <nav>
-              <a class="hero" href="u2-school-management-ui/pages/knowmore.html">visit us to know more</a>
-             <a href="u2-school-management-ui/pages/index.html" ><img src="/home/meenusowjanya/u2-school-management-ui/assets/images/log1.png"> </a>
-             <p>FRESHTECH</p>
-             <div class="nav-links">
-                 <ul>
-                     <li>
-                        <a href="u2-school-management-ui/pages/Student profile.html">STUDENTS</a>
-                     </li>
-                     <li>
+    .hero {
+      display: inline-block;
+      text-decoration: none;
+      color: #fff;
+      border: 1px solid #fff;
+      padding: 12px 34px;
+      font-size: 13px;
+      background: transparent;
+      position: relative;
+      cursor: pointer;
+    }
 
-                        <a href="u2-school-management-ui/pages/Teacher profile.html">TEACHER</a>
-                     </li>
-                     <li>
-                         <a class="note" href="u2-school-management-ui/pages/notification.html"><i class="far fa-bell"></i></a>
-                     </li>
-                  </ul>
-              </div>
-               &nbsp;&nbsp;&nbsp;&nbsp;
-                    <div class="button">
-                        <a class="likes" href="u2-school-management-ui/pages/login.html">SIGN IN</a>
-                    </div>
-         </nav>
+    .hero:hover {
+      border: 1px solid #f44336;
+      background: #f44336;
+      transition: 1s;
+    }
 
-       <div class="text-box">
-           <h1>FRESHTECH </h1>
-           <P>The courses in Freshworks Academy are really impressive and I believe
-             it's perfect for new joiners! It's super user-friendly, easy to understand<br>
-              and I love the design of it</P>
-              <a class="hero" href="u2-school-management-ui/pages/knowmore.html">visit us to know more</a>
-       </div>
-     </section>
- </body>
+
+
+
+    @media (max-width: 700px) {
+      .text-box h1 {
+        font-size: 20px;
+      }
+
+      .nav-links ul li {
+        display: block;
+      }
+
+      .nav-links {
+        position: absolute;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index: 2;
+      }
+
+    }
+
+    p {
+      font-size: 50px;
+      color: white;
+    }
+  </style>
+
+</head>
+
+<body>
+  <section class="header">
+    <nav>
+
+      <a href="u2-school-management-ui/pages/index.html"><img
+          src="/home/meenusowjanya/u2-school-management-ui/assets/images/log1.png"> </a>
+      <p>FRESHTECH</p>
+      <div class="nav-links">
+        <ul>
+          <li>
+            <a href="/home/meenusowjanya/u2-school-management-ui/pages/Student profile.html">STUDENTS</a>
+          </li>
+          <li>
+
+            <a href="/home/meenusowjanya/u2-school-management-ui/pages/Teacher profile.html">TEACHER</a>
+          </li>
+          <li>
+            <a class="note" href="/home/meenusowjanya/u2-school-management-ui/pages/notification.html"><i
+                class="far fa-bell"></i></a>
+          </li>
+        </ul>
+      </div>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <div class="button">
+        <a class="likes" href="/home/meenusowjanya/u2-school-management-ui/pages/login.html">SIGN IN</a>
+      </div>
+    </nav>
+
+    <div class="text-box">
+      <h1>FRESHTECH </h1>
+      <P>The courses in Freshworks Academy are really impressive and I believe
+        it's perfect for new joiners! It's super user-friendly, easy to understand<br>
+        and I love the design of it</P>
+      <a class="hero" href="/home/meenusowjanya/u2-school-management-ui/pages/knowmore.html">Visit us to know more</a>
+    </div>
+  </section>
+</body>
+
 </html

@@ -9,15 +9,15 @@ function submitHandler(){
     event.preventDefault();
    let userEmail = document.getElementById("mail").value;
    let userPass = document.getElementById("pass").value;
-   const userCredentials = JSON.parse(localStorage.getItem("user_credentials"));
-   const len = userCredentials.length;
+   let userCredentials = JSON.parse(localStorage.getItem("user_credentials"));
+   let len = userCredentials.length;
 
-   const isUserExist = false;
+   let isUserExist = false;
 
    for (i = 0; i < len; i++) {
 
-     const email = userCredentials[i].email_id
-     const password = userCredentials[i].password
+     let email = userCredentials[i].email_id;
+     let password = userCredentials[i].password;
 
      if (userEmail == email && userPass == password) {
        isUserExist=true;

@@ -9,7 +9,7 @@ function submitHandler(){
     event.preventDefault();
    let userEmail = document.getElementById("mail").value;
    let userPass = document.getElementById("pass").value;
-   let userCredentials = JSON.parse(localStorage.getItem("user_credentials"));
+   let userCredentials = JSON.parse(localStorage.getItem("user_credentials"));//[{name:meenu,},{}]
    let len = userCredentials.length;
 
    let isUserExist = false;
@@ -31,7 +31,7 @@ function submitHandler(){
         alert("Welcome!You have logged in successfully.");
         window.location.href="management.html";
    }else{
-          document.getElementById("error").innerHTML="***Invalid email id or password"
+          document.getElementById("error").innerHTML="***Invalid email id or password";
    }
   
  }

@@ -8,43 +8,8 @@
   <title>Sign-Up Page</title>
   <link rel="stylesheet" href="../assets/css/login and sign up.css">
   <link rel="shortcut icon" href="../assets/images/1bg.png">
-  <style>
-    .btn {
-      background-color: white;
-      padding: 10px;
-      font-size: 20px;
-      font-weight: bold;
-      border-radius: 20px;
-    }
-
-    .btn:hover {
-      background-color: #717a8b;
-      color: white;
-    }
-    #emailId{
-      color: red;
-    }
-    #message1 {
-      color: red;
-    }
-
-    #message2 {
-      color: red;
-    }
-
-    button {
-      background-color: white;
-      padding: 10px;
-      font-size: 25px;
-      font-weight: bold;
-      border-radius: 20px;
-    }
-
-    button:hover {
-      background-color: red;
-      color: white;
-    }
-  </style>
+  <link rel="stylesheet" href="../assets/css/signup.css">
+  <script src="../assets/js/signup.js"></script>
 </head>
 
 <body>
@@ -59,7 +24,7 @@
         <form class="box" onsubmit="submiHandler()">
           <h1>Sign-Up</h1>
           <p>Name</p>
-          <input type="text" name="Name" placeholder="Enter Your Name" id="name" required>
+          <input type="text" name="Name" placeholder="Enter Your Name" id="name" minlength="3" required>
           <p>Email ID</p>
           
           <input type="email" name="email" id="email_id" placeholder="Enter Your Email ID"
@@ -86,95 +51,7 @@
       </span>
     </div>
   </div>
-  <script>
-    let list = [];
-    function reload() {
-      window.location.reload();
-    }
-    function submiHandler() {
-      event.preventDefault();
-
-
-      var pw1 = document.getElementById("psw1").value;
-      var pw2 = document.getElementById("psw2").value;
-      var name = document.getElementById("name").value;
-      var email = document.getElementById("email_id").value;
-
-      const y = localStorage.getItem("user_credentials");
-      const array = JSON.parse(y);
-
-      let isEmailAlreadyExist = false;
-
-      for (i = 0; i < array.length; i++) {
-        let a = array[i].Email_id;
-        if (email == a) {
-          isEmailAlreadyExist = true;
-          break;
-        }
-      }
-
-      if (isEmailAlreadyExist) {
-        document.getElementById("emailId").innerHTML = "***Oops! Sorry ! This mail id already exists"
-        return;
-      }
-
-      let object_to_focus;
-
-      if (pw1 == "") {
-        document.getElementById("message1").innerHTML = "**Fill the password please!";
-        return;
-      }
-
-
-      if (pw2 == "") {
-        document.getElementById("message2").innerHTML = "**Enter the password please!";
-        return;
-      }
-
-
-      if (pw1.length < 8) {
-        document.getElementById("message1").innerHTML = "**Password length must be atleast 8 characters";
-        return;
-      }
-
-
-      if (pw1.length > 15) {
-        document.getElementById("message1").innerHTML = "**Password length must not exceed 15 characters";
-        return;
-      }
-
-      if (pw1 != pw2) {
-        document.getElementById("message2").innerHTML = "**Passwords are not same";
-        return;
-      } else {
-        object_to_focus = { Name: name, Email_id: email, Password: pw1 };
-        alert(`Registration is done successfully `);
-      }
-      console.log(object_to_focus)
-      updateList(object_to_focus);
-      window.location.href = "login.html";
-    }
-    function updateList(object) {
-      console.log(object)
-      list.push(object);
-      const arrayToString = JSON.stringify(list);
-      localStorage.setItem("user_credentials", arrayToString);
-    }
-    function getAllFields() {
-      const arrayToString = localStorage.getItem("user_credentials");
-      const inArray = JSON.parse(arrayToString);
-      return inArray;
-    }
-    function pageOnLoadHandler() {
-      const all = getAllFields();
-      list = all;
-
-    }
-
-    pageOnLoadHandler();
-
-
-  </script>
+  
 
 </body>
 

@@ -8,19 +8,8 @@
   <title>Login Page</title>
   <link rel="stylesheet" href="../assets/css/login and sign up.css">
   <link rel="shortcut icon" href="../assets/images/1bg.png">
-  <style>
-    .btn{
-      background-color: white;
-      padding: 10px;
-      font-size: 20px;
-      font-weight: bold;
-      border-radius: 20px;
-    }
-    .btn:hover{
-      background-color: #0A2558;
-      color: white;
-    }
-  </style>
+  <link rel="stylesheet" href="../assets/css/login.css">
+  <script src="../assets/js/login.js"></script>
 </head>
 
 
@@ -32,15 +21,16 @@
       </span>
 
       <span class="test2">
-        <form class="box" action="management.html" >
+        <form class="box"  onsubmit="submitHandler()">
           <h1>LOGIN PAGE</h1>
           <p>Email ID</p>
-          <input type="email" name="" placeholder="Enter Your Email ID"id="mail" required>
+          <input type="email" name="" placeholder="Enter Your Email ID" id="mail" required>
           <p>Password</p>
-          <input type="password" name="" placeholder="Create Your Password" id="pass" required>
-
-      <center>   <a href="../pages/management.html"><input type="submit" name="name" value="Submit" ></a> <br><br><br> </center>
-          Forget Password? <a href="../pages/forget.html">Click here</a>
+          <input type="password" name="" placeholder="Enter Your Password" id="pass" required>
+          <div id="error"></div>
+          <center> <a href="../pages/management.html"><input type="submit" name="name" value="Submit"></a> <br><br><br>
+          </center>
+          Forgot Password? <a href="../pages/forget.html">Click here</a>
           <br><br>
           New To the Our Site Sign Up <a href="../pages/signup.html"> Here</a>
         </form>
@@ -48,12 +38,7 @@
       </span>
     </div>
   </div>
-  <script>
-      let array=localStorage.getItem("user_credentials");
-      let y=JSON.parse(array);
-
-      
-  </script>
+  
 </body>
 
 </html>

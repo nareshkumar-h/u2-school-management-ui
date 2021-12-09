@@ -18,6 +18,7 @@ function submiHandler() {
     let parsed=JSON.parse(localStorage.getItem("user_credentials"));
     if(parsed==null){
         localStorage.setItem("user_credentials",JSON.stringify([]));
+        
     }
     
     var pw1 = document.getElementById("psw1").value;

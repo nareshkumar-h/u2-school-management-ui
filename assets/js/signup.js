@@ -14,8 +14,12 @@ function submiHandler() {
     //Show success message
     
     event.preventDefault();
-
-
+    let bool=false;
+    let parsed=JSON.parse(localStorage.getItem("user_credentials"));
+    if(parsed==null){
+        localStorage.setItem("user_credentials",JSON.stringify([]));
+    }
+    
     var pw1 = document.getElementById("psw1").value;
     var pw2 = document.getElementById("psw2").value;
     var name = document.getElementById("name").value;
@@ -77,6 +81,7 @@ function submiHandler() {
     updateList(object_to_focus);
     window.location.href = "login.html";
 }
+let inArray = [];
 function updateList(object) {
     console.log(object)
     list.push(object);
@@ -85,7 +90,11 @@ function updateList(object) {
 }
 function getAllFields() {
     const arrayToString = localStorage.getItem("user_credentials");
-    const inArray = JSON.parse(arrayToString);
+    if(arrayToString){
+    inArray = JSON.parse(arrayToString);}
+    else{
+           inArray = [];
+    }
     return inArray;
 }
 function pageOnLoadHandler() {

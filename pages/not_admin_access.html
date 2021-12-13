@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <title>Notify-Admin_Login</title>
+    <style>
+        body{
+            background-image: url('../assets/images/not.jpeg');
+            background-repeat: no-repeat;
+            background-size: 100% 400%;
+        }
+        .form{
+            height: 500px;
+            width: 600px;
+            border-radius: 25px;
+            margin-left: 600px;
+            margin-top: 170px;
+            background-color: blanchedalmond;
+            color:#0A2558;
+        }
+        h1{
+            font-size: 40px;
+            margin-left: 170px;
+            margin-top: 60px;
+        }
+        p{
+            font-weight: bold;
+            font-size: 29px;
+            margin-left: 20px;
+        }
+        input[type="text"]{
+            border-radius: 10px;
+            padding:7px;
+            font-size: 19px;
+            margin-left: 15px;
+        }
+        input[type="password"]{
+            border-radius: 10px;
+            padding:7px;
+            font-size: 19px;
+            margin-left: 15px;
+        }
+        input[type="submit"]{
+            border-radius: 10px;
+            padding:9px;
+            font-size: 20px;
+            margin-left: 15px;
+            margin-top: 30px;
+            background-color: #0A2558;
+            color:white;
+        }
+        input[type="submit"]:hover{
+            cursor: pointer;
+            opacity: 0.5;
+        }
+        button{
+            border-radius: 10px;
+            padding:11px 15px 11px 15px;
+            font-size: 20px;
+            margin-left: 15px;
+            margin-top: 25px;
+            background-color: red;
+            color:white;
+        }
+        button:hover{
+            cursor: pointer;
+            opacity: 0.5;
+        }
+        #message1 {
+            color:red;
+            font-size: 17px;
+            padding-left: 15px;
+        }
+       
+         
+    </style>
+</head>
+<body>
+    <div class="form">
+    <form class="box" onsubmit="submiHandler()">
+        <h1>Admin Access</h1>
+        <p>Admin_Id</p>
+        <input type="text" placeholder="Enter your Admin id" name="psw1"
+        id="admin" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+        
+        <p>Secret admin_code</p>
+        <input type="password"
+          placeholder="Enter your secret code" name="psw1"
+          id="psw1" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+         <div id="message1"></div>
+        
+        <center> <input type="submit" name="" value="Submit" class="btn">
+          <br>
+          <button type="button" onclick="reload()">Clear</button>
+          <br><br>
+        </center>
+        
+        
+      </form>
+    </div>
+    <script>
+        function submiHandler(){
+            event.preventDefault();
+            let id=document.getElementById("admin").value;
+        let secret_code=document.getElementById("psw1").value;
+        const adminId=["Chitra@01","Revathi@02","Raghu@03","Surya@04","Shyam@05","Prasanna@06","Selvi@07","Jayanthi@08"];
+        const secretCode=["Ch@00001","Re@00002","Ra@00003","Su@00004","Sh@00005","Pr@00006","Se@00007","Ja@00008"];
+        let bool=false;
+        for(i=0;i<adminId.length;i++){
+            if(id==adminId[i]&& secret_code==secretCode[i]){
+                bool=true;
+                break;
+            }
+        }
+        if(bool==false){
+           document.getElementById("message1").innerHTML="***Invalid admin id or secret code";
+           return;
+        }
+        window.location.href="../pages/create_not.html";
+        }
+        
+    </script>
+</body>
+</html>

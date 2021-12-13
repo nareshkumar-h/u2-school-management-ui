@@ -6,7 +6,7 @@
     <link rel="shortcut icon" href="../assets/images/1bg.png">
     <meta charset="UTF-8">
 
-    <link rel="stylesheet" href="style.css">
+    
 
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -480,7 +480,11 @@ display: none;
   font-weight: bold;
   font-size: 17px;
 }
-
+.edit a{
+  color:red;
+  text-decoration-style: none;
+  padding-left:20px;
+}
 
 </style>
    </head>
@@ -550,10 +554,13 @@ display: none;
       <div class="sidebar-button">
         <i class='bx bx-menu sidebarBtn'></i>
         <span class="dashboard">Notifications</span>
+        <span class="edit"><a href="../pages/not_admin_access.html">CREATE</a></span>
+        
       </div>
 
 
     </nav><br><br><br><br>
+    
     <div class="grid-container-element12">
          <div class="a1"><img src="../assets/images/bell.png" height="50px" width="50px"></div>
          <div class="a2">
@@ -653,7 +660,14 @@ display: none;
          </div>
 
     </div><br>
-
+    <div id="new"></div>
+    
+    <script>
+      let lS=JSON.stringify((localStorage.getItem("notifications")));
+      let html=lS.slice(5,(lS.length-1));
+      console.log(`${html}`);
+      document.getElementById("new").innerHTML=html;
+    </script>
 
 
 

@@ -4,7 +4,7 @@
 
 1. Register ( Completed )
 2. Login    ( Completed )
-
+3. Notification page 
 
 
 ### Register

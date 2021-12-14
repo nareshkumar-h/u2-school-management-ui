@@ -30,7 +30,7 @@ function commit_5() {
   }
 }
 function commit_6() {
-  if (array.includes("@Surya Umapathy")) {
+  if (array.includes("@Surya Umapathy")==false) {
     document.getElementById("add").innerHTML += "@Surya Umapathy";
     array.push("@Surya Umapathy");
   }

@@ -33,6 +33,7 @@ function submitHandler(){
         window.location.href="management.html";
    }else{
           document.getElementById("error").innerHTML="Invalid email id or password";
+          return null;
    }
   
  }

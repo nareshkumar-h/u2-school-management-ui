@@ -118,6 +118,9 @@
 </div>
     <script>
       let str = "";
+      function reload(){
+        window.location.reload();
+      }
       function submitHandler() {
         event.preventDefault();
         if (localStorage.getItem("notifications") == null) {

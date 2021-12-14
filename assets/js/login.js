@@ -28,6 +28,7 @@ function submitHandler(){
 
 
    if(isUserExist){
+     localStorage.setItem("loggedInUser",userEmail);
         alert("Welcome!You have logged in successfully.");
         window.location.href="management.html";
    }else{

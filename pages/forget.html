@@ -1,23 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Forgot Password</title>
-    <link rel="stylesheet" href="../assets/css/login and sign up.css">
-    <link rel="shortcut icon" href="../assets/images/1bg.png">
+    <link rel="stylesheet" href="../assets/css/login and sign up.css" />
+    <link rel="shortcut icon" href="../assets/images/1bg.png" />
+    <script src="./../assets/js/loginCheck.js"></script>
+    <script src="../assets/js/forget.js"></script>
+  </head>
 
-</head>
-
-<body>
+  <body>
     <div class="forget">
-        <p>Forgot Password???<br>No Issues just chill out and type your Email Id in the Box<br>we will send you the
-            password reset link</p>
-        <input type="email" name="" placeholder="Enter Your Mail Id">
-      <a href="../assets/pages/login.html">  <input type="submit" name="submit" value="Submit">  </a>
-    </div>
-</body>
+      <p>
+        Forgot Password???<br />No Issues just chill out and type your Email Id
+        in the Box <br />
+        and create your password
+      </p>
+      <br /><br />
+      <form onsubmit="submitHandler()">
+        <p>Email ID</p>
 
+        <input
+          type="email"
+          name="email"
+          id="email_id"
+          placeholder="Enter Your Email ID"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          required
+        />
+        <p>Password</p>
+
+        <input
+          type="password"
+          placeholder="Use 8-15 characters with atleast one capital,one running and one special character"
+          name="psw1"
+          id="psw1"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          required
+        />
+
+        <p>Confirm Password</p>
+        <input
+          type="password"
+          placeholder="Repeat Password"
+          id="psw2"
+          name="psw2"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          required
+        />
+        <div id="emailId"></div>
+        <input type="submit" name="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
 </html>

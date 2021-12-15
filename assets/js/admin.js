@@ -3,8 +3,8 @@ function reload() {
   //Reload the page
   window.location.reload();
 }
-function Admin(){
-    window.location.href="../pages/admin.html"
+function Student(){
+    window.location.href="../pages/signup.html"
 }
 function submiHandler() {
   //Get form values
@@ -81,7 +81,7 @@ function submiHandler() {
       name: name,
       email_id: email,
       password: pw1,
-      role: "student",
+      role: "admin",
     };
     alert(`Registration is done successfully `);
   }

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="../assets/images/1bg.png" />
+    <title>Queries</title>
+    <link rel="stylesheet" href="../assets/css/query.css">
+    
+    <script src="./../assets/js/loginCheck.js"></script>
+    
+    
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-details" onclick="redirect()">
+          <i class='bx bxl-c-plus-plus' ></i>
+          <span class="logo_name" >Fresh Tech</span>
+        </div>
+          <ul class="nav-links">
+            <li>
+              <a href="../pages/attendance.html" >
+                <i class='bx bx-grid-alt' ></i>
+                <span class="links_name">Attendance</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="active">
+                <i class='bx bx-grid-alt' ></i>
+                <span class="links_name">Query Box</span>
+              </a>
+            </li>
+    
+    
+            <li>
+              <a href="../pages/ytca.html">
+                <i class='bx bx-pie-chart-alt-2' ></i>
+                <span class="links_name">Calendar</span>
+              </a>
+            </li>
+            <li>
+              <a href="../pages/assignment.html">
+                <i class='bx bx-coin-stack' ></i>
+                <span class="links_name">Assignments</span>
+              </a>
+            </li>
+    
+    
+            <li>
+              <a href="../pages/school.html">
+                <i class='bx bx-message' ></i>
+                <span class="links_name">  Progress Reports</span>
+              </a>
+            </li>
+            <li>
+              <a href="../pages/notification.html">
+                <i class='bx bx-heart' ></i>
+                <span class="links_name">SMS/Mail</span>
+              </a>
+            </li>
+    
+            <li class="log_out" onclick="logout()">
+              <a href="#">
+                <i class='bx bx-log-out'></i>
+                <span class="links_name">Logout</span>
+              </a>
+            </li>
+          </ul>
+      </div>
+      <section class="home-section">
+        <nav>
+          <div class="sidebar-button">
+            <i class='bx bx-menu sidebarBtn'></i>
+            <span class="dashboard">Queries</span>
+            <span class="edit"><a href="../pages/querybox.html">ADD QUERY</a></span>
+          </div>
+          <div class="search-box">
+            <input type="text" placeholder="Search queries">
+            <i class='bx bx-search' ></i>
+          </div>
+          <div class="profile-details">
+            
+            <span class="admin_name">Chitra Muthukumaran</span>
+            
+          </div>
+        </nav><br><br><br><br>
+        <div class="grid-container-element22">
+             <div class="kitkat">
+                 <p class="Date">13:30 pm,13/12/2021 </p>
+                 <p class="User">Meenu Sowjanya</p>
+                 
+                <span> <p class="tag">@Naresh,@Selvi,@Jayanthi </p> </span><span><p class="desc">Coaches can you kindly exlain how to create an user flow?</p></span>
+             </div><br>
+
+             <div class="kitkat">
+                <p class="Date">13:45 pm,13/12/2021 </p>
+                <p class="User">Rishi Atgondan</p>
+                
+               <span> <p class="tag">@Surya Umapathy</p> </span><span><p class="desc">Hi @Surya Umapathy anna.Can you kindly help me out to fix an issue in login page ?</p></span>
+            </div><br>
+
+            <div class="kitkat">
+               <p class="Date">13:45 pm,15/12/2021 </p>
+               <p class="User">Rishi Atgondan</p>
+               
+              <span> <p class="tag">@Revathi Iyer</p> </span><span><p class="desc">Hi @Revathi Iyer. Kindly give us a brief description on how does a infographic look like ?</p></span>
+           </div><br>
+           <div id="new">
+           
+           </div>
+           
+        </div>
+        <script src="../assets/js/list_queries.js"></script>
+</body>
+</html>

@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="../assets/css/query.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <script src="../assets/js/query.js"></script>
+     <script src="./../assets/js/loginCheck.js"></script>
+     
    </head>
 <body>
   <div class="sidebar">
@@ -86,27 +87,29 @@
     <div class="grid-container-element22">
       <div class="grid-child-element-green22">
        <ul>
-        <li onclick="commit_1()">@Chithra Muthukumaran</li>
+        <li onclick="commit_1('@Chithra Muthukarumaran')">@Chithra Muthukumaran</li>
         <hr>
-        <li onclick="commit_2()">@Shanmuga anantharaman</li>
-        <hr><li onclick="commit_3()">@Revathi iyer</li>
-        <hr><li onclick="commit_4()">@Prasannabharathi Ram</li>
-        <hr><li onclick="commit_5()">@Selvi</li>
-        <hr><li onclick="commit_6()">@Surya Umapathy</li>
-        <hr><li onclick="commit_7()">@Jayanthi</li>
-        <hr><li onclick="commit_8()">@Naresh</li>
+        <li onclick="commit_1('@Shanmuga Anantharaman')">@Shanmuga anantharaman</li>
+        <hr><li onclick="commit_1('@Revathi Iyer')">@Revathi iyer</li>
+        <hr><li onclick="commit_1('@Prasannabharathi Ram')">@Prasannabharathi Ram</li>
+        <hr><li onclick="commit_1('@Selvi')">@Selvi</li>
+        <hr><li onclick="commit_1('@Surya Umapathy')">@Surya Umapathy</li>
+        <hr><li onclick="commit_1('@Jayanthi')">@Jayanthi</li>
+        <hr><li onclick="commit_1('@Naresh')">@Naresh</li>
       </ul>
       </div>
       <div class="grid-child-element-blue22">
         
         <form onsubmit="submitHandler()">
+          <textarea id="name" name="w3revie" rows="1" cols="78" placeholder="Type your Name"  required></textarea>
           <textarea id="add" name="w3review" rows="2" cols="62" placeholder="Tag the person whom you want to question"  required></textarea>
-          <textarea id="w3review" name="w3review" rows="15" cols="78" placeholder="Type your query here "  required></textarea><br><br>
+          <textarea id="w3review" name="w3review" rows="8" cols="78" placeholder="Type your query here "  required></textarea><br><br>
           <input type="submit" value="Submit Query"></input>
         </form>
         
 
       </div>
     </div>
+    <script src="../assets/js/query.js"></script>
 </body>
 </html>

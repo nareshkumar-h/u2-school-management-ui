@@ -1,4 +1,11 @@
 let array = [];
+function redirect(){
+  window.location.href="../pages/management.html";
+}
+function logout(){
+  localStorage.removeItem("loggedInUser");
+  window.location.href="../index.html";
+}
 function commit_1() {
   if (array.includes("@Chitra Muthukumaran") == false) {
     document.getElementById("add").innerHTML += "@Chitra Muthukumaran";

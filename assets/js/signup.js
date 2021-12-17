@@ -15,7 +15,7 @@ function submiHandler() {
   //Show success message
 
   event.preventDefault();
-  let bool = false;
+  
   let parsed = JSON.parse(localStorage.getItem("user_credentials"));
   if (parsed == null) {
     localStorage.setItem("user_credentials", JSON.stringify([]));
@@ -32,7 +32,8 @@ function submiHandler() {
   let isEmailAlreadyExist = false;
 
   for (let i = 0; i < array.length; i++) {
-    let a = array[i].email_id;
+    let b = array[i];
+    let a = b.email_id;
     if (email == a) {
       isEmailAlreadyExist = true;
       break;

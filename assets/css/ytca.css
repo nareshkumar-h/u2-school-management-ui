@@ -9,9 +9,9 @@ font-family: 'Poppins', sans-serif;
 {
   margin-top:90px;
   margin-left: 800px;
-  padding: 0;
+ 
   z-index: 1000;
-  position: absolute;
+  
   display: grid;
   justify-content: center;
   align-items: center;

@@ -18,7 +18,7 @@ p {
 .box input[type="email"],
 .box input[type="password"],
 .box input[type="date"] {
-  border: 0;
+
   background: none;
   display: block;
   margin: 20px auto;
@@ -33,7 +33,7 @@ p {
 }
 
 .box input[type="submit"] {
-  border: 0;
+  
   background: none;
   display: block;
   margin: 20px auto;
@@ -149,7 +149,7 @@ a{
 
 
 .forget input[type="submit"] {
-  border: 0;
+  
   background: none;
   display: block;
   margin: 30px auto;
@@ -174,7 +174,7 @@ a{
 }
 
 .forget input{
-  border: 0;
+  
   background: none;
   display: block;
   margin: 20px auto;

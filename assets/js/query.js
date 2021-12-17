@@ -1,6 +1,6 @@
 let array = [];
 let local = [];
-
+let str=""
 function redirect() {
   window.location.href = "../pages/management.html";
 }
@@ -13,10 +13,12 @@ function commit_1(x) {
     document.getElementById("add").innerHTML += x;
     array.push(x);
   }
+  return array;
 }
 
 function submitHandler() {
   event.preventDefault();
+  ;
   let createdBy=localStorage.getItem("loggedInUser");
   console.log(array);
   alert(
@@ -27,13 +29,14 @@ function submitHandler() {
   let desc = document.getElementById("w3review").value;
   let date = new Date();
   
-
+  
+   console.log(str);
   let localStorageSetObject = {
     title: name,
-    tag: array,
+    tag: tag,
     desc: desc,
     createdAt: date,
-    createdBy:createdBy
+    createdBy:createdBy,
   };
 
   local.push(localStorageSetObject);
@@ -43,6 +46,7 @@ function submitHandler() {
 }
 function getAllFields() {
   const arrayToString = localStorage.getItem("query");
+  let inArray=[];
   if (arrayToString) {
     inArray = JSON.parse(arrayToString);
   } else {

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <!-- Appears on Tiny Blueprint (https://www.tiny.cloud/blog/) in articles:
+ - Add an emoji picker to your textareas-->
+    <textarea id="mytextarea">
+<p>To insert a 🙂 emoji, either:</p><ul><li>Type a colon followed by a keyword, e.g., <code>:smile</code>, then press <em>Enter</em> or&nbsp;<em>Return</em> to add the highlighted emoji, or click the desired emoji from those displayed, or</li><li>Select the emoticons toolbar button to open the picker, and use the tabs or search bar to browse, then click the desired emoji</li></ul><p>Try it here!&nbsp;</p></textarea
+    >
+    <script>
+      tinymce.init({
+        selector: "#mytextarea",
+        plugins: "emoticons autoresize",
+        toolbar: "emoticons",
+        toolbar_location: "bottom",
+        menubar: false,
+        statusbar: false,
+      });
+    </script>
+  </body>
+</html>

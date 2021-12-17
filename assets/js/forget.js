@@ -4,11 +4,9 @@ function submitHandler() {
   let userPass = document.getElementById("psw1").value;
   let userCPass = document.getElementById("psw2").value;
   let userCredentials = JSON.parse(localStorage.getItem("user_credentials"));
-  let len = userCredentials.length;
-
   let isUserExist = false;
   let index = 0;
-  for (i = 0; i < len; i++) {
+  for (let i = 0; i < userCredentials.length;; i++) {
     if (userCredentials[i].email_id == userEmail) {
       index = i;
       isUserExist = true;

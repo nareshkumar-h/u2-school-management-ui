@@ -451,11 +451,6 @@ display: none;
   font-size: 17px;
 
 }
-
-
-.right-side{
-  align:left;
-}
 option{
   background-color: white;
   color:black;
@@ -704,10 +699,12 @@ li{
   margin-top:20px;
 }
 p.Date{
+  float: right;
   font-weight: 700;
   font-size: 15px;
 }
 p.User{
+  
   margin-top:12px;
   font-size: 30px;
   color:#e05260;

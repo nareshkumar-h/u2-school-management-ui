@@ -3,8 +3,8 @@ function reload() {
   //Reload the page
   window.location.reload();
 }
-function Admin(){
-    window.location.href="../pages/admin.html"
+function Admin() {
+  window.location.href = "../pages/admin.html";
 }
 function submiHandler() {
   //Get form values
@@ -31,7 +31,7 @@ function submiHandler() {
 
   let isEmailAlreadyExist = false;
 
-  for (i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     let a = array[i].email_id;
     if (email == a) {
       isEmailAlreadyExist = true;

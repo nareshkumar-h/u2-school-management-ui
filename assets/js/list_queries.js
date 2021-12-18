@@ -1,13 +1,13 @@
 let str = "";
 let add = "";
 let localStorageGet = JSON.parse(localStorage.getItem("query"));
-for (let i = 0; i < localStorageGet.length; i++) {
-  let a=localStorageGet[i];
-  let date = a.createdAt;
-  let name = a.title;
+for (let i of localStorageGet) {
   
-  let desc = a.desc;
-  let tag = a.tag;
+  let date = i.createdAt;
+  let name = i.title;
+  
+  let desc = i.desc;
+  let tag = i.tag;
   
   str +=
     "<div class='kitkat'><p class='Date'>" +

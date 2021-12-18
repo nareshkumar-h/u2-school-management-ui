@@ -18,11 +18,11 @@ function submitHandler() {
   let log_mail = "";
   let log_role = "";
 
-  for (let i = 0; i < userCredentials.length; i++) {
-    let a= userCredentials[i];
-    let email = a.email_id;
-    let password = a.password;
-    let role = a.role;
+  for (let i of userCredentials) {
+    
+    let email = i.email_id;
+    let password = i.password;
+    let role = i.role;
 
     if (userEmail == email && userPass == password) {
       isUserExist = true;

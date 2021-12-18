@@ -31,9 +31,8 @@ function submiHandler() {
 
   let isEmailAlreadyExist = false;
 
-  for (let i = 0; i < array.length; i++) {
-    let b = array[i];
-    let a= b.email_id;
+  for (let i of array) {
+    let a= i.email_id;
     if (email == a) {
       isEmailAlreadyExist = true;
       break;

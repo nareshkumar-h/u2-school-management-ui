@@ -20,7 +20,7 @@ height: 80px;
 display: flex;
 align-items: center;
 }
-.sidebar .logo-details i{
+.sidebar .logo-details em{
 font-size: 50px;
 font-weight: 500;
 color: #fff;
@@ -54,7 +54,7 @@ background: #081D45;
 .sidebar .nav-links li a:hover{
 background: #081D45;
 }
-.sidebar .nav-links li i{
+.sidebar .nav-links li em{
 min-width: 60px;
 text-align: center;
 font-size: 25px;

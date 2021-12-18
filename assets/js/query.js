@@ -9,7 +9,7 @@ function logout() {
   window.location.href = "../index.html";
 }
 function commit_1(x) {
-  if (array.includes(x) == false) {
+  if (!(array.includes(x))) {
     document.getElementById("add").innerHTML += x;
     array.push(x);
   }

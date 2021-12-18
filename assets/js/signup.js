@@ -32,7 +32,7 @@ function submiHandler() {
   let isEmailAlreadyExist = false;
 
   for (let i of array) {
-    ;
+    
     let a = i.email_id;
     if (email == a) {
       isEmailAlreadyExist = true;

@@ -8,12 +8,14 @@
 .a1{
 position:static;
 
+text-align: center;
 width:1600px;
 height:70px;
 border:3px;
 background-color:#0A2558;
 font-size: 50px;
 color:white;
+margin-left: 100px;
 }
 h1{
   font-size: 50px;
@@ -34,6 +36,9 @@ border :solid 7px #0A2558;
 position: fixed;
 margin-left:100px;
 }
+.a2 h2{
+  margin-left: 150px;
+}
 .icon{
   margin-left: 30px;
 }
@@ -48,7 +53,7 @@ input{
 }
 .message input{
   width:300px;
-  height:200px;
+  height:150px;
 }
 .name input{
   width:300px;
@@ -79,29 +84,30 @@ width:80px;
 </style>
 </head>
 <body>
-<center>
+
 <div class="a1">FWSA
 </div>
 <div class="a4"><h2>Get in touch</h2></div>
-</center>
+
 <div class="cc">
 <div class="a2">
   <br>
-  <center>
+  
 <h2>Send us a message</h2>
-</center>
+
 <table>
   <caption>Contact Us</caption>
+  <th></th>
   <tr class="name"><td><img src="../assets/images/user1.jpeg" width="45px"  height="45px" class="icon" alt="icon">
 </td>
-<td><input type="text" placeholder="Your name"</td></tr>
+<td><input type="text" placeholder="Your name"></td></tr>
 <tr class="name">
   <td><img src="../assets/images/email2.jpeg" width="45px"  height="45px" class="icon" alt="icon"></td>
-  <td><input type="text" placeholder="Email address" </td>
+  <td><input type="text" placeholder="Email address"></td>
 </tr>
 <tr class="message">
   <td><img src="../assets/images/comment.jpeg" width="45px"  height="45px" class="icon" alt="icon"></td>
-  <td><input type="textarea" name="message" placeholder="Message"</td>
+  <td><input type="textarea" name="message" placeholder="Message"></td>
 </tr>
 </table><button>submit</button>
 

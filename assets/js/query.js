@@ -1,6 +1,6 @@
 let array = [];
 let local = [];
-let str=""
+let str = "";
 function redirect() {
   window.location.href = "../pages/management.html";
 }
@@ -9,7 +9,7 @@ function logout() {
   window.location.href = "../index.html";
 }
 function commit_1(x) {
-  if (!(array.includes(x))) {
+  if (!array.includes(x)) {
     document.getElementById("add").innerHTML += x;
     array.push(x);
   }
@@ -18,8 +18,8 @@ function commit_1(x) {
 
 function submitHandler() {
   event.preventDefault();
-  
-  let createdBy=localStorage.getItem("loggedInUser");
+
+  let createdBy = localStorage.getItem("loggedInUser");
   console.log(array);
   alert(
     `Your query has been sent successfully ! They will respond in mail or slack call ! Thank you`
@@ -28,15 +28,14 @@ function submitHandler() {
   let name = document.getElementById("name").value;
   let desc = document.getElementById("w3review").value;
   let date = new Date();
-  
-  
-   console.log(str);
+
+  console.log(str);
   let localStorageSetObject = {
     title: name,
     tag: tag,
     desc: desc,
     createdAt: date,
-    createdBy:createdBy,
+    createdBy: createdBy,
   };
 
   local.push(localStorageSetObject);
@@ -46,7 +45,7 @@ function submitHandler() {
 }
 function getAllFields() {
   const arrayToString = localStorage.getItem("query");
-  let inArray=[];
+  let inArray = [];
   if (arrayToString) {
     inArray = JSON.parse(arrayToString);
   } else {
@@ -57,3 +56,10 @@ function getAllFields() {
 
 const all = getAllFields();
 local = all;
+  // axios
+  //   .post("https://61bb259de943920017784cc7.mockapi.io/query",localStorageSetObject)
+
+  //   .then(function (response) {
+  //     console.table(response.data);
+  //   });
+ 

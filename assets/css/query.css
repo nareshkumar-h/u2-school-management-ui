@@ -710,3 +710,24 @@ p.User{
   color:red;
   margin-left: 20px;
 }
+.up{
+  border: 5px yellow solid;
+  border-radius: 50%;
+  
+}
+.upspan{
+  padding:20px;
+}
+.down{
+  border: 5px yellow solid;
+  border-radius: 50%;
+  
+}
+.downspan{
+  padding:20px;
+}
+.up:hover,.down:hover{
+    border-color: tomato;
+    cursor: pointer;
+    background-color: tomato;
+}

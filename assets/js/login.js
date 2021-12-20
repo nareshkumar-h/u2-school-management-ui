@@ -1,4 +1,4 @@
-function submitHandler() {
+function submitHandler(event) {
   //Get form values
   //Validate form credentials
   //Validate email and password in local storage

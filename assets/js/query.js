@@ -1,6 +1,7 @@
 let array = [];
 let local = [];
 let str = "";
+let count=3;
 function redirect() {
   window.location.href = "../pages/management.html";
 }
@@ -16,6 +17,7 @@ function commit_1(x) {
   return array;
 }
 
+
 function submitHandler() {
   event.preventDefault();
 
@@ -28,7 +30,7 @@ function submitHandler() {
   let name = document.getElementById("name").value;
   let desc = document.getElementById("w3review").value;
   let date = new Date();
-
+  count+=1;
   console.log(str);
   let localStorageSetObject = {
     title: name,
@@ -36,12 +38,23 @@ function submitHandler() {
     desc: desc,
     createdAt: date,
     createdBy: createdBy,
+    count:count
   };
 
   local.push(localStorageSetObject);
   localStorage.setItem("query", JSON.stringify(local));
+  axios
+    .post(
+      "https://61bb259de943920017784cc7.mockapi.io/query",
+      localStorageSetObject
+    )
 
-  window.location.href = "../pages/list_queries.html";
+    .then(function (response) {
+      console.table(response.data);
+      window.location.href = "../pages/list_queries.html";
+    });
+
+  // window.location.href = "../pages/list_queries.html";
 }
 function getAllFields() {
   const arrayToString = localStorage.getItem("query");
@@ -56,10 +69,3 @@ function getAllFields() {
 
 const all = getAllFields();
 local = all;
-  // axios
-  //   .post("https://61bb259de943920017784cc7.mockapi.io/query",localStorageSetObject)
-
-  //   .then(function (response) {
-  //     console.table(response.data);
-  //   });
- 

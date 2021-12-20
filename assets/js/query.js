@@ -18,7 +18,7 @@ function commit_1(x) {
 }
 
 
-function submitHandler() {
+function submitHandler(event) {
   event.preventDefault();
 
   let createdBy = localStorage.getItem("loggedInUser");

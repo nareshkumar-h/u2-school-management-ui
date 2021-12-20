@@ -6,7 +6,7 @@ function reload() {
 function Student(){
     window.location.href="../pages/signup.html"
 }
-function submiHandler() {
+function submiHandler(event) {
   //Get form values
   //Validate form credentials
   //Store data in local storage

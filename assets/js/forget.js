@@ -1,4 +1,4 @@
-function submitHandler() {
+function submitHandler(event) {
   event.preventDefault();
   let userEmail = document.getElementById("email_id").value;
   let userPass = document.getElementById("psw1").value;

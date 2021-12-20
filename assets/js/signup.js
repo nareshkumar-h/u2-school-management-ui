@@ -6,7 +6,7 @@ function reload() {
 function Admin() {
   window.location.href = "../pages/admin.html";
 }
-function submiHandler() {
+function submiHandler(event) {
   //Get form values
   //Validate form credentials
   //Store data in local storage

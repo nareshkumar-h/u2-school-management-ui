@@ -54,7 +54,7 @@ function submitHandler(event) {
       window.location.href = "../pages/list_queries.html";
     });
 
-  // window.location.href = "../pages/list_queries.html";
+ 
 }
 function getAllFields() {
   const arrayToString = localStorage.getItem("query");

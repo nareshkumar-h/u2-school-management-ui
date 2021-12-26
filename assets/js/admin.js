@@ -48,13 +48,16 @@ function submiHandler(event) {
   }
 
   let object_to_focus;
-
+  
   if (pw1 == "") {
     document.getElementById("message1").innerHTML =
       "**Fill the password please!";
     return;
   }
-
+  if(pw1!="Freshwork@2001"){
+    alert("Invalid secret code");
+    return;
+  }
   if (pw2 == "") {
     document.getElementById("message2").innerHTML =
       "**Enter the password please!";

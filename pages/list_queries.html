@@ -1,129 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <link rel="shortcut icon" href="../assets/images/1bg.png" />
     <title>Queries</title>
-    <link rel="stylesheet" href="../assets/css/query.css">
-    
+    <link rel="stylesheet" href="../assets/css/query.css" />
+
     <script src="./../assets/js/loginCheck.js"></script>
-    
-    
-</head>
-<body>
+  </head>
+  <body>
     <div class="sidebar">
-        <div class="logo-details" onclick="redirect()">
-          <em class='bx bxl-c-plus-plus' ></em>
-          <span class="logo_name" >Fresh Tech</span>
-        </div>
-          <ul class="nav-links">
-            <li>
-              <a href="../pages/attendance.html" >
-                <em class='bx bx-grid-alt' ></em>
-                <span class="links_name">Attendance</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="active">
-                <em class='bx bx-grid-alt' ></em>
-                <span class="links_name">Query Box</span>
-              </a>
-            </li>
-    
-    
-            <li>
-              <a href="../pages/ytca.html">
-                <em class='bx bx-pie-chart-alt-2' ></em>
-                <span class="links_name">Calendar</span>
-              </a>
-            </li>
-            <li>
-              <a href="../pages/assignment.html">
-                <em class='bx bx-coin-stack' ></em>
-                <span class="links_name">Assignments</span>
-              </a>
-            </li>
-    
-    
-            <li>
-              <a href="../pages/school.html">
-                <em class='bx bx-message' ></em>
-                <span class="links_name">  Progress Reports</span>
-              </a>
-            </li>
-            <li>
-              <a href="../pages/notification.html">
-                <em class='bx bx-heart' ></em>
-                <span class="links_name">SMS/Mail</span>
-              </a>
-            </li>
-    
-            <li class="log_out" onclick="logout()">
-              <a href="#">
-                <em class='bx bx-log-out'></em>
-                <span class="links_name">Logout</span>
-              </a>
-            </li>
-          </ul>
+      <div class="logo-details" onclick="redirect()">
+        <em class="bx bxl-c-plus-plus"></em>
+        <span class="logo_name">Fresh Tech</span>
       </div>
-      <section class="home-section">
-        <nav>
-          <div class="sidebar-button">
-            <em class='bx bx-menu sidebarBtn'></em>
-            <span class="dashboard">Queries</span>
-            <span class="edit"><a href="../pages/querybox.html">ADD QUERY</a></span>
-          </div>
-          <div class="search-box">
-            <input type="text" placeholder="Search queries">
-            <em class='bx bx-search' ></em>
-          </div>
-          <div class="profile-details">
-            
-            <span class="admin_name">Chitra Muthukumaran</span>
-            
-          </div>
-        </nav><br><br><br><br>
-        <div class="grid-container-element22">
-             <div class="kitkat">
-                 <p class="Date">13:30 pm,13/12/2021 </p>
-                 <p class="User">Meenu Sowjanya</p>
-                 
-                <span> <p class="tag">@Naresh,@Selvi,@Jayanthi </p> </span><span><p class="desc">Coaches can you kindly exlain how to create an user flow?</p></span>
-                <br><span class="upspan" id="uspan"><img class="up" src="../assets/images/up.png" width="50px" height="50px" alt="" onclick="get('up1')" id="up1"/>
-                </span><span class="downspan" id="dspan"><img class="down" src="../assets/images/down.png" width="50px" height="50px" alt="" onclick="get('down')" id="down"/></span>
-             </div><br>
+      <ul class="nav-links">
+        <li>
+          <a href="../pages/attendance.html">
+            <em class="bx bx-grid-alt"></em>
+            <span class="links_name">Attendance</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="active">
+            <em class="bx bx-grid-alt"></em>
+            <span class="links_name">Query Box</span>
+          </a>
+        </li>
 
-             <div class="kitkat">
-                <p class="Date">13:45 pm,13/12/2021 </p>
-                <p class="User">Rishi Atgondan</p>
-                
-               <span> <p class="tag">@Surya Umapathy</p> </span><span><p class="desc">Hi @Surya Umapathy anna.Can you kindly help me out to fix an issue in login page ?</p></span>
-               <br><span class="upspan" id="uspan"><img class="up" src="../assets/images/up.png" width="50px" height="50px" alt="" onclick="get('up2')" id="up2"/>
-               </span><span class="downspan" id="dspan"><img class="down" src="../assets/images/down.png" width="50px" height="50px" alt="" onclick="get('down2')" id="down2"/></span>
-            </div><br>
+        <li>
+          <a href="../pages/ytca.html">
+            <em class="bx bx-pie-chart-alt-2"></em>
+            <span class="links_name">Calendar</span>
+          </a>
+        </li>
+        <li>
+          <a href="../pages/assignment.html">
+            <em class="bx bx-coin-stack"></em>
+            <span class="links_name">Assignments</span>
+          </a>
+        </li>
 
-            <div class="kitkat">
-               <p class="Date">13:45 pm,15/12/2021 </p>
-               <p class="User">Rishi Atgondan</p>
-               
-              <span> <p class="tag">@Revathi Iyer</p> </span><span><p class="desc">Hi @Revathi Iyer. Kindly give us a brief description on how does a infographic look like ?</p></span>
-              <br><span class="upspan" id="uspan"><img class="up" src="../assets/images/up.png" width="50px" height="50px" alt="" onclick="get('up3')" id="up3"/>
-              </span><span class="downspan" id="dspan"><img class="down" src="../assets/images/down.png" width="50px" height="50px" alt="" onclick="get('down3')" id="down3"/></span>
-           </div><br>
-           <div id="new">
-           
-           </div>
-           
+        <li>
+          <a href="../pages/school.html">
+            <em class="bx bx-message"></em>
+            <span class="links_name"> Progress Reports</span>
+          </a>
+        </li>
+        <li>
+          <a href="../pages/notification.html">
+            <em class="bx bx-heart"></em>
+            <span class="links_name">SMS/Mail</span>
+          </a>
+        </li>
+
+        <li class="log_out" onclick="logout()">
+          <a href="#">
+            <em class="bx bx-log-out"></em>
+            <span class="links_name">Logout</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <section class="home-section">
+      <nav>
+        <div class="sidebar-button">
+          <em class="bx bx-menu sidebarBtn"></em>
+          <span class="dashboard">Queries</span>
+          <span class="edit"
+            ><a href="../pages/querybox.html">ADD QUERY</a></span
+          >
         </div>
-        <script
+        <div class="search-box">
+          <input type="text" placeholder="Search queries" />
+          <em class="bx bx-search"></em>
+        </div>
+        <div class="profile-details">
+          <span class="admin_name">Chitra Muthukumaran</span>
+        </div>
+      </nav>
+      <br /><br /><br /><br />
+      <div class="grid-container-element22">
+        <div class="kitkat">
+          <p class="Date">13:30 pm,13/12/2021</p>
+          <p class="User">Meenu Sowjanya</p>
+
+          <span> <p class="tag">@Naresh,@Selvi,@Jayanthi</p> </span
+          ><span
+            ><p class="desc">
+              Coaches can you kindly exlain how to create an user flow?
+            </p></span
+          >
+          <br /><span class="upspan" id="uspan"
+            ><img
+              class="up"
+              src="../assets/images/up.png"
+              width="50px"
+              height="50px"
+              alt=""
+              onclick="get('up1')"
+              id="up1"
+            /> </span
+          ><span class="downspan" id="dspan"
+            ><img
+              class="down"
+              src="../assets/images/down.png"
+              width="50px"
+              height="50px"
+              alt=""
+              onclick="get('down')"
+              id="down"
+          /></span><br>
+          <span><a href="#" onclick="cli('thread1')">Reply in thread</a></span>
+          <span><a href="#" onclick="clic('thread1')">View all replies</a></span>
+        </div><br/>
+        
+
+        <div class="kitkat">
+          <p class="Date">13:45 pm,13/12/2021</p>
+          <p class="User">Rishi Atgondan</p>
+
+          <span> <p class="tag">@Surya Umapathy</p> </span
+          ><span
+            ><p class="desc">
+              Hi @Surya Umapathy anna.Can you kindly help me out to fix an issue
+              in login page ?
+            </p></span
+          >
+          <br /><span class="upspan" id="uspan"
+            ><img
+              class="up"
+              src="../assets/images/up.png"
+              width="50px"
+              height="50px"
+              alt=""
+              onclick="get('up2')"
+              id="up2"
+            /> </span
+          ><span class="downspan" id="dspan"
+            ><img
+              class="down"
+              src="../assets/images/down.png"
+              width="50px"
+              height="50px"
+              alt=""
+              onclick="get('down2')"
+              id="down2"
+          /></span><br />
+          <span><a href="#" onclick="cli('thread2')">Reply in thread</a></span>
+          <span><a href="#" onclick="clic('thread2')">View all replies</a></span>
+        </div><br/>
+       
+        <div class="kitkat">
+          <p class="Date">13:45 pm,15/12/2021</p>
+          <p class="User">Rishi Atgondan</p>
+
+          <span> <p class="tag">@Revathi Iyer</p> </span
+          ><span
+            ><p class="desc">
+              Hi @Revathi Iyer. Kindly give us a brief description on how does a
+              infographic look like ?
+            </p></span
+          >
+          <br /><span class="upspan" id="uspan"
+            ><img
+              class="up"
+              src="../assets/images/up.png"
+              width="50px"
+              height="50px"
+              alt=""
+              onclick="get('up3')"
+              id="up3"
+            /> </span
+          ><span class="downspan" id="dspan"
+            ><img
+              class="down"
+              src="../assets/images/down.png"
+              width="50px"
+              height="50px"
+              alt=""
+              onclick="get('down3')"
+              id="down3"
+          /></span><br />
+          <span><a href="#" onclick="cli('thread3')">Reply in thread</a></span>
+          <span><a href="#" onclick="clic('thread3')">View all replies</a></span>
+        </div>
+        <br />
+        <div id="new"></div>
+      </div>
+    </section>
+    <script src="../assets/js/list_queries.js"></script>
+    <script
       src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"
       integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-        <script src="../assets/js/list_queries.js"></script>
-</body>
+  </body>
 </html>

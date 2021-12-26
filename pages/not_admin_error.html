@@ -1,14 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="../assets/images/1bg.png" />
     <title>No Access</title>
-    
-</head>
-<body>
-    OOPS! Sorry.You are not the admin.
-</body>
+    <style>
+      #left {
+        float: left;
+        border-radius: 10px;
+      }
+      #left img {
+        border: 10px red solid;
+        height: 900px;
+        width: 1000px;
+      }
+      #right {
+        float: right;
+        background-color: red;
+        width:32%;
+        height:820px;
+        margin-right: 50px;
+        padding: 50px;
+        border-radius: 20px;
+        color:white;
+        font-size: 30px;
+        font-weight: bold;
+      }
+      p{
+          margin:260px 60px 60px 60px;
+      }
+      button{
+          padding: 20px;
+          border-radius: 20px;
+          font-size: 20px;
+          margin:50px 100px 100px 200px;
+          cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="left">
+      <img src="../assets/images/not_ad.jpeg" />
+    </div>
+
+    <div id="right">
+     <p>OOPS! Sorry.You are not the admin.<br /></p>
+      
+      <button class="but" onclick="back()">BACK</button>
+    </div>
+  </body>
+  <script>
+    function back() {
+      window.history.back();
+    }
+  </script>
 </html>

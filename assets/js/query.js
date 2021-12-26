@@ -1,7 +1,7 @@
 let array = [];
 let local = [];
 let str = "";
-let count=3;
+
 function redirect() {
   window.location.href = "../pages/management.html";
 }
@@ -22,7 +22,7 @@ function submitHandler(event) {
   event.preventDefault();
 
   let createdBy = localStorage.getItem("loggedInUser");
-  console.log(array);
+  
   alert(
     `Your query has been sent successfully ! They will respond in mail or slack call ! Thank you`
   );
@@ -30,15 +30,14 @@ function submitHandler(event) {
   let name = document.getElementById("name").value;
   let desc = document.getElementById("w3review").value;
   let date = new Date();
-  count+=1;
+  
   console.log(str);
   let localStorageSetObject = {
     title: name,
     tag: tag,
     desc: desc,
     createdAt: date,
-    createdBy: createdBy,
-    count:count
+    createdBy: createdBy
   };
 
   local.push(localStorageSetObject);

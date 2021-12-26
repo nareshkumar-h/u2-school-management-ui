@@ -717,6 +717,7 @@ p.User{
 }
 .upspan{
   padding:20px;
+  
 }
 .down{
   border: 5px yellow solid;
@@ -730,4 +731,13 @@ p.User{
     border-color: tomato;
     cursor: pointer;
     background-color: tomato;
+}
+#thread1{
+  display: none;
+}
+.threads{
+  border:10px #0A2558 solid;
+}
+.th input[type="submit"]{
+  margin-left: 700px;
 }

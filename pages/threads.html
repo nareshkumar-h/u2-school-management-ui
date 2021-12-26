@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Threads</title>
+    <style>
+      .kitkat {
+        background-color: rgb(196, 28, 120);
+        color: white;
+        width: 100%;
+        border-radius: 20px;
+        padding-bottom: 20px;
+      }
+      .Date {
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 3px;
+
+        margin-left: 1600px;
+      }
+      .User {
+        font-size: 34px;
+        font-weight: bold;
+        letter-spacing: 3px;
+        color: rgb(27, 27, 39);
+        margin-left: 80px;
+      }
+      .desc {
+        margin-left: 80px;
+        letter-spacing: 2px;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container-element20">
+
+      <div id="new"></div>
+    </div>
+    <script>
+      let str = "";
+      let localStorageGet = JSON.parse(localStorage.getItem("replies"));
+      for (let i of localStorageGet) {
+        let date = i.createdAt;
+        let desc = i.reply;
+        let user = i.uName;
+        str +=
+          "<div class='kitkat'><br><p class='Date'>" +
+          date +
+          "</p><p class='User'>" +
+          user +
+          "</p><p class='desc'>" +
+          desc +
+          "</p></div><br>";
+      }
+      document.getElementById("new").innerHTML = str;
+    </script>
+  </body>
+</html>

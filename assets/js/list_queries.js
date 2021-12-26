@@ -14,7 +14,7 @@ function get(x) {
   let array = x.split("", x.length);
   if (array.includes("u") && array.includes("p")) {
     let isLikeAlreadyExist = false;
-    for (i of like) {
+    for (let i of like) {
       if (i.queryId == "true" && i.email == email) {
         isLikeAlreadyExist = true;
         break;
@@ -93,9 +93,9 @@ const all = getAllFields();
 
 like = all;
 
-for (j of like) {
+for (let j of like) {
   let queryId = j.queryId;
-  let vote = j.like;
+  
   let array = queryId.split("", queryId.length);
   if (array.includes("u") && array.includes("p")) {
     document.getElementById(queryId).style.border = "tomato";

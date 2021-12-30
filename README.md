@@ -12,7 +12,7 @@
 3. Notification page    (Completed)
 4. Query box page    (In progress)
 
-### Register
+## Register
 
 ###### Two kinds of registration features are accomodated
 
@@ -52,7 +52,7 @@
 * Password and Confirm password fields must contain minimum 8 and maximum 15 characters with atleast 1 lowercase, 1 uppercase , 1 special character except "space".
 * Password and Confirm password fields must contain same value.
 * If everything is validated, redirect to login page.
-### Login
+## Login
 
 ###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fields
 
@@ -66,7 +66,7 @@
   
 
 
-### Notification 
+## Notification 
 
 ##### 1. List notifications :
 

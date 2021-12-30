@@ -23,6 +23,7 @@ function submiHandler(event) {
 
   var pw1 = document.getElementById("psw1").value;
   var pw2 = document.getElementById("psw2").value;
+  var pw3 = document.getElementById("psw3").value;
   var name = document.getElementById("name").value;
   var email = document.getElementById("email_id").value;
 
@@ -54,7 +55,7 @@ function submiHandler(event) {
       "**Fill the password please!";
     return;
   }
-  if(pw1!="Freshwork@2001"){
+  if(pw3!="Freshwork@2001"){
     alert("Invalid secret code");
     return;
   }

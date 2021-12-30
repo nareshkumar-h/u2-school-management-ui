@@ -5,7 +5,7 @@ let like = [];
 
 let localStorageGet = JSON.parse(localStorage.getItem("query"));
 let loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
-let userCredentials=JSON.parse(localStorage.getItem("user_credentials"))
+let userCredentials = JSON.parse(localStorage.getItem("user_credentials"));
 let bool = localStorage.getItem("boolean");
 if (bool == null) {
   localStorage.setItem("boolean", JSON.stringify([]));
@@ -72,14 +72,18 @@ for (let i of localStorageGet) {
     count +
     "')\" id='down" +
     count +
-    "'/></span><br /><span><a href='#' onclick=\"cli('thread"+count+"')\">Reply in thread</a></span><span><a href='#' onclick=\"clic('thread"+count+"')\">View all replies</a></span></div>";
+    "'/></span><br /><span><a href='#' onclick=\"cli('thread" +
+    count +
+    "')\">Reply in thread</a></span><span><a href='#' onclick=\"clic('thread" +
+    count +
+    "')\">View all replies</a></span></div>";
 }
 console.log(str);
 let div = document.getElementById("new");
 div.innerHTML = str;
 function getAllFields() {
   const arrayToString = localStorage.getItem("boolean");
- 
+
   let inArray = [];
   if (arrayToString) {
     inArray = JSON.parse(arrayToString);
@@ -95,7 +99,7 @@ like = all;
 
 for (let j of like) {
   let queryId = j.queryId;
-  
+
   let array = queryId.split("", queryId.length);
   if (array.includes("u") && array.includes("p")) {
     document.getElementById(queryId).style.border = "tomato";
@@ -111,11 +115,10 @@ for (let j of like) {
   }
 }
 function cli(x) {
-  localStorage.setItem("qId",x)
-  window.location.href="../pages/add_reply.html"
+  localStorage.setItem("qId", x);
+  window.location.href = "../pages/add_reply.html";
 }
-function clic(x){
-  localStorage.setItem("IdAsk",x);
-  window.location.href="../pages/threads.html";
-  }
-
+function clic(x) {
+  localStorage.setItem("IdAsk", x);
+  window.location.href = "../pages/threads.html";
+}

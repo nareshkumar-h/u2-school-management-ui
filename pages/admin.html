@@ -52,17 +52,28 @@
 
               <input
                 type="password"
-                placeholder="Enter your secret code"
+                placeholder="Enter the secret code for admin"
+                name="psw3"
+                id="psw3"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                required
+              />
+
+              <p>Password</p>
+
+              <input
+                type="password"
+                placeholder="Create a strong password"
                 name="psw1"
                 id="psw1"
                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                 required
               />
 
-              <p>Confirm Secret code</p>
+              <p>Confirm Password</p>
               <input
                 type="password"
-                placeholder="Repeat Secret code"
+                placeholder="Confirm password"
                 id="psw2"
                 name="psw2"
                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"

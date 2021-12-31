@@ -93,6 +93,7 @@
 
 ## Contact Us 
 
+###### (Flow : Index page --> Visit us to Know More --> Contact us (nav bar))
 ##### 1. Submit Request :
 
 ##### Frequently asked questions are also available for users to refer.

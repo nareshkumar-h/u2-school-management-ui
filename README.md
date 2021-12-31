@@ -10,7 +10,8 @@
 1. Register ( Completed )
 2. Login    ( Completed )
 3. Notification page    (Completed)
-4. Query box page    (In progress)
+4. Contact Us (Completed)
+5. Query box page    (In progress)
 
 ## Register
 
@@ -89,3 +90,41 @@
 
 * All fields are required.
 * There will be text areas to add notifications, and on submitting it,the new notifcation will be added to list notifications page along with the ceated time and date. 
+
+## Contact Us 
+
+##### 1. Submit Request :
+
+##### Frequently asked questions are also available for users to refer.
+###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fields
+
+* User name
+* Email id
+* Their request
+
+###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Acceptance Criteria 
+
+* All fields are required.
+* User name must contain 3 characters and must not be empty.No special characters are allowed.
+* Email id must contain 2 characters before the suffix @gmail.com.
+* If everything is valid,success message is shown and redirected to main page of contct us feature.
+
+##### 2. Write us Feedback :
+
+
+###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fields
+
+* User name
+* Email id
+* Their feedback
+
+###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Acceptance Criteria 
+
+* All fields are required.
+* User name must contain 3 characters and must not be empty.No special characters are allowed.
+* Email id must contain 2 characters before the suffix @gmail.com.
+* If everything is valid,success message is shown and redirected to main page of contct us feature.
+
+##### 3. Know About Us :
+
+* User can visit About us, Our achievements and Terms and conditions descriptions directly from this page.

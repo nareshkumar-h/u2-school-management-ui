@@ -25,7 +25,7 @@ function submitHandler(event) {
           window.location.href="./../index.html"
       }
   }
-  else if(isUserExist != true){
+  else if(!isUserExist){
     document.getElementById("add").innerHTML="***Email id not exist";
   }
 }

@@ -6,9 +6,9 @@ function submitHandler(event) {
   let userCredentials = JSON.parse(localStorage.getItem("user_credentials"));
   let isUserExist = false;
   let index = 0;
-  for (let i = 0; i < userCredentials.length;; i++) {
-    if (userCredentials[i].email_id == userEmail) {
-      index = i;
+  for (let i of userCredentials) {
+    if (i.email_id == userEmail) {
+      index = userCredentials.indexOf(i);
       isUserExist = true;
       break;
     }
@@ -18,6 +18,7 @@ function submitHandler(event) {
           document.getElementById("add").innerHTML="***Passwords do not match";
       }
       else if(userPass == userCPass){
+          alert("Your password is succesfully been reset ");
           userCredentials[index].password=userPass;
           
           localStorage.setItem("user_credentials",JSON.stringify(userCredentials));

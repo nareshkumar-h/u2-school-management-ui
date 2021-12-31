@@ -65,7 +65,22 @@
 * Email id and password should match with the local storage content.
 * If everything is validated, redirect to home page.
   
+## Forgot Password
 
+###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fields
+
+
+* User mail id
+* Password
+* Confirm Password
+  
+###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Acceptance Criteria
+* All input fields are required.
+* Email id must contain 2 characters before the suffix @gmail.com.
+* Email id entered must exist in local storage already.Else error will be thrown
+* Password and Confirm password fields must contain minimum 8 and maximum 15 characters with atleast 1 lowercase, 1 uppercase , 1 special character except "space".
+* Password and Confirm password fields must contain same value.
+* If everything is validated, newly created password will be updated to your account and you will be redirected to the index page.
 
 ## Notification 
 

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 40px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(17, 17, 17);
+        background-color: rgba(39, 30, 30, 0.863);
+        color: white;
+      }
+      .container {
+        display: flex;
+        margin: 40px;
+        flex-direction: column;
+        align-items: center;
+        padding: 25px;
+      }
+      hr {
+        width: 80%;
+      }
+      h2 {
+        font-size: 20px;
+      }
+      .contact-items {
+        display: flex;
+        margin: 30px auto;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .customer-care,
+      .write-us,
+      .sales-market {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 28%;
+        margin: 30px auto;
+        padding: 35px 15px;
+        border-radius: 15px;
+        text-align: center;
+        min-width: 250px;
+      }
+      .customer-care {
+        height: 250px;
+        box-shadow: 0 15px 15px green;
+        border: 1px solid green;
+      }
+      .write-us {
+        height: 250px;
+        box-shadow: 0 15px 15px red;
+        border: 1px solid red;
+      }
+      .sales-market {
+        height: 250px;
+        box-shadow: 0 15px 15px blue;
+        border: 1px solid blue;
+      }
+      p {
+        font-size: 15px;
+      }
+      button {
+        padding: 8px 16px;
+        font-size: 17px;
+        border-radius: 25px;
+        border: none;
+        margin: 15px auto;
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+      }
+      button:hover {
+         font-size: 22px;
+         padding: 12px;
+      }
+      #cust-care {
+        background: green;
+
+        box-shadow: 0 0 5px black;
+      }
+      #write {
+        background: rgb(187, 15, 15);
+
+        box-shadow: 0 0 5px black;
+      }
+      #sales {
+        background: blue;
+        box-shadow: 0 0 5px black;
+      }
+      a {
+        font-size: 19px;
+        letter-spacing: 1.3px;
+        text-decoration: none;
+      }
+      a:hover{
+        font-size: 20px;
+        text-decoration: underline;
+      }
+      .customer-care a {
+        color: green;
+        text-shadow: 0 0 2px rgba(73, 129, 80, 0.637);
+      }
+      .sales-market a {
+        color: blue;
+        text-shadow: 0 0 2px rgba(76, 62, 158, 0.637);
+      }
+    </style>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contact us</title>
+      </head>
+      <body>
+        <div class="container">
+          <h1>Contact Us</h1>
+          <hr />
+          <h2>Have any questions? We'd love to hear from you</h2>
+          <div class="contact-items">
+            <div class="customer-care">
+              <h3>User Care</h3>
+              <p>
+                Our Support team is available 24/7 to give you fast
+                response
+              </p>
+              <button id="cust-care" onclick="redirect('./../pages/submit_request.html')">Submit a Request</button>
+              <a href="./../pages/FAQ.html"> Frequently asked Questions</a>
+            </div>
+            <div class="write-us">
+              <h3>Write Us</h3>
+              <p>Give us a feedback</p>
+              <a href="./../pages/contact.html"> <button id="write">Feedback</button></a>
+              <!-- <a href="./contact-form.html"> <button id="write">Write</button></a>  u-->
+            </div>
+            <div class="sales-market">
+              <h3>About Us</h3>
+              <p>Get in touch with us to know more abou us</p>
+              <button id="sales" onclick="redirect('aboutus.html')">ABOUT US</button>
+              <a href="./../pages/achivement.html">Acheivements and Gallery</a>
+            </div>
+          </div>
+        </div>
+        <script>
+            function redirect(src){
+                window.location.href=src;
+            }
+        </script>
+      </body>
+    </html>
+  </body>
+</html>

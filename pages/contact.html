@@ -1,128 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <link rel="shortcut icon" href="../assets/images/1bg.png">
-<title>Contact Us</title>
-<script src="./../assets/js/loginCheck.js"></script>
-<style>
-.a1{
-position:static;
+  <head>
+    <link rel="shortcut icon" href="../assets/images/1bg.png" />
+    <title>Contact Us</title>
+    <script src="./../assets/js/loginCheck.js"></script>
+    <style>
+      .a1 {
+        position: static;
 
-text-align: center;
-width:1600px;
-height:70px;
-border:3px;
-background-color:#0A2558;
-font-size: 50px;
-color:white;
-margin-left: 100px;
-}
-h1{
-  font-size: 50px;
-}
-h2{
-  font-size: 35px;
-  color:#0A2558;
-}
-h3{
-font-size: 17px;
-}
-.a2{
-width:600px;
-height:600px;
-margin:80px;
-border-radius: 20px;
-border :solid 7px #0A2558;
-position: fixed;
-margin-left:100px;
-}
-.a2 h2{
-  margin-left: 150px;
-}
-.icon{
-  margin-left: 30px;
-}
-.a2 table{
-margin-left: 50px;
-/* margin-top: 30px; */
-border-spacing: 10px;
-}
-input{
-  padding:10px;
-  border-radius: 24px;
-}
-.message input{
-  width:300px;
-  height:150px;
-}
-.name input{
-  width:300px;
-  height: 70px;
-}
-button{
-padding:10px;
-margin-left: 250px;
-width:80px;
-}
-.a3{
-  height:700px;
-  width:800px;
-  margin-left:900px;
-  margin-top: 170px;
-  position: fixed;
-  text-align: center;
-}
-.cc{
-  background-color: blue;
-  margin-top: 100px;
-}
-.a4{
-  margin-top: 50px;
-  position: fixed;
-  margin-left: 800px;
-}
-</style>
-</head>
-<body>
+        text-align: center;
+        width: 1600px;
+        height: 70px;
+        border: 3px;
+        background-color: #0a2558;
+        font-size: 50px;
+        color: white;
+        margin-left: 100px;
+      }
+      h1 {
+        font-size: 50px;
+      }
+      h2 {
+        font-size: 35px;
+        color: #0a2558;
+      }
+      h3 {
+        font-size: 17px;
+      }
+      .a2 {
+        width: 600px;
+        height: 600px;
+        margin: 80px;
+        border-radius: 20px;
+        border: solid 7px #0a2558;
+        position: fixed;
+        margin-left: 100px;
+      }
+      .a2 h2 {
+        margin-left: 150px;
+      }
+      .icon {
+        margin-left: 30px;
+      }
+      .a2 table {
+        margin-left: 50px;
+        /* margin-top: 30px; */
+        border-spacing: 10px;
+      }
+      input {
+        padding: 10px;
+        border-radius: 24px;
+      }
+      .message input {
+        width: 300px;
+        height: 150px;
+      }
+      .name input {
+        width: 300px;
+        height: 70px;
+      }
+      button {
+        padding: 10px;
+        margin-left: 250px;
+        width: 80px;
+      }
+      .a3 {
+        height: 700px;
+        width: 800px;
+        margin-left: 900px;
+        margin-top: 170px;
+        position: fixed;
+        text-align: center;
+      }
+      .cc {
+        background-color: blue;
+        margin-top: 100px;
+      }
+      .a4 {
+        margin-top: 50px;
+        position: fixed;
+        margin-left: 800px;
+      }
+      .a3 img:hover {
+        cursor: pointer;
+      }
+      input[type="submit"]{
+        margin-left:280px;
+        background-color: #0A2558;
+        color:white;
+        padding:12px;
+      }
+      input[type="submit"]:hover{
+        background-color: orange;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="a1">FWSA</div>
+    <div class="a4"><h2>Get in touch</h2></div>
 
-<div class="a1">FWSA
-</div>
-<div class="a4"><h2>Get in touch</h2></div>
+    <div class="cc">
+      <div class="a2">
+        <br />
 
-<div class="cc">
-<div class="a2">
-  <br>
-  
-<h2>Send us a message</h2>
+        <h2>Send us a message</h2>
+        <form onsubmit="submitHandler(event)">
+          <table>
+            <caption>
+              Contact Us
+            </caption>
 
-<table>
-  <caption>Contact Us</caption>
-  <th id="contact"></th>
-  <tr class="name"><td><img src="../assets/images/user1.jpeg" width="45px"  height="45px" class="icon" alt="icon">
-</td>
-<td><input type="text" placeholder="Your name"></td></tr>
-<tr class="name">
-  <td><img src="../assets/images/email2.jpeg" width="45px"  height="45px" class="icon" alt="icon"></td>
-  <td><input type="text" placeholder="Email address"></td>
-</tr>
-<tr class="message">
-  <td><img src="../assets/images/comment.jpeg" width="45px"  height="45px" class="icon" alt="icon"></td>
-  <td><input type="textarea" name="message" placeholder="Message"></td>
-</tr>
-</table><button>submit</button>
-
-</div>
-<div class="a3">
-<h2>Chat with us</h2>
-<h3>If you'd prefer to chat in real time with our support team<br>we're online monday to friday whatever your time zone  </h3>
-<h2>Follow Us</h2>
-<img src="../assets/images/facebook.jpeg" width="50" height="50" alt="fb">&nbsp; &nbsp;
-<img src="../assets/images/link.jpeg" width="50" height="50" alt="linkedin">&nbsp; &nbsp;
-<img src="../assets/images/insta.jpeg" width="50" height="50" alt="insta">&nbsp; &nbsp;
-<img src="../assets/images/twit.jpeg" width="50" height="50" alt="twitter">
-<h2>Our address</h2>
-<h3>Freshworks software academy at global infosity park,<br>block B,,40,MGR main rd,kodandarma nagar perungudi,chennai. </h3>
-</div>
-</div>
-</body>
+            <th id="contact"></th>
+            <tr class="name">
+              <td>
+                <img
+                  src="../assets/images/user1.jpeg"
+                  width="45px"
+                  height="45px"
+                  class="icon"
+                  alt="icon"
+                />
+              </td>
+              <td>
+                <input
+                  type="text"
+                  placeholder="Your name"
+                  placeholder="Enter your name"
+                  minlength="3"
+                  id="name"
+                  title="Name should not be empty and should contain only characters"
+                  pattern="[A-Za-z]{3,32}"
+                  required
+                />
+              </td>
+            </tr>
+            <tr class="name">
+              <td>
+                <img
+                  src="../assets/images/email2.jpeg"
+                  width="45px"
+                  height="45px"
+                  class="icon"
+                  alt="icon"
+                />
+              </td>
+              <td>
+                <input
+                  type="text"
+                  placeholder="Email address"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                  title="Please match the following format : anu@gmail.com"
+                  required
+                />
+              </td>
+            </tr>
+            <tr class="message">
+              <td>
+                <img
+                  src="../assets/images/comment.jpeg"
+                  width="45px"
+                  height="45px"
+                  class="icon"
+                  alt="icon"
+                />
+              </td>
+              <td>
+                <input
+                  type="textarea"
+                  name="message"
+                  placeholder="Write your suggestion"
+                />
+              </td>
+            </tr>
+          </table>
+          <input type="submit"></input>
+        </form>
+      </div>
+      <div class="a3">
+        <h2>Chat with us</h2>
+        <h3>
+          If you'd prefer to chat in real time with our support team<br />we're
+          online monday to friday whatever your time zone
+        </h3>
+        <h2>Follow Us</h2>
+        <img
+          src="../assets/images/facebook.jpeg"
+          width="50"
+          height="50"
+          alt="fb"
+          onclick="fb()"
+        />&nbsp; &nbsp;
+        <img
+          src="../assets/images/link.jpeg"
+          width="50"
+          height="50"
+          alt="linkedin"
+          onclick="inl()"
+        />&nbsp; &nbsp;
+        <img
+          src="../assets/images/insta.jpeg"
+          width="50"
+          height="50"
+          alt="insta"
+          onclick="gram()"
+        />
+        &nbsp; &nbsp;
+        <img
+          src="../assets/images/twit.jpeg"
+          width="50"
+          height="50"
+          alt="twitter"
+          onclick="tweet()"
+        />
+        <h2>Our address</h2>
+        <h3>
+          Freshworks software academy at global infosity park,<br />block
+          B,,40,MGR main rd,kodandarma nagar perungudi,chennai.
+        </h3>
+      </div>
+    </div>
+    <script>
+      function fb() {
+        window.location.href = "https://www.facebook.com/FreshworksInc/";
+      }
+      function inl() {
+        window.location.href = "https://in.linkedin.com/company/freshworks-inc";
+      }
+      function gram() {
+        window.location.href = "https://www.instagram.com/freshworksinc/?hl=en";
+      }
+      function tweet() {
+        window.location.href =
+          "https://twitter.com/FreshworksInc?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor";
+      }
+      function submitHandler(event){
+        event.preventDefault();
+        alert("Your feedback is successfully submitted");
+        window.location.href="./../pages/contactMP.html"
+      }
+    </script>
+  </body>
 </html>

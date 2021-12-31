@@ -27,7 +27,7 @@
   
 ###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Acceptance Criteria
 * All input fields are required.
-* User name must contain 3 characters and must not be empty.
+* User name must contain 3 characters and must not be empty.No special characters are allowed.
 * Email id must contain 2 characters before the suffix @gmail.com.
 * Email id entered must not exist in local storage already.
 * Password and Confirm password fields must contain minimum 8 and maximum 15 characters with atleast 1 lowercase, 1 uppercase , 1 special character except "space".
@@ -45,7 +45,7 @@
 * Confirm Password
 ###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Acceptance Criteria
 * All input fields are required.
-* User name must contain 3 characters and must not be empty.
+* User name must contain 3 characters and must not be empty.No special characters are allowed.
 * Email id must contain 2 characters before the suffix @gmail.com.
 * Email id entered must not exist in local storage already.
 * Secret code for admins is <strong>Freshwork@2001</strong>. Any other code is not accepted for successful registration.

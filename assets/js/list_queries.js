@@ -4,7 +4,7 @@ let count = 3;
 let like = [];
 let index = 0;
 
-let hello = "";
+let hello;
 let localStorageGet = JSON.parse(localStorage.getItem("query"));
 let loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
 let userCredentials = JSON.parse(localStorage.getItem("user_credentials"));
@@ -21,20 +21,20 @@ function get(x) {
     const digits_only = (string) =>
       [...string].every((c) => "0123456789".includes(c));
     let numbers = [];
-    for (j of array) {
+    for (let j of array) {
       if (digits_only(j)) {
         numbers.push(j);
       }
     }
     console.log(numbers);
-    for (k of numbers) {
+    for (let k of numbers) {
       id_change = id_change * 10 + parseInt(k);
     }
     console.log(id_change);
     let numInString = JSON.stringify(id_change);
     console.log(numInString);
     let isLikeAlreadyExist = false;
-    let isFalse = false;
+    
     for (let i of like) {
       console.log(i.email);
       console.log(loggedInUser.email);

@@ -3,6 +3,8 @@ let add = "";
 let count = 3;
 let like = [];
 let index = 0;
+
+let hello = "";
 let localStorageGet = JSON.parse(localStorage.getItem("query"));
 let loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
 let userCredentials = JSON.parse(localStorage.getItem("user_credentials"));
@@ -12,13 +14,47 @@ if (bool == null) {
 }
 function get(x) {
   let array = x.split("", x.length);
+
   if (array.includes("u") && array.includes("p")) {
+    let id_change = 0;
+    let hello = "up";
+    const digits_only = (string) =>
+      [...string].every((c) => "0123456789".includes(c));
+    let numbers = [];
+    for (j of array) {
+      if (digits_only(j)) {
+        numbers.push(j);
+      }
+    }
+    console.log(numbers);
+    for (k of numbers) {
+      id_change = id_change * 10 + parseInt(k);
+    }
+    console.log(id_change);
+    let numInString = JSON.stringify(id_change);
+    console.log(numInString);
     let isLikeAlreadyExist = false;
+    let isFalse = false;
     for (let i of like) {
-      if (i.queryId == "true" && i.email == email) {
+      console.log(i.email);
+      console.log(loggedInUser.email);
+
+      if (loggedInUser.email === i.email && i.like == "true") {
         isLikeAlreadyExist = true;
         break;
+      } else if (loggedInUser.email === i.email && i.like == "false") {
+        isLikeAlreadyExist = true;
+        index = like.indexOf(i);
+
+        console.log("true");
+        console.log(index);
+        break;
       }
+    }
+    if (isLikeAlreadyExist) {
+      like[index].like = "true";
+      like[index].queryId = hello + numInString;
+      window.location.href = "../pages/list_queries.html";
     }
     if (!isLikeAlreadyExist) {
       document.getElementById(x).style.border = "tomato";
@@ -30,6 +66,8 @@ function get(x) {
       };
       like.push(likeObject);
       localStorage.setItem("boolean", JSON.stringify(like));
+      alert("hello");
+      window.location.href = "../pages/list_queries.html";
     }
   } else if (
     array.includes("d") &&
@@ -47,6 +85,7 @@ function get(x) {
     like.push(likeObject);
     localStorage.setItem("boolean", JSON.stringify(like));
   }
+  return index;
 }
 for (let i of localStorageGet) {
   let date = i.createdAt;

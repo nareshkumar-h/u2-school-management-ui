@@ -16,16 +16,18 @@
     <div class="test">
       <div class="test3">
         <span class="test1">
-          <img src="../assets/images/group.JPG" height="100%" alt="group photo"/>
+          <img
+            src="../assets/images/group.JPG"
+            height="100%"
+            alt="group photo"
+          />
         </span>
 
         <span class="test2">
           <form class="box" onsubmit="submiHandler(event)">
             <h1>Sign-Up</h1>
-            <button class="active" onclick="Student()">
-              Student
-            </button>
-            <button  onclick="Admin()">Admin</button>
+            <button class="active" onclick="Student()">Student</button>
+            <button onclick="Admin()">Admin</button>
             <br />
 
             <div id="student" class="add">
@@ -35,8 +37,9 @@
                 name="Name"
                 placeholder="Enter Your Name"
                 id="name"
-                title="Name should not be empty and shoul contain only characters"
-                pattern="[A-Za-z]{3,32}"
+                title="Name should not be empty and should contain only characters and space with minimum 3 to maximum 32 characters"
+                pattern="[A-Za-z ]+.{3,32}"
+                autofocus
                 required
               />
               <p>Email ID</p>
@@ -54,8 +57,8 @@
               <input
                 type="password"
                 placeholder="Use 8-15 characters with atleast one capital,one running and one special character"
-                name="psw1"
-                id="psw1"
+                name="password1"
+                id="password1"
                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                 required
               />
@@ -64,21 +67,23 @@
               <input
                 type="password"
                 placeholder="Repeat Password"
-                id="psw2"
-                name="psw2"
+                id="password2"
+                name="password2"
                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                 required
               />
               <div id="emailId"></div>
               <div id="message1"></div>
               <div id="message2"></div>
-              
-                <input type="submit" name="" value="Submit" class="btn" />
-                <br />
-                <p class="ss1"> <button type="button" onclick="reload()">Clear</button></p>
-               
-                <br /><br />
-             
+
+              <input type="submit" name="" value="Submit" class="btn" />
+              <br />
+              <p class="ss1">
+                <button type="button" onclick="reload()">Clear</button>
+              </p>
+
+              <br /><br />
+
               Already have a account login <a href="login.html">Here</a>
             </div>
           </form>

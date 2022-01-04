@@ -21,8 +21,8 @@ function submiHandler(event) {
     localStorage.setItem("user_credentials", JSON.stringify([]));
   }
 
-  var pw1 = document.getElementById("psw1").value;
-  var pw2 = document.getElementById("psw2").value;
+  var pw1 = document.getElementById("password1").value;
+  var pw2 = document.getElementById("password2").value;
   var name = document.getElementById("name").value;
   var email = document.getElementById("email_id").value;
 

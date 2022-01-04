@@ -35,8 +35,9 @@
                 name="Name"
                 placeholder="Enter Your Name"
                 id="name"
-                title="Name should not be empty and shoul contain only characters"
-                pattern="[A-Za-z]{3,32}"
+                title="Name should not be empty and should contain only characters and space with minimum 3 to maximum 32 characters"
+                pattern="[A-Za-z ]+.{3,32}"
+                autofocus
                 required
               />
               <p>Email ID</p>
@@ -54,8 +55,8 @@
               <input
                 type="password"
                 placeholder="Enter the secret code for admin"
-                name="psw3"
-                id="psw3"
+                name="secret_code"
+                id="secret_code"
                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                 required
               />
@@ -65,8 +66,8 @@
               <input
                 type="password"
                 placeholder="Create a strong password"
-                name="psw1"
-                id="psw1"
+                name="password1"
+                id="password1"
                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                 required
               />
@@ -75,8 +76,8 @@
               <input
                 type="password"
                 placeholder="Confirm password"
-                id="psw2"
-                name="psw2"
+                id="password2"
+                name="password2"
                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                 required
               />

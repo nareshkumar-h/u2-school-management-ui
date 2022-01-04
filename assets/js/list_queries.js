@@ -4,7 +4,6 @@ let count = 3;
 let like = [];
 let index = 0;
 
-let hello;
 let localStorageGet = JSON.parse(localStorage.getItem("query"));
 let loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
 let userCredentials = JSON.parse(localStorage.getItem("user_credentials"));

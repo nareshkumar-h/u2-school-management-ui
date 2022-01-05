@@ -33,7 +33,7 @@ function submitHandler(event) {
   
   console.log(str);
   let localStorageSetObject = {
-    queryId:Math.floor((Math.random() * 10) + 1),
+    
     title: name,
     tag: tag,
     desc: desc,

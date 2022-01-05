@@ -33,7 +33,7 @@ function get(x) {
     let numInString = JSON.stringify(id_change);
     console.log(numInString);
     let isLikeAlreadyExist = false;
-    
+
     for (let i of like) {
       console.log(i.email);
       console.log(loggedInUser.email);
@@ -86,6 +86,21 @@ function get(x) {
   }
   return index;
 }
+function check(x) {
+  let array = x.split("", x.length);
+
+  if (array.includes("u") && array.includes("p")) {
+    let isCheck = true;
+  } else if (
+    array.includes("d") &&
+    array.includes("o") &&
+    array.includes("w") &&
+    array.includes("n")
+  ) {
+    let isCheck = false;
+  }
+  return isCheck;
+}
 for (let i of localStorageGet) {
   let date = i.createdAt;
   let name = i.title;
@@ -118,6 +133,7 @@ for (let i of localStorageGet) {
 console.log(str);
 let div = document.getElementById("new");
 div.innerHTML = str;
+
 function getAllFields() {
   const arrayToString = localStorage.getItem("boolean");
 
@@ -159,3 +175,5 @@ function clic(x) {
   localStorage.setItem("IdAsk", x);
   window.location.href = "../pages/threads.html";
 }
+
+//  =============================================================================================================================

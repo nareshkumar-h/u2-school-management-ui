@@ -1,62 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add reply</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add reply</title>
 </head>
+
 <body>
-<div id="queryAsked"></div>
-<div id="thread1" class="th">
-    <form  onsubmit="submitHandler1(event,'thread1','b1')">
-      <textarea id="b1" class="threads" name="w3" rows="4" cols="123" placeholder="Type your text here "  required></textarea><br>
-      <input type="submit" value="Send reply" ></input>
+  <div id="queryAsked"></div>
+  <div id="thread1" class="th">
+    <form method="post">
+      <textarea id="b1" class="threads" name="w3" rows="4" cols="123" placeholder="Type your reply here "
+        ></textarea><br>
+      <input type="button" value="Send reply" onclick="submitHandler1()"></input>
     </form>
+    <div id="p"></div>
   </div>
 </body>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 <script>
-    let query_concentrate=localStorage.getItem("qId");
-    let qid_array=query_concentrate.split("",query_concentrate.length);
-    const digits_only = string => [...string].every(c => '0123456789'.includes(c))
-    let numbers=[];
-    for(j of qid_array){
-        if(digits_only(j)){
-            numbers.push(j);
-        }
-    }
-    console.log(numbers);
-    let reply=[];
-    function getAllReplies(){
-  const local=localStorage.getItem("replies");
-  let inArray = [];
-  if (local) {
-    inArray = JSON.parse(local);
-  } else {
-    inArray = [];
-  }
-  return inArray;
-}
-const lo=getAllReplies();
-reply=lo;
-  function submitHandler1(event, y, x) {
-  event.preventDefault();
-  let qId=y;
-  let iD = x;
-  let b = document.getElementById(iD).value;
-  let user=loggedInUser.email;
-  let uname="a";
-  for(j of userCredentials){
-    if(j.email_id==user){
-     uname=j.name;
+  let queryIdInLS = parseFloat(localStorage.getItem("qId"));
+  console.log(queryIdInLS);
+  let queriesInLocalStorage = JSON.parse(localStorage.getItem("query"));
+  let isTrue = false;
+  for (let i of queriesInLocalStorage) {
+
+    console.log("HEllo")
+    if (i.qNo == queryIdInLS) {
+      let name = i.title;
+      let desc = i.desc;
+      let time = i.createdAt;
+      console.log("Hello");
+      
+      document.getElementById("queryAsked").innerHTML = `<div class=\"toBeDecorated\"><p class=\"Name\">${name}</p><p class=\"Time\">${time}</p><p class=\"Query\">${desc}</p></div>`;
       break;
     }
   }
-  let g={reply:b,user:user,qId:qId,uName:uname,createdAt:new Date()};
-  reply.push(g);
-  localStorage.setItem("replies",JSON.stringify(reply));
-  window.location.reload();
-}  
+  function submitHandler1() {
+    let reply = document.getElementById("b1").value;
+    if(reply==""){
+      document.getElementById("p").innerHTML="Type a reply";
+      console.log("null");
+      return null;
+    }
+    let index=0;
+    
+    let LS = JSON.parse(localStorage.getItem("loggedInUser"));
+    let FromEmail = LS.email;
+    console.log(FromEmail);
+    for (let i of queriesInLocalStorage) {
+
+      console.log("HEllo")
+      if (i.qNo == queryIdInLS) {
+        
+        index = queriesInLocalStorage.indexOf(i);
+        console.log(index);
+        
+        break;
+        }}
+      let qUserLS = JSON.parse(localStorage.getItem("query"))[index].createdBy;
+      console.log(qUserLS);
+      let ToEmail = JSON.parse(qUserLS).email;
+      console.log(ToEmail);
+      Email.send({
+        Host: "smtp.gmail.com",
+        Username: "freshschoolsb2@gmail.com",
+        Password: "chitra@B2",
+        To: ToEmail,
+        From: FromEmail,
+        Subject: "You have got a reply to your query",
+        Body: reply
+      })
+      .then(res=>console.log(res))
+    }
+
+
 
 </script>
+
 </html>

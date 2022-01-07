@@ -36,8 +36,10 @@
                 placeholder="Enter Your Name"
                 id="name"
                 title="Name should not be empty and should contain only characters and space with minimum 3 to maximum 32 characters"
-                pattern="[A-Za-z ]+.{3,32}"
+                pattern="^[a-zA-Z0-9_]+( [a-zA-Z0-9_]+)*$"
                 autofocus
+                minlength="3";
+                maxlength="32"
                 required
               />
               <p>Email ID</p>

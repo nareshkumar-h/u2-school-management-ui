@@ -17,12 +17,11 @@ function commit_1(x) {
   return array;
 }
 
-
 function submitHandler(event) {
   event.preventDefault();
 
   let createdBy = localStorage.getItem("loggedInUser");
-  
+
   alert(
     `Your query has been sent successfully ! They will respond in mail or slack call ! Thank you`
   );
@@ -30,15 +29,15 @@ function submitHandler(event) {
   let name = document.getElementById("name").value;
   let desc = document.getElementById("w3review").value;
   let date = new Date();
-  
+
   console.log(str);
   let localStorageSetObject = {
-    
     title: name,
     tag: tag,
     desc: desc,
     createdAt: date,
-    createdBy: createdBy
+    createdBy: createdBy,
+    qNo: Math.random(),
   };
 
   local.push(localStorageSetObject);
@@ -53,8 +52,6 @@ function submitHandler(event) {
       console.table(response.data);
       window.location.href = "../pages/list_queries.html";
     });
-
- 
 }
 function getAllFields() {
   const arrayToString = localStorage.getItem("query");

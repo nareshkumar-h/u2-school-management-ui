@@ -39,8 +39,9 @@ function submiHandler(event) {
       break;
     }
   }
-  if (name == "") {
+  if (name === " ") {
     document.getElementById("message1").innerHTML = "***Name must not be empty";
+    return;
   }
   if (isEmailAlreadyExist) {
     document.getElementById("emailId").innerHTML =

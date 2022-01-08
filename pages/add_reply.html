@@ -6,78 +6,70 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Add reply</title>
+  <style>
+    .toBeDecorated{
+      background-color: burlywood;
+      width:97%;
+      border-radius: 20px;
+      border:10px black solid;
+      margin-left: 10px;
+    }
+    .Name{
+      float:left;
+      color:black;
+      font-size: 25px;
+      font-weight: bold;
+      margin-top:30px;
+      margin-left: 30px;
+    }
+    .Time{
+      float: right;
+      margin-right: 20px;
+      font-size: 18px;
+      color: rgb(34, 32, 32);
+    }
+    .Query{
+      padding-left: -50px;
+      color:rgb(59, 32, 32);
+      font-weight: bold;
+      letter-spacing: 2.5px;
+    }
+    textarea{
+      margin-left: 250px;
+      margin-top: 50px;
+      border:5px #0A2558 solid;
+      padding-left:20px;
+      padding-top: 20px;
+      font-weight: bold;
+    }
+    input[type="button"]{
+      margin-left:750px;
+      margin-top: 30px;
+      padding:15px;
+      background-color: #0A2558;
+      color:white;
+      font-size: 20px;
+      border-radius: 20px;
+    }
+  </style>
 </head>
 
 <body>
   <div id="queryAsked"></div>
   <div id="thread1" class="th">
     <form method="post">
-      <textarea id="b1" class="threads" name="w3" rows="4" cols="123" placeholder="Type your reply here "
+      <textarea id="b1" class="threads" name="w3" rows="9" cols="140" placeholder="Type your reply here "
         ></textarea><br>
       <input type="button" value="Send reply" onclick="submitHandler1()"></input>
     </form>
+    <div class="Replies">REPLIES
     <div id="p"></div>
+  </div>
   </div>
 </body>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
-<script>
-  let queryIdInLS = parseFloat(localStorage.getItem("qId"));
-  console.log(queryIdInLS);
-  let queriesInLocalStorage = JSON.parse(localStorage.getItem("query"));
-  let isTrue = false;
-  for (let i of queriesInLocalStorage) {
+<script src="./../assets/js/admin_reply.js"></script>
+  
 
-    console.log("HEllo")
-    if (i.qNo == queryIdInLS) {
-      let name = i.title;
-      let desc = i.desc;
-      let time = i.createdAt;
-      console.log("Hello");
-      
-      document.getElementById("queryAsked").innerHTML = `<div class=\"toBeDecorated\"><p class=\"Name\">${name}</p><p class=\"Time\">${time}</p><p class=\"Query\">${desc}</p></div>`;
-      break;
-    }
-  }
-  function submitHandler1() {
-    let reply = document.getElementById("b1").value;
-    if(reply==""){
-      document.getElementById("p").innerHTML="Type a reply";
-      console.log("null");
-      return null;
-    }
-    let index=0;
-    
-    let LS = JSON.parse(localStorage.getItem("loggedInUser"));
-    let FromEmail = LS.email;
-    console.log(FromEmail);
-    for (let i of queriesInLocalStorage) {
-
-      console.log("HEllo")
-      if (i.qNo == queryIdInLS) {
-        
-        index = queriesInLocalStorage.indexOf(i);
-        console.log(index);
-        
-        break;
-        }}
-      let qUserLS = JSON.parse(localStorage.getItem("query"))[index].createdBy;
-      console.log(qUserLS);
-      let ToEmail = JSON.parse(qUserLS).email;
-      console.log(ToEmail);
-      Email.send({
-        Host: "smtp.gmail.com",
-        Username: "freshschoolsb2@gmail.com",
-        Password: "chitra@B2",
-        To: ToEmail,
-        From: FromEmail,
-        Subject: "You have got a reply to your query",
-        Body: reply
-      })
-      .then(res=>console.log(res))
-    }
-
-
-
-</script>
 
 </html>

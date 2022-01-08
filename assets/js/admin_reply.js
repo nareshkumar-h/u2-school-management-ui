@@ -1,0 +1,88 @@
+let queryIdInLS = parseFloat(localStorage.getItem("qId"));
+  console.log(queryIdInLS);
+  let queriesInLocalStorage = JSON.parse(localStorage.getItem("query"));
+  let isTrue = false;
+  
+  for (let i of queriesInLocalStorage) {
+
+    console.log("HEllo")
+    if (i.qNo == queryIdInLS) {
+      let name = i.title;
+      let desc = i.desc;
+      let time = i.createdAt;
+      console.log("Hello");
+      
+      document.getElementById("queryAsked").innerHTML = `<div class=\"toBeDecorated\"><p class=\"Name\">${name}</p><p class=\"Time\">${time}</p><br><br><br><p class=\"Query\">${desc}</p></div>`;
+      break;
+    }
+  }
+  function returning(){
+    let LS = JSON.parse(localStorage.getItem("loggedInUser"));
+    let name="";
+    let UC=JSON.parse(localStorage.getItem("user_credentials"));
+    console.log(UC);
+    for(let i of UC){
+      if (i.email_id==LS.email){
+        console.log("Hi")
+        name=i.name;
+        
+        break;
+      }
+    }
+    return name;
+  }
+  function submitHandler1() {
+
+    let LS = JSON.parse(localStorage.getItem("loggedInUser"));
+
+    let reply = document.getElementById("b1").value;
+    if(reply==""){
+      document.getElementById("p").innerHTML="Type a reply";
+      console.log("null");
+      return null;
+    }
+    let index=0;
+    
+    
+    let name=returning();
+    console.log(name);
+    let FromEmail = LS.email;
+    console.log(FromEmail);
+    for (let i of queriesInLocalStorage) {
+
+      console.log("HEllo")
+      if (i.qNo == queryIdInLS) {
+        
+        index = queriesInLocalStorage.indexOf(i);
+        console.log(index);
+        
+        break;
+        }}
+      let qUserLS = JSON.parse(localStorage.getItem("query"))[index].createdBy;
+      console.log(qUserLS);
+      let setObject={qNo:queryIdInLS,replied_person:name,desc:reply};
+      let pushingObj=JSON.parse(localStorage.getItem("replies"));
+      if(pushingObj==null){
+        localStorage.setItem("replies",JSON.stringify([]));
+        pushingObj=[];
+      }
+      pushingObj.push(setObject);
+
+      localStorage.setItem("replies",JSON.stringify(pushingObj));
+      let ToEmail = JSON.parse(qUserLS).email;
+      console.log(ToEmail);
+      Email.send({
+        Host: "smtp.gmail.com",
+        Username: "freshtechschools12@gmail.com",
+        Password: "AnuMeenuAMB",
+        To: ToEmail,
+        From: FromEmail,
+        Subject: "You have got a reply to your query",
+        Body: reply
+      })
+      .then(res=>console.log(res))
+      window.location.reload();
+
+    }
+
+

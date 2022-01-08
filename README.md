@@ -145,7 +145,7 @@
 ###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Acceptance Criteria
 
 * The send reply textbox must not be empty.
-* If everything is validated the reply will be sent as an email to the respective mail id of the person who asked the query and the reply will also be update in the view replies part of the page.
+* If everything is validated the reply will be sent as an email to the respective mail id of the person who asked the query and the reply will also be updated in the view replies part of the page.
 
 
   

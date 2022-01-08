@@ -86,7 +86,7 @@ let queryIdInLS = parseFloat(localStorage.getItem("qId"));
     }
     let objectGet=JSON.parse(localStorage.getItem("replies"));
     let str="";
-    for(j of objectGet){
+    for(let j of objectGet){
        if(j.qNo==parseFloat(localStorage.getItem("qId"))){
            str+=`<div class=\"kitkat\"><p class=\"person\">${j.replied_person}</p><p class=\"desc\">${j.desc}</p><p class=\"time\">${j.time}</p></div><br>`;
        }

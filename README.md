@@ -10,8 +10,8 @@
 1. Register ( Completed )
 2. Login    ( Completed )
 3. Notification page    (Completed)
-4. Contact Us (Completed)
-5. Query box page    (In progress)
+4. Query box page    (Completed)
+5. Contact Us (Completed)
 
 ## Register
 
@@ -105,6 +105,51 @@
 
 * All fields are required.
 * There will be text areas to add notifications, and on submitting it,the new notifcation will be added to list notifications page along with the ceated time and date. 
+  
+## Queries
+
+##### 1. List Queries
+
+* Only logged in user can get access to view the page (Admin or Student).
+* Queries are listed in pre to past way in the direction up to down.
+* It has an enabling button to add new queries.
+* Visiting users can also like the query if they accept the same.
+* Every query has a feature of replying in thread.
+
+##### 2. Add queries
+
+
+###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fields
+
+* Name
+* Tagging the person whom you want to question
+* Description of query
+
+###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Acceptance Criteria
+
+* All fields are required.
+* Name must not be empty and should have minimum 3 to maximum 32 characters with no special characters allowed.
+* Tagging the person can be done by clicking on the list of admins given in the left corner.The method of directly typing is not allowed.
+* There will be text areas to add your query.
+* If every field is validated the query will be submitted and also displayed in the list queries page.
+
+##### 3. Reply in thread
+
+
+* In this page, the respective query, the replies to the respective query and a textarea to add a reply will be present.
+  
+###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fields
+
+* Text area to send a reply.
+
+###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Acceptance Criteria
+
+* The send reply textbox must not be empty.
+* If everything is validated the reply will be sent as an email to the respective mail id of the person who asked the query and the reply will also be update in the view replies part of the page.
+
+
+  
+
 
 ## Contact Us 
 

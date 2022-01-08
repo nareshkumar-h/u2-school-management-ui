@@ -29,8 +29,7 @@ function submitHandler(event) {
   let name = document.getElementById("name").value;
   let desc = document.getElementById("w3review").value;
   let date = new Date();
-
-  console.log(str);
+  
   let localStorageSetObject = {
     title: name,
     tag: tag,

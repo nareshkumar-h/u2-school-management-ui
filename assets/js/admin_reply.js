@@ -60,7 +60,7 @@ let queryIdInLS = parseFloat(localStorage.getItem("qId"));
         }}
       let qUserLS = JSON.parse(localStorage.getItem("query"))[index].createdBy;
       console.log(qUserLS);
-      let setObject={qNo:queryIdInLS,replied_person:name,desc:reply};
+      let setObject={qNo:queryIdInLS,replied_person:name,desc:reply,time:new Date()};
       let pushingObj=JSON.parse(localStorage.getItem("replies"));
       if(pushingObj==null){
         localStorage.setItem("replies",JSON.stringify([]));
@@ -80,9 +80,18 @@ let queryIdInLS = parseFloat(localStorage.getItem("qId"));
         Subject: "You have got a reply to your query",
         Body: reply
       })
-      .then(res=>console.log(res))
-      window.location.reload();
-
+      .then(res=>console.log(res));
+      alert("Mail has been successfully sent");
+     
     }
+    let objectGet=JSON.parse(localStorage.getItem("replies"));
+    let str="";
+    for(j of objectGet){
+       if(j.qNo==parseFloat(localStorage.getItem("qId"))){
+           str+=`<div class=\"kitkat\"><p class=\"person\">${j.replied_person}</p><p class=\"desc\">${j.desc}</p><p class=\"time\">${j.time}</p></div><br>`;
+       }
+    }
+    document.getElementById("p").innerHTML=str;
+    
 
 

@@ -672,6 +672,14 @@ textarea{
     padding:30px 30px 10px 20px;
     color:blue;
     font-size:17px;
+    border:2px black solid;
+}
+#name{
+  width:940px;
+  margin:20px;
+  border:2px black solid;
+  padding-top:20px;
+  padding-bottom: 20px;
 }
 li{
     cursor:pointer;
@@ -740,4 +748,9 @@ p.User{
 }
 .th input[type="submit"]{
   margin-left: 700px;
+}
+.link{
+  color:white;
+  margin-left: 20px;
+  margin-top: -30px;
 }

@@ -10,9 +10,10 @@ let queryIdInLS = parseFloat(localStorage.getItem("qId"));
       let name = i.title;
       let desc = i.desc;
       let time = i.createdAt;
+      let tag=i.tag
       console.log("Hello");
       
-      document.getElementById("queryAsked").innerHTML = `<div class=\"toBeDecorated\"><p class=\"Name\">${name}</p><p class=\"Time\">${time}</p><br><br><br><p class=\"Query\">${desc}</p></div>`;
+      document.getElementById("queryAsked").innerHTML = `<div class=\"toBeDecorated\"><p class=\"Name\">${name}</p><br><p class=\"Time\">${time}</p><br><br><p class=\"tag\">${tag}</p><br><br><br><p class=\"Query\">${desc}</p></div>`;
       break;
     }
   }

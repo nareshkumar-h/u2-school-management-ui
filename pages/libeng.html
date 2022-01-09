@@ -716,7 +716,7 @@
     }
 
     .container {
-      background-image: url("../assets/images//bb.jpg");
+      background-image: url("../assets/images/bb.jpg");
       background-repeat: no-repeat;
       background-size: 100% 100%;
       margin-left: 380px;
@@ -754,6 +754,44 @@
       color: orange;
       padding: 20px;
       font-size: 50px;
+    }
+    .adding{
+      color: #cce5ff;
+      margin-left: 1000px;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    .adding:hover{
+      cursor: pointer;
+
+    }
+    #imageAdd{
+      background-color: hsl(351, 26%, 95%);
+      height:100px;
+      width:30%;
+      margin-left: 720px;
+      margin-top: 10px;
+      border-radius: 7px;
+      padding: 10px 40px 40px 40px;
+      display: none;
+    }
+    input[type="url"]{
+      padding:6px;
+      color:black;
+      font-weight: bold;
+      border-radius: 10px;
+      border:2px black solid;
+      
+    }
+    input[type="submit"]{
+      border: none;
+      font-size: 60px;
+      font-weight: bold;
+      margin-left: 15px;
+    }
+    input[type="submit"]:hover{
+      cursor: pointer;
+      color: brown;
     }
   </style>
 </head>
@@ -812,13 +850,15 @@
         <li><img src="../assets/images/b4.jpeg" alt=""></li>
         <li><img src="../assets/images/b5.jpeg" alt=""></li>
         <li><img src="../assets/images/b6.jpg" alt=""></li>
-
+        
 
 
       </ul>
       <span><a id="prev" href="#">&#8666;</a></span>
       <span><a id="next" href="#">&#8667;</a></span>
     </div>
+    <br><p class="adding" onclick="addNewImage()">Add New image into slider</p>
+    
     <br><br>
     <p class="a1">Continue Reading</p>
     <br>
@@ -930,6 +970,8 @@
 
     </div>
     <script>
+      
+      
       var responsiveSlider = function () {
 
         var slider = document.getElementById("slider");

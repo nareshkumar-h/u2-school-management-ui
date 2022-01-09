@@ -71,18 +71,6 @@ let queryIdInLS = parseFloat(localStorage.getItem("qId"));
       localStorage.setItem("replies",JSON.stringify(pushingObj));
       let ToEmail = JSON.parse(qUserLS).email;
       console.log(ToEmail);
-      Email.send({
-        Host: "smtp.gmail.com",
-        Username: "freshtechschools12@gmail.com",
-        Password: "AnuMeenuAMB",
-        To: ToEmail,
-        From: FromEmail,
-        Subject: "You have got a reply to your query",
-        Body: reply
-      })
-      .then(res=>console.log(res));
-      alert("Mail has been successfully sent");
-     
     }
     let objectGet=JSON.parse(localStorage.getItem("replies"));
     let str="";

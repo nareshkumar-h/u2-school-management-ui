@@ -130,3 +130,11 @@ function cli(x) {
   localStorage.setItem("qId", x);
   window.location.href = "../pages/add_reply.html";
 }
+let userNameToBeDisplayed="";
+for(let l of userCredentials){
+  if(loggedInUser.email==l.email_id){
+     userNameToBeDisplayed=l.name;
+     break;
+  }
+}
+document.getElementById("userEntry").innerHTML=userNameToBeDisplayed;

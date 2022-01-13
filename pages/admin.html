@@ -8,24 +8,24 @@
     <link rel="stylesheet" href="../assets/css/login and sign up.css" />
     <link rel="shortcut icon" href="../assets/images/1bg.png" />
     <link rel="stylesheet" href="../assets/css/signup.css" />
-
-    <script src="../assets/js/admin.js"></script>
   </head>
 
   <body>
     <div class="test">
       <div class="test3">
         <span class="test1">
-          <img src="../assets/images/group.JPG" height="100%" alt="group photo"/>
+          <img
+            src="../assets/images/group.JPG"
+            height="100%"
+            alt="group photo"
+          />
         </span>
 
         <span class="test2">
           <form class="box" onsubmit="submiHandler(event)">
             <h1>Sign-Up</h1>
-            <button  onclick="Student()">
-              Student
-            </button>
-            <button  class="active" onclick="Admin()">Admin</button>
+            <button onclick="Student()">Student</button>
+            <button class="active" onclick="Admin()">Admin</button>
             <br />
 
             <div id="student" class="add">
@@ -38,7 +38,8 @@
                 title="Name should not be empty and should contain only characters and space with minimum 3 to maximum 32 characters"
                 pattern="^[a-zA-Z0-9_]+( [a-zA-Z0-9_]+)*$"
                 autofocus
-                minlength="3";
+                minlength="3"
+                ;
                 maxlength="32"
                 required
               />
@@ -68,7 +69,8 @@
               <input
                 type="password"
                 placeholder="Use 8-15 characters with atleast one uppercase,one lowercase and one special character"
-                title="Use 8-15 characters with atleast one uppercase,one lowercase and one special character";
+                title="Use 8-15 characters with atleast one uppercase,one lowercase and one special character"
+                ;
                 name="password1"
                 id="password1"
                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
@@ -87,17 +89,18 @@
               <div id="emailId"></div>
               <div id="message1"></div>
               <div id="message2"></div>
-              
-                <input type="submit" name="" value="Submit" class="btn" />
-                <br />
-                <button type="button" onclick="reload()">Clear</button>
-                <br /><br />
-              
+
+              <input type="submit" name="" value="Submit" class="btn" />
+              <br />
+              <button type="button" onclick="reload()">Clear</button>
+              <br /><br />
+
               Already have a account login <a href="login.html">Here</a>
             </div>
           </form>
         </span>
       </div>
     </div>
+    <script src="../assets/js/admin.js"></script>
   </body>
 </html>

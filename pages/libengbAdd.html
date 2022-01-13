@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add new image to slider</title>
+    <script src="./../assets/js/admin_check.js"></script>
+    <link rel="stylesheet" href="./../assets/css/libengbAdd.css" />
+    <style>
+      body {
+        background-image: url("./../assets/images/apsara.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 120%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading">Insert Book</div>
+      <br /><br />
+      <form onsubmit="submitHandler(event)">
+        <input
+          type="text"
+          name="Name"
+          placeholder="Enter the name of book"
+          id="name"
+          title="Book name should not be empty and should contain only characters and space with minimum 3 to maximum 50 characters"
+          pattern="^[a-zA-Z0-9_]+( [a-zA-Z0-9_]+)*$"
+          autofocus
+          minlength="3"
+          ;
+          maxlength="50"
+          required
+        />
+        <input
+          type="url"
+          name="url"
+          id="url"
+          placeholder="Enter the image url of cover page"
+          pattern="https://.*"
+          size="30"
+          title="Match the format : https://example.com  "
+          required
+        />
+        <input
+          type="number"
+          id="ratings"
+          name="tentacles"
+          min="1"
+          max="5"
+          placeholder="Enter the number of star ratings"
+          title="Enter number of star ratings from 1 to 5"
+        />
+        <input
+          type="number"
+          id="views"
+          name="tentacles"
+          min="0"
+          placeholder="Enter the number of views"
+        />
+
+        <input
+          type="url"
+          name="url"
+          id="urlBook"
+          placeholder="Enter the book url to be redirected"
+          pattern="https://.*"
+          size="30"
+          title="Match the format : https://example.com  "
+          required
+        />
+        <input type="submit" class="InsertButton" value="Insert Book" />
+      </form>
+
+      <div id="newImageConfirm">
+        <div id="Image" class="addNewImage"></div>
+        <form onsubmit="submitHandler1(event)">
+          <input type="submit" value="Confirm Book" class="ConfirmButton" />
+          <input
+            type="button"
+            value="Clear This Book"
+            onclick="reload()"
+            class="ClearButton"
+          />
+        </form>
+      </div>
+    </div>
+    <script>
+      let array = JSON.parse(localStorage.getItem("BooksEng"));
+      if (array == null) {
+        localStorage.setItem("BooksEng", JSON.stringify([]));
+      }
+      function submitHandler(event) {
+        event.preventDefault();
+        let name = document.getElementById("name").value;
+        let url = document.getElementById("url").value;
+        let ratings = document.getElementById("ratings").value;
+        let views = document.getElementById("views").value;
+        let urlBook = document.getElementById("urlBook").value;
+        localStorage.setItem(
+          "BookUrl",
+          JSON.stringify({
+            name: name,
+            url: url,
+            ratings: ratings,
+            views: views,
+            urlBook: urlBook,
+          })
+        );
+
+        document.getElementById(
+          "Image"
+        ).innerHTML = `<img src=${url} height=\"200px\" width=\"250px\">`;
+      }
+      function reload() {
+        let url = JSON.parse(localStorage.getItem("BookUrl"));
+        if (url == null) {
+          alert(
+            "Please enter an image url and click on insert image.Then confirm whether you want to proceed further with this image or not."
+          );
+          return null;
+        }
+        localStorage.removeItem("BookUrl");
+        window.location.reload();
+      }
+      
+      function submitHandler1(event) {
+        event.preventDefault();
+        let BookUrl = JSON.parse(localStorage.getItem("BookUrl"));
+        let object = {};
+        if (BookUrl == null) {
+          alert(
+            "Please insert a book and click on insert book.Then confirm whether you want to proceed further with this book or not."
+          );
+          return null;
+        }
+        let library = localStorage.getItem("libbook");
+        if (library == "libeng" && library != null) {
+          object = {
+            name: BookUrl.name,
+            CoverImageurl: BookUrl.url,
+            ratings: BookUrl.ratings,
+            views: BookUrl.views,
+            urlBook: BookUrl.urlBook,
+            library: "english",
+          };
+        } else if (library == "libls" && library != null) {
+          object = {
+            name: BookUrl.name,
+            CoverImageurl: BookUrl.url,
+            ratings: BookUrl.ratings,
+            views: BookUrl.views,
+            urlBook: BookUrl.urlBook,
+            library: "ls",
+          };
+        } else if (library == "libhtml" && library != null) {
+          object = {
+            name: BookUrl.name,
+            CoverImageurl: BookUrl.url,
+            ratings: BookUrl.ratings,
+            views: BookUrl.views,
+            urlBook: BookUrl.urlBook,
+            library: "html",
+          };
+        } else if (library == "libcss" && library != null) {
+          object = {
+            name: BookUrl.name,
+            CoverImageurl: BookUrl.url,
+            ratings: BookUrl.ratings,
+            views: BookUrl.views,
+            urlBook: BookUrl.urlBook,
+            library: "css",
+          };
+        } else if (library == "libjs" && library != null) {
+          object = {
+            name: BookUrl.name,
+            CoverImageurl: BookUrl.url,
+            ratings: BookUrl.ratings,
+            views: BookUrl.views,
+            urlBook: BookUrl.urlBook,
+            library: "js",
+          };
+        }
+        array.push(object);
+        localStorage.setItem("BooksEng", JSON.stringify(array));
+        localStorage.removeItem("BookUrl");
+        console.log(array);
+        alert("Book is inserted successfully!");
+        window.history.back();
+      }
+    </script>
+  </body>
+</html>

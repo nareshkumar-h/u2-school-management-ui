@@ -540,18 +540,18 @@
     }
 
     .grid-container-element {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-gap: 20px;
+      display: flex;
+      flex-wrap: wrap;
 
-      width: 95%;
+      width: 99%;
       margin-left: 17px;
     }
-
+    
     .grid-child-element {
-      margin: 10px;
+      margin: 10px 10px 10px 50px;
       border: 3px solid orange;
       height: 300px;
+      width:450px;
       background-image: url("../assets/images/va.jpeg");
       background-repeat: no-repeat;
       background-size: 100% 100%;
@@ -564,7 +564,7 @@
       color: orange;
       font-size: 30px;
       font-weight: bold;
-      padding-left: 24px;
+      margin-left: 60px;
 
     }
 
@@ -576,7 +576,7 @@
 
     .p2 {
       float: right;
-      padding-right: 25px;
+      padding-left: 2px;
       padding-top: 70px;
     }
 
@@ -625,7 +625,7 @@
 
     .p4 {
       float: right;
-      padding-right: 19px;
+      padding-left: 9px;
       padding-top: 70px;
     }
 
@@ -674,13 +674,14 @@
 
     .p6 {
       float: right;
-      padding-right: 20px;
+      padding-left: 10px;
       padding-top: 70px;
     }
 
     .o7 {
       font-size: 22px;
       color: orange;
+      
     }
 
     .o8 {
@@ -702,7 +703,8 @@
 
     .p6 a button {
       margin-top: 45px;
-      margin-left: 10px;
+      margin-left: 6px;
+      margin-right: 25px;
       background-color: orange;
       color: black;
       font-size: 18px;
@@ -765,34 +767,17 @@
       cursor: pointer;
 
     }
-    #imageAdd{
-      background-color: hsl(351, 26%, 95%);
-      height:100px;
-      width:30%;
-      margin-left: 720px;
-      margin-top: 10px;
-      border-radius: 7px;
-      padding: 10px 40px 40px 40px;
-      display: none;
-    }
-    input[type="url"]{
-      padding:6px;
-      color:black;
+    .addBook{
+      color: #cce5ff;
+      margin-left: 70px;
       font-weight: bold;
-      border-radius: 10px;
-      border:2px black solid;
-      
+      text-decoration: underline;
     }
-    input[type="submit"]{
-      border: none;
-      font-size: 60px;
-      font-weight: bold;
-      margin-left: 15px;
-    }
-    input[type="submit"]:hover{
+    .addBook:hover{
       cursor: pointer;
-      color: brown;
+
     }
+    
   </style>
 </head>
 
@@ -860,8 +845,11 @@
     <br><p class="adding" onclick="addNewImage()">Add New image into slider</p>
     
     <br><br>
-    <p class="a1">Continue Reading</p>
-    <br>
+    <p class="a1">Top Suggestions</p>
+    <br><p class="addBook" onclick="addNewBook()">Add New Book</p>
+    
+    
+    <br><br>
     <div class="grid-container-element">
       <div class="grid-child-element purple">
         <div class="p1"><img src="../assets/images/z1.jpg" width="250px"
@@ -907,18 +895,15 @@
         </div>
 
       </div>
-    </div>
-    <br>
-    <p class="a1">For You</p>
-    <br>
-    <div class="grid-container-element">
+    </div><br>
+     <div class="grid-container-element" id="mainElement">
       <div class="grid-child-element purple">
         <div class="p1"><img src="../assets/images/z1.jpg" width="250px"
             height="270px" alt=""></div>
         <div class="p2">
           <div class="o1">Marriam Dict.</div>
           <div class="o2">&#9733;&#9733;&#9733;&#9733;&#9733;(5)</div>
-          <div class="o3">&#128065; Read by 1234K</div>
+          <div class="o3">&#128065; Read by 37489K</div>
           <br>
           <a href="https://www.britannica.com/topic/introspection"> <button>Read now</button> </a>
         </div>
@@ -927,12 +912,12 @@
       </div>
 
       <div class="grid-child-element green">
-        <div class="p3"><img src="../assets/images/z3.jpg" width="250px"
+        <div class="p3"><img src="../assets/images/z2.jpg" width="250px"
             height="270px" alt=""></div>
         <div class="p4">
-          <div class="o4">Julius Ceaser</div>
+          <div class="o4">Macbeth</div>
           <div class="o5">&#9733;&#9733;&#9733;&#9733;&#9733;(5)</div>
-          <div class="o6">&#128065; Read by 9876K</div>
+          <div class="o6">&#128065; Read by 8903K</div>
           <br>
           <a href="https://www.betterhealth.vic.gov.au/health/conditionsandtreatments/personal-hygiene"> <button>Read
               now</button> </a>
@@ -945,10 +930,58 @@
 
 
       <div class="grid-child-element orange">
-        <div class="p5"><img src="../assets/images/z6.jpg" width="250px"
+        <div class="p5"><img src="../assets/images/z5.jpg" width="250px"
             height="270px" alt=""></div>
         <div class="p6">
-          <div class="o7">Snow White</div>
+          <div class="o7">Cindrella</div>
+          <div class="o8">&#9733;&#9733;&#9733;&#9733;&#9733;(5)</div>
+          <div class="o9">&#128065; Read by 2732K</div>
+          <br>
+          <a href="https://www.descriptionari.com/quotes/appreciation/"> <button>Read now</button> </a>
+        </div>
+
+      </div>
+      <div class="grid-child-element orange">
+        <div class="p5"><img src="../assets/images/z5.jpg" width="250px"
+            height="270px" alt=""></div>
+        <div class="p6">
+          <div class="o7">Cindrella</div>
+          <div class="o8">&#9733;&#9733;&#9733;&#9733;&#9733;(5)</div>
+          <div class="o9">&#128065; Read by 2732K</div>
+          <br>
+          <a href="https://www.descriptionari.com/quotes/appreciation/"> <button>Read now</button> </a>
+        </div>
+
+      </div>
+      <div class="grid-child-element orange">
+        <div class="p5"><img src="../assets/images/z5.jpg" width="250px"
+            height="270px" alt=""></div>
+        <div class="p6">
+          <div class="o7">Cindrella</div>
+          <div class="o8">&#9733;&#9733;&#9733;&#9733;&#9733;(5)</div>
+          <div class="o9">&#128065; Read by 2732K</div>
+          <br>
+          <a href="https://www.descriptionari.com/quotes/appreciation/"> <button>Read now</button> </a>
+        </div>
+
+      </div>
+      <div class="grid-child-element orange">
+        <div class="p5"><img src="../assets/images/z5.jpg" width="250px"
+            height="270px" alt=""></div>
+        <div class="p6">
+          <div class="o7">Cindrella</div>
+          <div class="o8">&#9733;&#9733;&#9733;&#9733;&#9733;(5)</div>
+          <div class="o9">&#128065; Read by 2732K</div>
+          <br>
+          <a href="https://www.descriptionari.com/quotes/appreciation/"> <button>Read now</button> </a>
+        </div>
+
+      </div>
+      <div class="grid-child-element orange">
+        <div class="p5"><img src="../assets/images/z5.jpg" width="250px"
+            height="270px" alt=""></div>
+        <div class="p6">
+          <div class="o7">Cindrella</div>
           <div class="o8">&#9733;&#9733;&#9733;&#9733;&#9733;(5)</div>
           <div class="o9">&#128065; Read by 2732K</div>
           <br>
@@ -957,17 +990,7 @@
 
       </div>
     </div>
-    <br><br>
-    <div class="container">
-      <div class="left">
-        <div class="c1"> Read one book a day continuosly for a week and get a coin </div>
-        <div class="c2"> You are now at;&nbsp;&nbsp;&nbsp;&nbsp;&#9312;&#8722; &#8722; &#9313;&#8722; &#8722;
-          &#9314;&#8722; &#8722;
-          &#9315;&#8722; &#8722; &#9316;&#8722;</div>
-        <div class="c3">Your score ----> &#9316;</div>
-      </div>
-    </div>
-
+  <br><p class="addBook" onclick="addNewBook()">Add New Book</p>
     </div>
     <script>
       
@@ -1026,6 +1049,74 @@
       window.onload = function () {
         responsiveSlider();
       }
+      function addNewImage(){
+        localStorage.setItem("library","libeng")
+        window.location.href="./../pages/libengAdd.html";
+      }
+      function addToSlider(){
+        let str="";
+        let imagesToAdd=JSON.parse(localStorage.getItem("ImagesEng"));
+        if(imagesToAdd!=null && imagesToAdd!=[]){
+          for(let i of imagesToAdd){
+            if(i.library=="english"){
+            str+=`<li><img src=\"${i.url}\" alt=\"\"></li>`;
+            }
+          }
+        }
+        return str;
+      }
+      let addingImage=addToSlider();
+      console.log(addingImage);
+      document.getElementById("slideWrap").innerHTML+=addingImage;
+      function addNewBook(){
+        localStorage.setItem("libbook","libeng")
+        window.location.href="./../pages/libengbAdd.html";
+      }
+      function givingStar(x){
+        let star="";
+        for(let i=0;i<x;i++){
+          star+="&#9733;";
+        }
+        return star;
+      }
+      function numFormatter(num) {
+        if(num > 999 && num < 1000000){
+        return (num/1000).toFixed(1) + 'K';
+        }else if(num >= 1000000){
+        return (num/1000000).toFixed(1) + 'M';
+        }else if(num <= 999){
+        return num; 
+        }
+        }
+      function addingToDiv(){
+        let str="";
+        let bookToAdd=JSON.parse(localStorage.getItem("BooksEng"));
+        if(bookToAdd!=null && bookToAdd!=[]){
+          for(let i of bookToAdd){
+            if(i.library=="english"){
+            let star=givingStar(i.ratings);
+            let roundNum=numFormatter(i.views);
+            str+=` <div class="grid-child-element orange">
+                      <div class="p5">
+                        <img src=\"${i.CoverImageurl}\" width="250px" height="270px" alt="">
+                      </div>
+                      <div class="p6">
+                        <div class="o7">${i.name}</div>
+                        <div class="o8">${star} (${i.ratings})</div>
+                        <div class="o9">&#128065; Read By ${roundNum}</div>
+                        <br>
+                        <a href=\"${i.urlBook}\"> <button>Read now</button> </a>
+                      </div>
+
+                    </div>`;
+            }
+          }
+        }
+        return str;
+      }
+      let divAdd=addingToDiv();
+      console.log(divAdd);
+      document.getElementById("mainElement").innerHTML+=divAdd;
     </script>
 </body>
 

@@ -1,0 +1,88 @@
+
+  .heading {
+    margin-left: 57px;
+    font-size: 60px;
+    font-weight: bold;
+  }
+  .container {
+    margin-left: 670px;
+    margin-top: 150px;
+    border: box;
+    background-color: whitesmoke;
+    height: 700px;
+    width: 500px;
+    box-shadow: 10px 5px 5px wheat;
+  }
+  input[type="text"] {
+    width: 200px;
+    padding: 10px;
+    border: 3px black solid;
+    margin-left: 50px;
+  }
+  input[type="text"]:focus,
+  input[type="number"]:focus,
+  input[type="url"]:focus {
+    background-color: black;
+    color: white;
+    padding-top: 17px;
+    padding-bottom: 2px;
+    font-size: 18px;
+  }
+  input[type="url"] {
+    width: 200px;
+    padding: 10px;
+    border: 3px black solid;
+    margin-left: 50px;
+    margin-top: 7px;
+  }
+  input[type="number"] {
+    width: 200px;
+    padding: 10px;
+    border: 3px black solid;
+    margin-left: 50px;
+    margin-top: 7px;
+  }
+  .InsertButton {
+    border: 3px black solid;
+    padding: 10px;
+    font-weight: bold;
+    letter-spacing: 1.3px;
+  }
+  .InsertButton:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+  }
+  .ConfirmButton {
+    margin-left: 89px;
+    margin-top: 20px;
+    border: 3px black solid;
+    padding: 10px;
+    font-weight: bold;
+    letter-spacing: 1.3px;
+  }
+  .ClearButton {
+    margin-left: 10px;
+    margin-top: 20px;
+    border: 3px black solid;
+    padding: 10px;
+    font-weight: bold;
+    letter-spacing: 1.3px;
+  }
+  .ConfirmButton:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+  }
+  .ClearButton:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+  }
+  .addNewImage {
+    margin-top: 30px;
+    margin-left: 100px;
+    border: 5px black solid;
+    width: 250px;
+    height: 200px;
+  }

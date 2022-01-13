@@ -13,157 +13,53 @@
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./../assets/css/create_not.css" />
     <style>
-        body{
-            background-image: url('../assets/images/not.jpeg');
-            background-repeat: no-repeat;
-            background-size: 100% 400%;
-        }
-        .form{
-            height: 700px;
-            width: 700px;
-            border-radius: 25px;
-            margin-left: 600px;
-            margin-top: 170px;
-            background-color: blanchedalmond;
-            color:#0A2558;
-        }
-        h1{
-            font-size: 40px;
-            margin-left: 170px;
-            margin-top: 60px;
-        }
-        p{
-            font-weight: bold;
-            font-size: 29px;
-            margin-left: 20px;
-        }
-        input[type="textarea"]{
-            border-radius: 10px;
-            padding:7px;
-            font-size: 19px;
-            margin-left: 15px;
-        }
-        
-        input[type="submit"]{
-            border-radius: 10px;
-            padding:9px;
-            font-size: 20px;
-            margin-left: 15px;
-            margin-top: 30px;
-            background-color: #0A2558;
-            color:white;
-        }
-        input[type="submit"]:hover{
-            cursor: pointer;
-            opacity: 0.5;
-        }
-        button{
-            border-radius: 10px;
-            padding:11px 15px 11px 15px;
-            font-size: 20px;
-            margin-left: 15px;
-            margin-top: 25px;
-            background-color: red;
-            color:white;
-        }
-        button:hover{
-            cursor: pointer;
-            opacity: 0.5;
-        }
-        #message1 {
-            color:red;
-            font-size: 17px;
-            padding-left: 15px;
-        }
+      body {
+        background-image: url("../assets/images/not.jpeg");
+        background-repeat: no-repeat;
+        background-size: 100% 400%;
+      }
     </style>
   </head>
   <body>
     <div class="form">
-    <h1>CREATE POPUPS</h1>
-    <form class="box" onsubmit="submitHandler(event)">
-      <p>Title</p>
-      <input
-        type="textarea"
-        name="Name"
-        placeholder="Enter Your notification title"
-        id="title"
-        minlength="3"
-        required
-      />
-      <p>Subtitle</p>
-      <input
-        type="textarea"
-        name="Name"
-        placeholder="Enter Subtitle"
-        id="st"
-        minlength="3"
-        required
-      />
-      <p>Data</p>
-      <input
-        type="textarea"
-        name="Name"
-        placeholder="Enter Other data"
-        id="data"
-        minlength="3"
-        required
-      />
-    
+      <h1>CREATE POPUPS</h1>
+      <form class="box" onsubmit="submitHandler(event)">
+        <p>Title</p>
+        <input
+          type="textarea"
+          name="Name"
+          placeholder="Enter Your notification title"
+          id="title"
+          minlength="3"
+          required
+        />
+        <p>Subtitle</p>
+        <input
+          type="textarea"
+          name="Name"
+          placeholder="Enter Subtitle"
+          id="st"
+          minlength="3"
+          required
+        />
+        <p>Data</p>
+        <input
+          type="textarea"
+          name="Name"
+          placeholder="Enter Other data"
+          id="data"
+          minlength="3"
+          required
+        />
+
         <input type="submit" name="" value="Submit" class="btn" />
         <br />
         <button type="button" onclick="reload()">Clear</button>
         <br /><br />
-      
-    </form>
-</div>
-    <script>
-      let str = "";
-      function reload(){
-        window.location.reload();
-      }
-      function submitHandler() {
-        event.preventDefault();
-        if (localStorage.getItem("notifications") == null) {
-          localStorage.setItem("notifications","");
-          let title = document.getElementById("title").value;
-          let data = document.getElementById("data").value;
-          let st = document.getElementById("st").value;
-          let date = new Date();
-          updatePage(title, data, date,st);
-          alert("Notification has been sent to everybody !")
-          window.location.href="../pages/notification.html"
-        } else {
-          let title = document.getElementById("title").value;
-          let data = document.getElementById("data").value;
-          let date = new Date();
-          let st = document.getElementById("st").value;
-          updatePage(title, data, date,st);
-          alert("Notification has been sent to everybody !")
-          window.location.href="../pages/notification.html"
-        }
-        
-      }
-
-      function updatePage(add_title,add_data, add_date,add_sub) {
-        str+="<div class='grid-container-element12'><div class='a1'><img src='../assets/images/bell.png' height='50px' width='50px'></div><div class='a2'>"
-             +add_title+"</div><br><br><div class='a3'><span class='w12'>"+add_sub+"</span><span class='w13'><a href='#'>"+add_data+"</a></span><span class='w14'>"+add_date+"</span></div></div><br>";
-         
-        
-        console.log(str);
-        localStorage.setItem("notifications", str);
-      }
-      function getAllFields() {
-        const string = localStorage.getItem("notifications");
-
-        return string;
-      }
-      function pageOnLoadHandler() {
-        const all = getAllFields();
-        str = all;
-      }
-
-      pageOnLoadHandler();
-    </script>
+      </form>
+    </div>
+  <script src="./../assets/js/create_not.js"></script>
   </body>
 </html>

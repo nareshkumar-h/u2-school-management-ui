@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add new image to slider</title>
+    <script src="./../assets/js/admin_check.js"></script>
+    <style>
+      body {
+        background-image: url("../assets/images/apsara.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 140%;
+      }
+      .heading {
+        margin-left: 57px;
+        font-size: 60px;
+        font-weight: bold;
+      }
+      .container {
+        margin-left: 620px;
+        margin-top: 220px;
+        border: box;
+        background-color: whitesmoke;
+        height: 500px;
+        width: 500px;
+        box-shadow: 10px 5px 5px wheat;
+      }
+      input[type="url"] {
+        width: 200px;
+        padding: 10px;
+        border: 3px black solid;
+        margin-left: 50px;
+      }
+      .InsertButton {
+        border: 3px black solid;
+        padding: 10px;
+        font-weight: bold;
+        letter-spacing: 1.3px;
+      }
+      .InsertButton:hover {
+        background-color: black;
+        color: white;
+        cursor: pointer;
+      }
+      .ConfirmButton {
+        margin-left: 94px;
+        margin-top: 20px;
+        border: 3px black solid;
+        padding: 10px;
+        font-weight: bold;
+        letter-spacing: 1.3px;
+      }
+      .ClearButton {
+        margin-left: 10px;
+        margin-top: 20px;
+        border: 3px black solid;
+        padding: 10px;
+        font-weight: bold;
+        letter-spacing: 1.3px;
+      }
+      .ConfirmButton:hover {
+        background-color: black;
+        color: white;
+        cursor: pointer;
+      }
+      .ClearButton:hover {
+        background-color: black;
+        color: white;
+        cursor: pointer;
+      }
+      .addNewImage {
+        margin-top: 30px;
+        margin-left: 100px;
+        border: 5px black solid;
+        width: 250px;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading">Insert Image</div>
+      <br /><br />
+      <form onsubmit="submitHandler(event)">
+        <input
+          type="url"
+          name="url"
+          id="url"
+          placeholder="Enter the image url"
+          pattern="https://.*"
+          size="30"
+          title="Match the format : https://example.com  "
+          autofocus
+          required
+        />
+        <input type="submit" class="InsertButton" value="Insert Image" />
+      </form>
+
+      <div id="newImageConfirm">
+        <div id="Image" class="addNewImage"></div>
+        <form onsubmit="submitHandler1(event)">
+          <input type="submit" value="Confirm Image" class="ConfirmButton" />
+          <input
+            type="button"
+            value="Clear Image"
+            onclick="reload()"
+            class="ClearButton"
+          />
+        </form>
+      </div>
+    </div>
+    <script>
+      let array = JSON.parse(localStorage.getItem("ImagesEng"));
+      if (array == null) {
+        localStorage.setItem("ImagesEng", JSON.stringify([]));
+      }
+      function submitHandler(event) {
+        event.preventDefault();
+
+        let url = document.getElementById("url").value;
+        localStorage.setItem("ImageUrl", url);
+
+        document.getElementById(
+          "Image"
+        ).innerHTML = `<img src=${url} height=\"200px\" width=\"250px\">`;
+      }
+      function reload() {
+        let url = localStorage.getItem("ImageUrl");
+        if (url == null) {
+          alert(
+            "Please enter an image url and click on insert image.Then confirm whether you want to proceed further with this image or not."
+          );
+          return null;
+        }
+        localStorage.getItem("ImagekUrl")
+        window.location.reload();
+      }
+      function submitHandler1(event) {
+        event.preventDefault();
+        let url = localStorage.getItem("ImageUrl");
+        let object={};
+        if (url == null) {
+          alert(
+            "Please enter an image url and click on insert image.Then confirm whether you want to proceed further with this image or not."
+          );
+          return null;
+        }
+        let library = localStorage.getItem("library");
+        if (library == "libeng" && library != null) {
+          object = {
+            url: url,
+            library: "english"
+          };
+        } else if (library == "libls" && library != null) {
+          object = {
+            url: url,
+            library: "ls",
+          };
+          
+        }
+        else if (library == "libhtml" && library != null) {
+          object = {
+            url: url,
+            library: "html",
+          };
+          
+        }
+        else if (library == "libcss" && library != null) {
+          object = {
+            url: url,
+            library: "css",
+          };
+          
+        }
+        else if (library == "libjs" && library != null) {
+          object = {
+            url: url,
+            library: "js",
+          };
+          
+        }
+        array.push(object);
+        localStorage.setItem("ImagesEng", JSON.stringify(array));
+        localStorage.removeItem("ImageUrl");
+        alert("Your image is added to slider successfully!");
+        window.history.back();
+      }
+    </script>
+  </body>
+</html>

@@ -752,6 +752,17 @@
       padding: 20px;
       font-size: 50px;
     }
+    .adding{
+      color: #cce5ff;
+      margin-left: 1000px;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    .adding:hover{
+      cursor: pointer;
+
+    }
+    
   </style>
   </head>
   <body>
@@ -814,7 +825,7 @@
     </ul>
     <span><a id="prev" href="#">&#8666;</a></span>
     <span><a id="next" href="#">&#8667;</a></span>
-  </div>
+  </div><br><p class="adding" onclick="addNewImage()">Add New image into slider</p>
   <br><br>
   <p class="a1">Continue Reading</p>
     <br>
@@ -965,6 +976,25 @@
   window.onload = function() {
   responsiveSlider();
   }
+  function addNewImage(){
+        localStorage.setItem("library","libjs")
+        window.location.href="./../pages/libengAdd.html";
+      }
+      function addToSlider(){
+        let str="";
+        let imagesToAdd=JSON.parse(localStorage.getItem("ImagesEng"));
+        if(imagesToAdd!=null && imagesToAdd!=[]){
+          for(let i of imagesToAdd){
+            if(i.library=="js"){
+            str+=`<li><img src=\"${i.url}\" alt=\"\"></li>`;
+            }
+          }
+        }
+        return str;
+      }
+      let addingImage=addToSlider();
+      console.log(addingImage);
+      document.getElementById("slideWrap").innerHTML+=addingImage;
   </script>
   </body>
   </html>

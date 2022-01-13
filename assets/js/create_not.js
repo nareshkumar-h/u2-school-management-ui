@@ -1,3 +1,4 @@
+ let str;
  function reload() {
         window.location.reload();
       }
@@ -36,7 +37,7 @@
         localStorage.setItem("notifications", JSON.stringify(str));
       }
       function getAllFields() {
-       return (JSON.parse(localStorage.getItem("notifications")));;
+       return (JSON.parse(localStorage.getItem("notifications")));
       }
       function pageOnLoadHandler() {
         const all = getAllFields();

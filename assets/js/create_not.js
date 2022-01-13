@@ -38,10 +38,4 @@
       function getAllFields() {
        return (JSON.parse(localStorage.getItem("notifications")));
       }
-      function pageOnLoadHandler() {
-        let str=[];
-        const all = getAllFields();
-        str = all;
-      }
-
-      pageOnLoadHandler();
+      

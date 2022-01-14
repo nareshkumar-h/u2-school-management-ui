@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Notification</title>
     <link rel="shortcut icon" href="../assets/images/1bg.png" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
     <meta charset="UTF-8" />
     <script src="./../assets/js/loginCheck.js"></script>
     <script src="./../assets/js/admin_check.js"></script>
@@ -16,26 +22,27 @@
     <link rel="stylesheet" href="./../assets/css/create_not.css" />
     <style>
       body {
-        background-image: url("../assets/images/not.jpeg");
+        background-image: url("../assets/images/561.jpg");
         background-repeat: no-repeat;
-        background-size: 100% 400%;
+        background-size: 100% 125%;
       }
     </style>
   </head>
   <body>
     <div class="form">
-      <h1>CREATE POPUPS</h1>
+      <br />
+      <h1>CREATE</h1>
       <form class="box" onsubmit="submitHandler(event)">
-        <p>Title</p>
         <input
           type="textarea"
           name="Name"
           placeholder="Enter Your notification title"
           id="title"
           minlength="3"
+          autofocus
           required
         />
-        <p>Subtitle</p>
+
         <input
           type="textarea"
           name="Name"
@@ -44,22 +51,26 @@
           minlength="3"
           required
         />
-        <p>Data</p>
-        <input
-          type="textarea"
-          name="Name"
+
+        <textarea
+          cols="27"
+          rows="2"
           placeholder="Enter Other data"
           id="data"
           minlength="3"
           required
-        />
-
-        <input type="submit" name="" value="Submit" class="btn" />
+        ></textarea>
+        
         <br />
-        <button type="button" onclick="reload()">Clear</button>
+        <button type="button" class="btn btn-outline-danger" id="redirect" onclick="reload()">Clear</button>
+        <span class="submitBtn"
+          ><input type="submit" name="submitBtn" value="Submit" class="btn btn-outline-danger" id="submitBtn"
+        /></span>
+
+        
         <br /><br />
       </form>
     </div>
-  <script src="./../assets/js/create_not.js"></script>
+    <script src="./../assets/js/create_not.js"></script>
   </body>
 </html>

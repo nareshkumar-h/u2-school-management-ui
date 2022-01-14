@@ -8,6 +8,8 @@
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" href="./../assets/css/list_notification.css">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
      <script src="./../assets/js/loginCheck.js"></script>
      
    </head>
@@ -77,97 +79,39 @@
       <div class="sidebar-button">
         <em class='bx bx-menu sidebarBtn'></em>
         <span class="dashboard">Notifications</span>
-        <span class="edit"><a href="../pages/create_not.html">CREATE</a></span>
+        <span class="edit"><button type="button" class="btn btn-outline-danger" id="redirect" onclick="redirect()">Create</button> </span>
         
       </div>
 
 
-    </nav><br><br><br><br>
+    </nav><br><br><br><br><br>
     
-    <div class="grid-container-element12">
-         <div class="a1"><img src="../assets/images/bell.png" height="50px" width="50px" alt=""></div>
-         <div class="a2">
-             Technical Class (11:00 am - 01:00 pm)
-         </div><br><br>
-         <div class="a3">
-            <span class="w12">Meeting link :-</span><span class="w13"> <a href="https://freshworks.zoom.us/my/b2classroom">https://freshworks.zoom.us/my/b2classroom</a></span>
-            <span class="w14">10:50    (15/11/2021) </span>
-         </div>
-
-    </div><br>
-    <div class="grid-container-element12">
-         <div class="a1"><img src="../assets/images/bell.png" height="50px" width="50px" alt=""></div>
-         <div class="a2">
-             English Class (08:30 am - 10:30 am)
-         </div><br><br>
-         <div class="a3">
-            <span class="w12">Meeting link :-</span><span class="w13"> <a href="https://freshworks.zoom.us/my/b2classroom">https://freshworks.zoom.us/my/b2classroom</a></span>
-            <span class="w14">08:20   (15/11/2021) </span>
-         </div>
-
-    </div><br>
-    <div class="grid-container-element12">
-         <div class="a1"><img src="../assets/images/bell.png" height="50px" width="50px" alt=""></div>
-         <div class="a7">
-             Same link will be followed for every classes
-         </div><br><br>
-         <div class="a3">
-            <span class="w12">Meeting link :-</span><span class="w13"> <a href="https://freshworks.zoom.us/my/b2classroom">https://freshworks.zoom.us/my/b2classroom</a></span>
-            <span class="w14">07:20    (13/11/2021) </span>
-         </div>
-
-    </div><br>
-    <div class="grid-container-element12">
-         <div class="a1"><img src="../assets/images/bell.png" height="50px" width="50px" alt=""></div>
-         <div class="a4">
-            No classes
-         </div><br><br>
-         <div class="a3">
-            <span class="w12">Because of heavy rain, there will be no classes today</span>
-            <span class="w14">07:50    (12/11/2021) </span>
-         </div>
-
-    </div><br>
-    <div class="grid-container-element12">
-         <div class="a1"><img src="../assets/images/bell.png" height="50px" width="50px" alt=""></div>
-         <div class="a2">
-             Fitness Class (05:45 pm - 06:15 pm)
-         </div><br><br>
-         <div class="a3">
-            <span class="w12">Meeting link :-</span><span class="w13"> <a href="https://freshworks.zoom.us/my/b2classroom">https://freshworks.zoom.us/my/b2fclassroom</a></span>
-            <span class="w14">17:30    (11/11/2021) </span>
-         </div>
-
-    </div><br>
-    <div class="grid-container-element12">
-         <div class="a1"><img src="../assets/images/bell.png" height="50px" width="50px" alt=""></div>
-         <div class="a2">
-             Technical Class (03:10 pm - 05:30 pm)
-         </div><br><br>
-         <div class="a3">
-            <span class="w12">Meeting link :-</span><span class="w13"> <a href="https://freshworks.zoom.us/my/b2classroom">https://freshworks.zoom.us/my/b2classroom</a></span>
-            <span class="w14">15:00    (11/11/2021) </span>
-         </div>
-
-    </div><br>
-    <div class="grid-container-element12">
-         <div class="a1"><img src="../assets/images/bell.png" height="50px" width="50px" alt=""></div>
-         <div class="a2">
-             LS Class (02:00 pm - 03:00 pm)
-         </div><br><br>
-         <div class="a3">
-            <span class="w12">Meeting link :-</span><span class="w13"> <a href="https://freshworks.zoom.us/my/b2classroom">https://freshworks.zoom.us/my/b2classroom</a></span>
-            <span class="w14">13:50     (11/11/2021) </span>
-         </div>
-
-    </div>
     
-
-    </div><br>
     <div id="new"></div>
     
     <script src="./../assets/js/list_notification.js"></script>
-
+    <script>
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".sidebarBtn");
+      sidebarBtn.onclick = function () {
+        sidebar.classList.toggle("active");
+        if (sidebar.classList.contains("active")) {
+          sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+        } else {
+        sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+      }
+      };
+    $("button").click(function () {
+      clicked = true;
+      if (clicked) {
+        $(this).toggleClass("active");
+        clicked = true;
+      } else {
+          $(this).removeClass("active");
+          clicked = false;
+      }
+      });
+    </script>
 
 
 

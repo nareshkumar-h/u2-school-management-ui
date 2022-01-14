@@ -11,7 +11,7 @@ function submitHandler(event) {
     let data = document.getElementById("data").value;
     let st = document.getElementById("st").value;
     let date = new Date();
-    updatePage(
+    updatePage([
       title,
       data,
       date.getDate(),
@@ -19,8 +19,8 @@ function submitHandler(event) {
       date.getFullYear(),
       date.getHours(),
       date.getMinutes(),
-      st
-    );
+      st,
+    ]);
     alert("Notification has been sent to everybody !");
     window.location.href = "../pages/notification.html";
   } else {
@@ -28,7 +28,7 @@ function submitHandler(event) {
     let data = document.getElementById("data").value;
     let date = new Date();
     let st = document.getElementById("st").value;
-    updatePage(
+    updatePage([
       title,
       data,
       date.getDate(),
@@ -36,33 +36,24 @@ function submitHandler(event) {
       date.getFullYear(),
       date.getHours(),
       date.getMinutes(),
-      st
-    );
+      st,
+    ]);
     alert("Notification has been sent to everybody !");
     window.location.href = "../pages/notification.html";
   }
 }
 
-function updatePage(
-  add_title,
-  add_data,
-  add_date,
-  add_month,
-  add_years,
-  add_hours,
-  add_minutes,
-  add_sub
-) {
+function updatePage(array) {
   let str = getAllFields();
   let object = {
-    title: add_title,
-    data: add_data,
-    date: add_date,
-    month: add_month,
-    year: add_years,
-    hour: add_hours,
-    minutes: add_minutes,
-    sub: add_sub,
+    title: array[0],
+    data: array[1],
+    date: array[2],
+    month: array[3],
+    year: array[4],
+    hour: array[5],
+    minutes: array[6],
+    sub: array[7],
   };
   str.push(object);
   console.log(str);

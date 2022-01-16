@@ -19,3 +19,10 @@ for (let i of lS) {
 }
 console.log(str);
 document.getElementById("new").innerHTML = str;
+function onc(){
+  window.location.href="./../index.html";
+}
+function logout(){
+  localStorage.removeItem("loggedInUser");
+  window.location.href="./../index.html";
+}

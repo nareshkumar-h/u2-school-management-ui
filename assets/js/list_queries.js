@@ -95,7 +95,7 @@ for (let i of localStorageGet) {
     JSON.stringify(count) +
     "','true'/><span><a class=\"link\" href='#' onclick=\"cli(" +
     i.qNo +
-    ')">Reply in thread</a></span></div>';
+    ')\">Reply in thread</a></span></div>';
 }
 console.log(str);
 let div = document.getElementById("new");

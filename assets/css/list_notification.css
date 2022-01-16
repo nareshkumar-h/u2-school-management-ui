@@ -200,4 +200,7 @@ nav .profile-details em {
   background-color: #ec745a;
   border: 1px #ec745a solid;
 }
-
+.logoimg{
+  margin-left: 12px;
+  margin-right: 12px;
+}

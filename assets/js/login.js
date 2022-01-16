@@ -19,7 +19,6 @@ function submitHandler(event) {
   let log_role = "";
 
   for (let i of userCredentials) {
-    
     let email = i.email_id;
     let password = i.password;
     let role = i.role;
@@ -41,4 +40,9 @@ function submitHandler(event) {
     document.getElementById("error").innerHTML = "Invalid email id or password";
     return null;
   }
+}
+function colorChange() {
+  document.getElementById("submit").style.backgroundColor = "#46a9a9";
+  document.getElementById("submit").style.color = "white";
+  document.getElementById("submit").style.borderColor = "#46a9a9";
 }

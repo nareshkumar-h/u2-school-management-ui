@@ -1,45 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In</title>
+    <link rel="stylesheet" href="../assets/css/login_page.css" />
+    <link rel="shortcut icon" href="./../assets/images/New Project (22).png">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Page</title>
-  <link rel="stylesheet" href="../assets/css/login and sign up.css">
-  <link rel="shortcut icon" href="../assets/images/1bg.png">
-  <link rel="stylesheet" href="../assets/css/login.css">
-  
- 
-</head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background-image: url("./../assets/images/59276.jpg");
+      }
+    </style>
+  </head>
 
+  <body>
+    <div class="test">
+      <div class="test3">
+        <span class="test1">
+          <img
+            src="../assets/images/group.JPG"
+            height="100%"
+            alt="group photo"
+          />
+        </span>
 
-<body>
-  <div class="test">
-    <div class="test3">
-      <span class="test1">
-        <img src="../assets/images/group.JPG" height="100%" alt="group photo">
-      </span>
+        <span class="test2">
+          <div class="side_up">
+            <form class="box" onsubmit="submitHandler(event)">
+              <h1 class="h1">SIGN IN</h1>
 
-      <span class="test2">
-        <form class="box"  onsubmit="submitHandler(event)">
-          <h1>LOGIN PAGE</h1>
-          <p>Email ID</p>
-          <input type="email" name="mail" placeholder="Enter Your Email ID" id="mail" autofocus required>
-          <p>Password</p>
-          <input type="password" name="password" placeholder="Enter Your Password" id="pass" required>
-          <div id="error"></div>
-           <a href="../pages/management.html"><input type="submit" name="name" value="Submit"></a> <br><br><br>
-          
-          Forgot Password? <a href="../pages/forget.html">Click here</a>
-          <br><br>
-          New To the Our Site Sign Up <a href="../pages/signup.html"> Here</a>
-        </form>
+              <input
+                type="email"
+                name="mail"
+                placeholder="Email ID"
+                id="mail"
+                autofocus
+                required
+                class="mail"
+              />
 
-      </span>
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                id="pass"
+                class="pass"
+                required
+              />
+              <div id="error"></div>
+              <a href="../pages/forget.html" class="fp">Forgot Password ?</a>
+              <input
+                type="submit"
+                name="name"
+                value="Submit"
+                class="btn btn-outline-danger"
+                onclick="colorChange()"
+                id="submit"
+              />
+              <br /><br /><br />
+
+              <br /><br />
+              <p class="fpw">
+                New User ?
+                <a href="../pages/signup.html" class="linkto">Sign up</a>
+              </p>
+            </form>
+          </div>
+        </span>
+      </div>
     </div>
-  </div>
-  <script src="../assets/js/login.js"></script>
-</body>
-
+    <script src="../assets/js/login.js"></script>
+  </body>
 </html>

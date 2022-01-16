@@ -2,11 +2,11 @@
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title> FreshTech</title>
+    <title> Freshtech</title>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   
-    <link rel="shortcut icon" href="../assets/images/1bg.png">
+    <link rel="shortcut icon" href="./../assets/images/New Project (22).png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
@@ -22,12 +22,17 @@
       .header {
         min-height: 100vh;
         width: 100%;
-        background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url('../assets/images/bgi.jpeg');
+        background-image: url('./assets/images/fw.jpg');
         background-position: center;
         background-size: cover;
         position: relative;
       }
-  
+      .logoimg{
+         width:70px;
+        margin-right: 16px;
+        margin-top: 38px;
+        margin-left:-37px;
+      }
       nav {
         display: flex;
         padding: 2% 6%;
@@ -49,6 +54,7 @@
       .nav-links {
         flex: 1;
         text-align: right;
+        margin-right:35px;
       }
   
       .nav-links ul li {
@@ -69,7 +75,7 @@
         content: "";
         width: 0%;
         height: 2px;
-        background: #f44336;
+        background: #63bfbf;
         display: block;
         margin: auto;
         transition: 0.5s;
@@ -105,7 +111,7 @@
   
       .button {
         color: #fff;
-        background-color: sandybrown;
+        
         width: 5%;
         height: 5%;
         display: flex;
@@ -118,8 +124,14 @@
         color: white;
         text-decoration: none;
       }
-  
-  
+     .signIn{
+       width:55px;
+       
+     }
+     .signIn:hover{
+       cursor: pointer;
+       opacity: 0.9;
+     }
   
       .text-box {
         width: 90%;
@@ -137,7 +149,7 @@
   
       .text-box p {
         margin: 10px 0 40px;
-        font-size: 14px;
+        font-size: 16px;
         color: #fff;
       }
   
@@ -151,39 +163,14 @@
         background: transparent;
         position: relative;
         cursor: pointer;
+        border-radius:2px;
       }
   
       .hero:hover {
-        border: 1px solid #f44336;
-        background: #f44336;
+        border: 1px solid #63bfbf;
+        background: #63bfbf;
         transition: 1s;
       }
-  
-  
-  
-  
-      @media (max-width: 700px) {
-        .text-box h1 {
-          font-size: 20px;
-        }
-  
-        .nav-links ul li {
-          display: block;
-        }
-  
-        .nav-links {
-          position: absolute;
-          background: #f44336;
-          height: 100vh;
-          width: 200px;
-          top: 0;
-          right: 0;
-          text-align: left;
-          z-index: 2;
-        }
-  
-      }
-  
       p {
         font-size: 50px;
         color: white;
@@ -195,10 +182,10 @@
   <body>
     <section class="header">
       <nav>
-  
-        <a href="u2-school-management-ui/pages/index.html"><img
-            src="../assets/images/log1.png" alt="logo"> </a>
-        <p>FRESHTECH</p>
+        
+        <a href="u2-school-management-ui/pages/index.html"><img class="logoimg"
+            src="./../assets/images/New Project (22).png" alt="logo"> </a>
+        <p>Freshtech</p>
         <div class="nav-links">
           <ul>
             <li>
@@ -209,26 +196,30 @@
               <a href="../pages/Teacher profile.html">TEACHER</a>
             </li>
             <li>
-              <a class="note" href="../pages/notification.html"><em
-                  class="far fa-bell"></em></a>
+              <a class="note" href="../pages/notification.html">NOTIFICATIONS</a>
             </li>
           </ul>
         </div>
         &nbsp;&nbsp;&nbsp;&nbsp;
         <div class="button">
-          <a class="likes" href="../pages/login.html">SIGN IN</a>
+          <img class="signIn" src="./../assets/images/icons8-test-account-96.png" onclick="redirecttoLogin()" alt="">
         </div>
       </nav>
   
       <div class="text-box">
         <h1>FRESHTECH </h1>
         <P>The courses in Freshworks Academy are really impressive and I believe
-          it's perfect for new joiners! It's super user-friendly, easy to understand<br>
+          it's perfect for new joiners!<br> It's super user-friendly, easy to understand
           and I love the design of it</P>
         <a class="hero" href="../pages/knowmore.html">Visit us to know more</a>
       </div>
     </section>
   </body>
-  
+  <script>
+    function redirecttoLogin(){
+
+      window.location.href="./../pages/login.html";
+    }
+  </script>
   </html>
 

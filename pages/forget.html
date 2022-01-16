@@ -5,54 +5,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Forgot Password</title>
-    <link rel="stylesheet" href="../assets/css/login and sign up.css" />
-    <link rel="shortcut icon" href="../assets/images/1bg.png" />
-    
-    <script src="../assets/js/forget.js"></script>
+    <link rel="stylesheet" href="../assets/css/fp.css" />
+    <link rel="shortcut icon" href="./../assets/images/New Project (22).png">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background-image: url("./../assets/images/59276.jpg");
+      }
+    </style>
   </head>
 
   <body>
-    <div class="forget">
-      <p>
-        Forgot Password???<br />No Issues just chill out and type your Email Id
-        in the Box <br />
-        and create your password
-      </p>
-      <br /><br />
-      <form onsubmit="submitHandler(event)">
-        <p>Email ID</p>
+    <div class="test">
+      <div class="test3">
+        <span class="test1">
+          <img
+            src="../assets/images/group.JPG"
+            height="100%"
+            alt="group photo"
+          />
+        </span>
 
-        <input
-          type="email"
-          name="email"
-          id="email_id"
-          placeholder="Enter Your Email ID"
-          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-          required
-        />
-        <p>Password</p>
+        <span class="test2">
+          <div class="side_up">
+            <form class="box" onsubmit="submitHandler(event)">
+              <h1 class="h1">FORGOT PASSWORD ?</h1>
 
-        <input
-          type="password"
-          placeholder="Use 8-15 characters with atleast one capital,one running and one special character"
-          name="psw1"
-          id="psw1"
-          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-          required
-        />
+              <input
+                type="email"
+                name="mail"
+                placeholder="Email ID"
+                id="email_id"
+                autofocus
+                required
+                class="mail"
+              />
 
-        <p>Confirm Password</p>
-        <input
-          type="password"
-          placeholder="Repeat Password"
-          id="psw2"
-          name="psw2"
-          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-          required
-        />
-        <div id="add"></div>
-        <input type="submit" name="submit" value="Submit" />
-      </form>
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                id="password1"
+                class="pass"
+                required
+              />
+              <input
+                type="password"
+                name="password"
+                placeholder="Confirm Password"
+                id="password2"
+                class="pass"
+                required
+              />
+              <div id="error"></div>
+
+              <input
+                type="submit"
+                name="name"
+                value="Submit"
+                id="submit"
+                class="btn btn-outline-danger"
+                onclick="colorChange()"
+              />
+              <br /><br /><br />
+            </form>
+          </div>
+        </span>
+      </div>
     </div>
+    <script src="../assets/js/forget.js"></script>
   </body>
 </html>

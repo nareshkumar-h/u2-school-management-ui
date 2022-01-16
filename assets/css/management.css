@@ -1,75 +1,122 @@
-body {
-    background-image: url("../assets/images/home1.jpeg");
-    background-repeat: no-repeat;
-    background-size: 100% 100% ;
-    background-attachment: fixed;
-   }
-  .logo{
-    height: 80px;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.logo {
+  height: 80px;
   display: flex;
   align-items: center;
   font-size: 50px;
-  color:azure;
-  margin-left: 20px;
-  }
-  .h{
-    padding-left: 900px;
-  }
-  .nav{
-    margin-bottom: 230px;
-  }
-   .nav a{
-    color: black;
-    text-decoration: none;
-  }
-  .nav button{
-    
-    padding: 10px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 20px;
-  }
-  .nav button:hover{
-    cursor: pointer;
-    opacity: 0.5;
-  }
-  .icon{
-    font-size: 250px;
-  }
-  .school{
-    color: yellow;
-  }
-  .school a{
-    color: yellow;
-  }
-  .library{
-    color: blue;
-  }
-  .library a{
-    color: blue;
-  }
-  .notification{
-    color: red;
-  }
-  .notification a{
-    color: red;
-  }
-  .text{
-    font-size: 25px;
-  }
-  .text a{
-    color:white;
-    text-decoration: none;
-  }
-  .sm{
-    padding-left: 280px;
-  }
-  .lib{
-    padding-left: 420px;
-  }
-  .no{
-    padding-left: 420px;
-  }
-  button{
-    margin-left: 40px;
-  }
+  color: azure;
+  margin-left: 60px;
+  margin-top: 40px;
+}
+.logo:hover {
+  cursor: pointer;
+}
+.nav-links {
+  flex: 1;
+  text-align: right;
+  margin-right: 75px;
+  margin-top: -50px;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 21px 0 55px;
+  position: relative;
+}
+
+.nav-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #63bfbf;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav-links ul li:hover:after {
+  width: 100%;
+}
+
+.logo_name {
+  margin-left: 14px;
+}
+
+.logoImg {
+  width: 70px;
+  margin-top: 30px;
+}
+.boxofone,
+.boxoftwo,
+.boxofthree {
+  display: inline-block;
+  background-color: white;
+  margin-left: 120px;
+  width: 425px;
+  height: 600px;
+  border-radius: 10px;
+  text-align: center;
+}
+.boxofone:hover {
+  background-color: #eff8f8;
+  cursor: pointer;
+  box-shadow: 3px 3px 8px 5px rgba(59, 114, 114, 0.4);
+  transition: 0.7s;
+}
+.boxoftwo:hover {
+  background-color: #eff8f8;
+  cursor: pointer;
+  box-shadow: 3px 3px 8px 5px rgba(59, 114, 114, 0.4);
+  transition: 0.7s;
+}
+.boxofthree:hover {
+  background-color: #eff8f8;
+  cursor: pointer;
+  box-shadow: 3px 3px 8px 5px rgba(59, 114, 114, 0.4);
+  transition: 0.7s;
+}
+.mainDiv {
+  margin-left: 38px;
+  margin-top: 30px;
+}
+.imagesIn2,
+.imagesIn1,
+.imagesIn3 {
+  display: inline-block;
+  width: 350px;
+  height: 440px;
+  margin-left: -1px;
+  margin-top: 35px;
+  border-radius: 10px;
+}
+
+h4 {
+  display: inline-block;
+  font-weight: lighter;
+}
+p {
+  display: inline-block;
+  font-size: 12px;
+  opacity: 0.6;
+  color: #050b0b;
+}
+.heading {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 20px;
+  color: #050b0b;
+  opacity: 1;
+}

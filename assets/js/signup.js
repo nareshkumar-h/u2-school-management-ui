@@ -15,7 +15,7 @@ function submiHandler(event) {
   //Show success message
 
   event.preventDefault();
-  
+
   let parsed = JSON.parse(localStorage.getItem("user_credentials"));
   if (parsed == null) {
     localStorage.setItem("user_credentials", JSON.stringify([]));
@@ -32,7 +32,6 @@ function submiHandler(event) {
   let isEmailAlreadyExist = false;
 
   for (let i of array) {
-    
     let a = i.email_id;
     if (email == a) {
       isEmailAlreadyExist = true;
@@ -44,21 +43,23 @@ function submiHandler(event) {
   }
   if (isEmailAlreadyExist) {
     document.getElementById("emailId").innerHTML =
-      "***Oops! Sorry ! This mail id already exists";
+      "Oops! Sorry ! This mail id already exists";
+    document.getElementById("emailId").style.marginLeft = "65px";
     return;
   }
 
   let object_to_focus;
 
   if (pw1 == "") {
-    document.getElementById("message1").innerHTML =
-      "**Fill the password please!";
+    document.getElementById("message1").innerHTML = "Fill the password please!";
+    document.getElementById("emailId").style.marginLeft = "65px";
     return;
   }
 
   if (pw2 == "") {
     document.getElementById("message2").innerHTML =
-      "**Enter the password please!";
+      "Enter the password please!";
+    document.getElementById("emailId").style.marginLeft = "65px";
     return;
   }
 
@@ -110,5 +111,9 @@ function pageOnLoadHandler() {
   const all = getAllFields();
   list = all;
 }
-
+function colorChange() {
+  document.getElementById("submit1").style.backgroundColor = "#46a9a9";
+  document.getElementById("submit1").style.color = "white";
+  document.getElementById("submit1").style.borderColor = "#46a9a9";
+}
 pageOnLoadHandler();

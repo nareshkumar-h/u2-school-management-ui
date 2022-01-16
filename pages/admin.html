@@ -5,9 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign-Up Page</title>
-    <link rel="stylesheet" href="../assets/css/login and sign up.css" />
-    <link rel="shortcut icon" href="../assets/images/1bg.png" />
-    <link rel="stylesheet" href="../assets/css/signup.css" />
+    <link rel="stylesheet" href="./../assets/css/admin_page.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="shortcut icon" href="./../assets/images/New Project (22).png">
+    
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background-image: url("./../assets/images/59276.jpg");
+      }
+    </style>
   </head>
 
   <body>
@@ -23,17 +37,18 @@
 
         <span class="test2">
           <form class="box" onsubmit="submiHandler(event)">
-            <h1>Sign-Up</h1>
-            <button onclick="Student()">Student</button>
-            <button class="active" onclick="Admin()">Admin</button>
+            <h1 class="s1">Sign Up</h1>
+            <div class="side">
+              <button class="hello" onclick="Student()">Student</button>
+              <button class="active" onclick="Admin()" >Admin</button>
+            </div>
             <br />
 
             <div id="student" class="add">
-              <p>Name</p>
               <input
                 type="text"
                 name="Name"
-                placeholder="Enter Your Name"
+                placeholder="Username"
                 id="name"
                 title="Name should not be empty and should contain only characters and space with minimum 3 to maximum 32 characters"
                 pattern="^[a-zA-Z0-9_]+( [a-zA-Z0-9_]+)*$"
@@ -43,44 +58,37 @@
                 maxlength="32"
                 required
               />
-              <p>Email ID</p>
 
               <input
                 type="email"
                 name="email"
                 id="email_id"
-                placeholder="Enter Your Email ID"
+                placeholder="Email ID"
                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                 required
               />
-              <p>Secret code</p>
-
               <input
                 type="password"
-                placeholder="Enter the secret code for admin"
-                name="secret_code"
+                placeholder="Secret Code"
+                title="Use 8-15 characters with atleast one uppercase,one lowercase and one special character"
+                name="password1"
                 id="secret_code"
                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                 required
               />
-
-              <p>Password</p>
-
               <input
                 type="password"
-                placeholder="Use 8-15 characters with atleast one uppercase,one lowercase and one special character"
+                placeholder="Password"
                 title="Use 8-15 characters with atleast one uppercase,one lowercase and one special character"
-                ;
                 name="password1"
                 id="password1"
                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                 required
               />
 
-              <p>Confirm Password</p>
               <input
                 type="password"
-                placeholder="Confirm password"
+                placeholder="Confirm Password"
                 id="password2"
                 name="password2"
                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
@@ -89,13 +97,27 @@
               <div id="emailId"></div>
               <div id="message1"></div>
               <div id="message2"></div>
+              <button
+                type="button"
+                onclick="reload()"
+                class="btn btn-outline-danger"
+                id="clear"
+              >
+                Clear
+              </button>
+              <input
+                type="submit"
+                name="submit"
+                value="Submit"
+                class="btn btn-outline-danger"
+                id="submit1"
+                onclick="colorChange()"
+              />
 
-              <input type="submit" name="" value="Submit" class="btn" />
-              <br />
-              <button type="button" onclick="reload()">Clear</button>
               <br /><br />
-
-              Already have a account login <a href="login.html">Here</a>
+             <h4 class="pq1">
+              Already have a account login <a href="./../pages/login.html" class="linkto">Here</a>
+            </h4>
             </div>
           </form>
         </span>

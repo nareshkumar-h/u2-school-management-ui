@@ -21,7 +21,7 @@ function submitHandler(event) {
   event.preventDefault();
 
   let createdBy = localStorage.getItem("loggedInUser");
-
+  let randomArray=new Uint8Array(1);
   alert(
     `Your query has been sent successfully ! They will respond in mail or slack call ! Thank you`
   );
@@ -36,7 +36,7 @@ function submitHandler(event) {
     desc: desc,
     createdAt: date,
     createdBy: createdBy,
-    qNo: Math.random(),
+    qNo: self.crypto.getRandomValues(randomArray)[0],
   };
 
   local.push(localStorageSetObject);
